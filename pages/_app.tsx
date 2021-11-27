@@ -1,8 +1,47 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css"
+import contents from "../public/contents.json"
+import type { AppProps } from "next/app"
+import { useCallback, useState } from "react"
+import { useRouter } from "next/router"
+import { useKey } from "rooks"
+import { AnimatePresence } from "framer-motion"
+import Head from "next/head"
+import type { Dispatch, ReactNode, SetStateAction } from "react"
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+export const LEN = Object.keys(contents).length
+
+export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+  const [[pageIndex, transDirect], setPage] = useState([0, 0])
+  const router = useRouter()
+
+  const onPressKey = useCallback((keyDirect: number) => {
+    const nextPageIndex = (((pageIndex + keyDirect) % LEN) + LEN) % LEN
+
+    setPage([nextPageIndex, keyDirect])
+    router.replace(contents[nextPageIndex].path)
+  }, [pageIndex, router])
+
+  useKey(37, () => onPressKey(-1))    // left key
+  useKey(39, () => onPressKey(1))     // right key
+
+  return (
+    <div>
+      <Head>
+        <title>{process.env.NEXT_PUBLIC_TITLE}</title>
+        <meta name="description" content={process.env.NEXT_PUBLIC_DESC} />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <AnimatePresence initial={false}>
+        <Component {...pageProps} pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} />
+      </AnimatePresence>
+    </div>
+  )
 }
 
-export default MyApp
+export interface ComponentProps {
+  children: ReactNode
+  pageIndex: number
+  transDirect: number
+  setPage: Dispatch<SetStateAction<[number, number]>>
+}
