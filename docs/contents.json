@@ -1,10 +1,5 @@
 [
-  {
-    "path": "/",
-    "title": "home"
-  },
-  {
-    "path": "/publication",
-    "title": "publication"
-  }
+  "/",
+  "/publication",
+  "/skill"
 ]
