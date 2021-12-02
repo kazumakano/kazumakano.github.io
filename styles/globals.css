@@ -87,3 +87,14 @@ a {
   margin-bottom: auto;
   padding-left: 20px;
 }
+
+.half-body {
+  backdrop-filter: blur(10px);
+  background-color:rgba(255, 255, 255, .8);
+  border-radius: 20px;
+  height: 89%;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 20px;
+  width: 50%;
+}
