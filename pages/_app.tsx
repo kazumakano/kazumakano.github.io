@@ -21,6 +21,9 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     router.replace(contents[nextPageIndex])
   }, [pageIndex, router])
 
+  useKey(8, () => onPressKey(-1))     // back space key
+  useKey(13, () => onPressKey(1))     // enter key
+  useKey(32, () => onPressKey(1))     // space key
   useKey(37, () => onPressKey(-1))    // left key
   useKey(39, () => onPressKey(1))     // right key
 
