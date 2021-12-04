@@ -69,7 +69,7 @@ export default function Slide({ pageIndex, transDirect, setPage, children }: Sli
           onSwipe(-1)
         }
       }}
-      className="slide"
+      id="slide"
     >
       {children}
     </motion.div>

@@ -7,7 +7,7 @@ interface TextBoxProps {
 
 export default function TextBox({ children }: TextBoxProps): JSX.Element {
   return (
-    <div className="text-box">
+    <div className="text-box whole-text-box">
       {children}
     </div>
   )
@@ -15,7 +15,7 @@ export default function TextBox({ children }: TextBoxProps): JSX.Element {
 
 export function HalfTextBox({ children }: TextBoxProps): JSX.Element {
   return (
-    <div className="half-text-box">
+    <div className="text-box half-text-box">
       {children}
     </div>
   )

@@ -7,7 +7,7 @@ interface BodyProps {
 
 export default function Body({ children }: BodyProps): JSX.Element {
   return (
-    <div className="body">
+    <div id="body">
       {children}
     </div>
   )

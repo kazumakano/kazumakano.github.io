@@ -22,7 +22,7 @@ a {
   height: 100%;
 }
 
-.wrapper {
+#wrapper {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -32,17 +32,17 @@ a {
   scrollbar-width: none;       /* Firefox */
 }
 
-.wrapper::-webkit-scrollbar {
+#wrapper::-webkit-scrollbar {
   display: none;               /* Chrome, Brave */
 }
 
-.container {
+#container {
   display: flex;
   height: 80%;
   justify-content: center;
 }
 
-.progress-icon {
+#progress-icon {
   position: fixed;
   top: 92%;
   left: 92%;
@@ -50,13 +50,13 @@ a {
   height: 6%;
 }
 
-.slide {
+#slide {
   display: flex;
   flex-direction: column;
   width: 80%;
 }
 
-.header {
+#header {
   backdrop-filter: blur(10px);
   background-color:rgba(0, 0, 0, .5);
   border-radius: 20px;
@@ -66,18 +66,15 @@ a {
   justify-content: center;
   margin-bottom: 2px;
   padding-left: 20px;
+  padding-right: 20px;
 }
 
-.header > h1 {
+#header > h1 {
   color: white;
-  text-transform: lowercase;
+  text-transform: capitalize;
 }
 
-.header > h1::first-letter {
-  text-transform: uppercase;
-}
-
-.body {
+#body {
   display: flex;
   height: calc(90% - 2px);
   margin-top: 2px;
@@ -87,21 +84,25 @@ a {
   backdrop-filter: blur(10px);
   background-color:rgba(255, 255, 255, .8);
   border-radius: 20px;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: x-large;
+  justify-content: center;
   padding-left: 20px;
+  padding-right: 20px;
+}
+
+.whole-text-box {
+  height: 100%;
   width: 100%;
 }
 
 .half-text-box {
-  backdrop-filter: blur(10px);
-  background-color:rgba(255, 255, 255, .8);
-  border-radius: 20px;
   margin-right: 2px;
-  padding-left: 20px;
   width: calc(60% - 2px);
 }
 
-.half-img-wrapper {
+.half-img {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -109,20 +110,20 @@ a {
   width: calc(40% - 2px);
 }
 
-.half-img-container {
+.half-img > div {
   display: flex;
   justify-content: center;
 }
 
-.half-img-container > img {
+.half-img > div > img {
   border-radius: 50%;
   height: auto;
   width: 90%;
 }
 
 @media (orientation: portrait) {
-  .body {
-    flex-direction: column;
+  #body {
+    flex-direction: column-reverse;
   }
 
   .half-text-box {
@@ -131,19 +132,23 @@ a {
     width: 100%;
   }
 
-  .half-img-wrapper {
+  .half-img {
     flex-direction: row;
     height: calc(40% - 2px);
     margin-top: 2px;
     width: 100%;
   }
 
-  .half-img-container {
+  .half-img > div {
     flex-direction: column;
   }
 
-  .half-img-container > img {
+  .half-img > div > img {
     height: 90%;
     width: auto;
   }
+}
+
+.btn {
+  font-size: 1em;
 }

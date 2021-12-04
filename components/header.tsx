@@ -4,7 +4,7 @@ interface HeaderProps {
 
 export default function Header({ title }: HeaderProps): JSX.Element {
   return (
-    <div className="header">
+    <div id="header">
       <h1>{title}</h1>
     </div>
   )

@@ -26,7 +26,7 @@ export default function ProgressIcon({ pageIndex, transDirect }: ProgressIconPro
   return (
     <motion.svg
       viewBox="0 0 100 100"
-      className="progress-icon"
+      id="progress-icon"
     >
       <motion.circle
         initial="before"

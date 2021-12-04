@@ -15,7 +15,7 @@ interface LayoutProps extends ComponentProps {
 
 export default function Layout({ pageIndex, transDirect, setPage, children, title }: LayoutProps): JSX.Element {
   return (
-    <div className="container">
+    <div id="container">
       <ProgressIcon pageIndex={pageIndex} transDirect={transDirect} />
 
       <Slide pageIndex={pageIndex} transDirect={transDirect} setPage={setPage}>
@@ -37,7 +37,7 @@ interface TextAndImgLayoutProps extends LayoutProps {
 
 export function TextAndImgLayout({ pageIndex, transDirect, setPage, children, title, imgSrc }: TextAndImgLayoutProps): JSX.Element {
   return (
-    <div className="container">
+    <div id="container">
       <ProgressIcon pageIndex={pageIndex} transDirect={transDirect} />
 
       <Slide pageIndex={pageIndex} transDirect={transDirect} setPage={setPage}>

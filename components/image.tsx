@@ -4,8 +4,8 @@ interface ImgProps {
 
 export function HalfImg({ src }: ImgProps): JSX.Element {
   return (
-    <div className="half-img-wrapper">
-      <div className="half-img-container">
+    <div className="half-img">
+      <div>
         <img src={src}/>
       </div>
     </div>
