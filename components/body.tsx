@@ -12,11 +12,3 @@ export default function Body({ children }: BodyProps): JSX.Element {
     </div>
   )
 }
-
-export function HalfBody({ children }: BodyProps): JSX.Element {
-  return (
-    <div className="half-body">
-      {children}
-    </div>
-  )
-}

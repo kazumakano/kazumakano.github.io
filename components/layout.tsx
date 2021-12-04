@@ -3,7 +3,9 @@ import type { ReactNode } from "react"
 import ProgressIcon from "./progress-icon"
 import Slide from "./slide"
 import Header from "./header"
-import Body, { HalfBody } from "./body"
+import Body from "./body"
+import TextBox, { HalfTextBox } from "./text-box"
+import { HalfImg } from "./image"
 
 
 interface LayoutProps extends ComponentProps {
@@ -20,14 +22,20 @@ export default function Layout({ pageIndex, transDirect, setPage, children, titl
         <Header title={title} />
 
         <Body>
-          {children}
+          <TextBox>
+            {children}
+          </TextBox>
         </Body>
       </Slide>
     </div>
   )
 }
 
-export function HomeLayout({ pageIndex, transDirect, setPage, children, title }: LayoutProps): JSX.Element {
+interface TextAndImgLayoutProps extends LayoutProps {
+  imgSrc: string
+}
+
+export function TextAndImgLayout({ pageIndex, transDirect, setPage, children, title, imgSrc }: TextAndImgLayoutProps): JSX.Element {
   return (
     <div className="container">
       <ProgressIcon pageIndex={pageIndex} transDirect={transDirect} />
@@ -35,11 +43,14 @@ export function HomeLayout({ pageIndex, transDirect, setPage, children, title }:
       <Slide pageIndex={pageIndex} transDirect={transDirect} setPage={setPage}>
         <Header title={title} />
 
-        <HalfBody>
-          {children}
-        </HalfBody>
+        <Body>
+          <HalfTextBox>
+            {children}
+          </HalfTextBox>
+
+          <HalfImg src={imgSrc} />
+        </Body>
       </Slide>
     </div>
-
   )
 }
