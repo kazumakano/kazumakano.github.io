@@ -8,7 +8,7 @@ interface ProgressIconProps {
 }
 
 export default function ProgressIcon({ pageIndex, transDirect }: ProgressIconProps): JSX.Element  {
-  const draw = {
+  const variants = {
     before: {
       pathLength: ((((pageIndex - transDirect) % LEN) + LEN) % LEN) / (LEN - 1),
       opacity: 0
@@ -26,21 +26,19 @@ export default function ProgressIcon({ pageIndex, transDirect }: ProgressIconPro
   return (
     <motion.svg
       viewBox="0 0 100 100"
+      initial="before"
+      animate="after"
+      fill="none"
       id="progress-icon"
     >
       <motion.circle
-        initial="before"
-        animate="after"
+        variants={variants}
         cx="50"
         cy="50"
         r="45"
         stroke="white"
-        variants={draw}
-        fill="none"
         strokeWidth="10"
-        style={{
-          rotate: 270
-        }}
+        style={{rotate: 270}}
       />
     </motion.svg>
   )

@@ -5,9 +5,7 @@ interface ImgProps {
 export function HalfImg({ src }: ImgProps): JSX.Element {
   return (
     <div className="half-img">
-      <div>
-        <img src={src}/>
-      </div>
+      <img src={src} />
     </div>
   )
 }

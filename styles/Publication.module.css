@@ -1,3 +1,8 @@
 .paperTable th {
   text-transform: capitalize;
 }
+
+.paperTable td {
+  font-size: medium;
+  vertical-align: middle;
+}

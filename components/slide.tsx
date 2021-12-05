@@ -47,8 +47,6 @@ export default function Slide({ pageIndex, transDirect, setPage, children }: Sli
 
   return (
     <motion.div
-      custom={transDirect}
-      variants={variants}
       initial="enter"
       animate="center"
       exit="exit"
@@ -56,8 +54,13 @@ export default function Slide({ pageIndex, transDirect, setPage, children }: Sli
         x: {type: "spring", stiffness: 300, damping: 30},
         opacity: {duration: 0.2}
       }}
+      variants={variants}
+      custom={transDirect}
       drag="x"
-      dragConstraints={{left: 0, right: 0}}
+      dragConstraints={{
+        left: 0,
+        right: 0
+      }}
       dragElastic={1}
       onDragEnd={(_, { offset, velocity }) => {
         const swipePower = calcSwipePower(offset.x, velocity.x)

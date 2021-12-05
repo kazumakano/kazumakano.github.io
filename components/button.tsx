@@ -1,3 +1,7 @@
+import { useCallback, useState } from "react"
+import Button from "react-bootstrap/Button"
+
+
 interface CopyBtnProps {
   text: string
 }
@@ -9,14 +13,26 @@ const clipboardIcon = (
   </svg>
 )
 
+const checkIcon = (
+  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+  </svg>
+)
+
 export function CopyBtn({ text }: CopyBtnProps): JSX.Element {
-  const onClick = () => {
-    navigator.clipboard.writeText(text)
-  }
+  const [icon, setIcon] = useState(clipboardIcon)
+
+  const onClick = useCallback(async () => {
+    await navigator.clipboard.writeText(text)
+    setIcon(checkIcon)
+  }, [])
+
+  const onMouseLeave = useCallback((event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    event.currentTarget.blur()
+    window.setTimeout(setIcon, 1000, clipboardIcon)
+  }, [])
 
   return (
-    <button onClick={onClick} className="btn">
-      {clipboardIcon}
-    </button>
+    <Button variant="outline-dark" size="sm" onClick={onClick} onMouseLeave={onMouseLeave} className="btn copy-btn">{icon}</Button>
   )
 }

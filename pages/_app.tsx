@@ -28,7 +28,7 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   useKey(39, () => onPressKey(1))     // right key
 
   return (
-    <div id="wrapper">
+    <>
       <Head>
         <title>{process.env.NEXT_PUBLIC_TITLE}</title>
         <meta name="description" content={process.env.NEXT_PUBLIC_DESC} />
@@ -44,7 +44,7 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       <AnimatePresence initial={false}>
         <Component {...pageProps} pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} />
       </AnimatePresence>
-    </div>
+    </>
   )
 }
 
