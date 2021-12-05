@@ -1,6 +1,10 @@
 [
   {
     "title": "A data-driven approach for online pre-impact fall detection with wearable devices",
-    "date": "2021-10"
+    "date": [2021, 10]
+  },
+  {
+    "title": "Sample title",
+    "date": [2022, 1]
   }
 ]

@@ -24,7 +24,7 @@ export default function Home({ pageIndex, transDirect, setPage }: ComponentProps
         <tbody>
           {eduList.map((v, i) => {
             return (
-              <tr>
+              <tr key={i}>
                 <td>{v.year}</td>
                 <td>{v.desc}</td>
               </tr>
