@@ -1,4 +1,3 @@
-import styles from "../styles/Publication.module.css"
 import papers from "../public/papers.json"
 import type { ComponentProps } from "./_app"
 import Layout from "../components/layout"
@@ -17,7 +16,8 @@ const dateTimeFormat = new Intl.DateTimeFormat(
 export default function Publication({ pageIndex, transDirect, setPage }: ComponentProps): JSX.Element {
   return (
     <Layout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="publication">
-      <Table hover responsive striped className={styles.paperTable}>
+      <h2>international</h2>
+      <Table hover responsive striped>
         <thead>
           <tr>
             <th>date</th>
@@ -28,9 +28,12 @@ export default function Publication({ pageIndex, transDirect, setPage }: Compone
 
         <tbody>
           {papers.map((v, i) => {
+            const date = new Date()
+            date.setFullYear(v.date[0], v.date[1] - 1)
+
             return (
               <tr key={i}>
-                <td>{dateTimeFormat.format(new Date(v.date))}</td>
+                <td>{dateTimeFormat.format(date)}</td>
                 <td>{v.title}</td>
                 <td><CopyBtn text={v.title} /></td>
               </tr>
