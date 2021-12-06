@@ -17,7 +17,7 @@ export default function Publication({ pageIndex, transDirect, setPage }: Compone
   return (
     <Layout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="publication">
       <h2>international</h2>
-      <Table hover responsive striped>
+      <Table hover striped>
         <thead>
           <tr>
             <th>date</th>
@@ -28,12 +28,9 @@ export default function Publication({ pageIndex, transDirect, setPage }: Compone
 
         <tbody>
           {papers.map((v, i) => {
-            const date = new Date()
-            date.setFullYear(v.date[0], v.date[1] - 1)
-
             return (
               <tr key={i}>
-                <td>{dateTimeFormat.format(date)}</td>
+                <td>{dateTimeFormat.format(new Date(v.date[0], v.date[1] - 1))}</td>
                 <td>{v.title}</td>
                 <td><CopyBtn text={v.title} /></td>
               </tr>
@@ -41,6 +38,10 @@ export default function Publication({ pageIndex, transDirect, setPage }: Compone
           })}
         </tbody>
       </Table>
+      <p>
+        This is publication page. This is publication page. This is publication page. This is publication page. This is publication page.<br />
+        This is publication page.
+      </p>
     </Layout>
   )
 }

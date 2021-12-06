@@ -4,8 +4,6 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-image: url("../public/wall-paper.jpg");
-  background-size: cover;
   height: 100%;
 }
 
@@ -20,15 +18,15 @@ a {
 
 #__next {
   align-items: center;
+  background-image: url("../public/wall-paper.jpg");
+  background-size: cover;
   display: flex;
   height: 100%;
   overflow: scroll;
-  -ms-overflow-style: none;    /* Edge */
-  scrollbar-width: none;       /* Firefox */
 }
 
 #__next::-webkit-scrollbar {
-  display: none;               /* Chrome, Brave */
+  display: none;
 }
 
 #container {
@@ -58,8 +56,7 @@ a {
   display: flex;
   height: calc(10% - 2px);
   margin-bottom: 4px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px;
 }
 
 #header > h1 {
@@ -74,38 +71,13 @@ a {
 }
 
 .text-box {
+  align-items: center;
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 20px;
   display: flex;
-  flex-direction: column;
-  font-size: large;
   justify-content: center;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-align: center;
-}
-
-.text-box > h2 {
-  border-bottom: solid darkturquoise;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 0.1em;
-  padding-left: 2em;
-  padding-right: 2em;
-  text-transform: capitalize;
-}
-
-.text-box table {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: start;
-  vertical-align: middle;
-  width: auto;
-}
-
-.text-box table th {
-  text-transform: capitalize;
+  padding: 20px;
 }
 
 .whole-text-box {
@@ -115,7 +87,40 @@ a {
 
 .half-text-box {
   margin-right: 4px;
-  width: calc(60% - 2px);
+  width: calc(70% - 2px);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  font-size: large;
+  max-height: 100%;
+  overflow: scroll;
+}
+
+.text::-webkit-scrollbar {
+  display: none;
+}
+
+.text > h2 {
+  border-bottom: solid darkturquoise;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0.1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-transform: capitalize;
+}
+
+.text > table {
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+  width: auto;
+}
+
+.text > table th {
+  text-transform: capitalize;
 }
 
 .half-img {
@@ -123,13 +128,14 @@ a {
   display: flex;
   justify-content: center;
   margin-left: 4px;
-  width: calc(40% - 2px);
+  width: calc(30% - 2px);
+  z-index: 0;
 }
 
 .half-img > img {
   border-radius: 50%;
-  height: auto;
   width: 90%;
+  -webkit-user-drag: none;
 }
 
 /* for smart phone */
@@ -139,14 +145,14 @@ a {
   }
 
   .half-text-box {
-    height: calc(60% - 2px);
+    height: calc(70% - 2px);
     margin-right: 0;
     margin-top: 4px;
     width: 100%;
   }
 
   .half-img {
-    height: calc(40% - 2px);
+    height: calc(30% - 2px);
     margin-bottom: 4px;
     margin-left: 0;
     width: 100%;

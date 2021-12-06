@@ -20,7 +20,7 @@ export default function Home({ pageIndex, transDirect, setPage }: ComponentProps
   return (
     <TextAndImgLayout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="about me" imgSrc={IMG_SRC}>
       <h2>education</h2>
-      <Table borderless responsive id={styles.eduTable}>
+      <Table borderless id={styles.eduTable}>
         <tbody>
           {eduList.map((v, i) => {
             return (
