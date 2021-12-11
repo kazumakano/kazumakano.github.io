@@ -1,28 +1,18 @@
 import styles from "../styles/Home.module.css"
+import history from "../public/history.json"
 import type { ComponentProps } from "./_app"
 import { TextAndImgLayout } from "../components/layout"
 import Table from "react-bootstrap/Table"
 
 const IMG_SRC = "https://github.com/" + process.env.NEXT_PUBLIC_USER_NAME + ".png"
 
-const eduList = [
-  {
-    year: 2022,
-    desc: "Guraduate Nagoya Univ Engineering"
-  },
-  {
-    year: 2024,
-    desc: "Graduate Nagoya Univ"
-  }
-]
-
 export default function Home({ pageIndex, transDirect, setPage }: ComponentProps): JSX.Element {
   return (
     <TextAndImgLayout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="about me" imgSrc={IMG_SRC}>
-      <h2>education</h2>
+      <h2>history</h2>
       <Table borderless id={styles.eduTable}>
         <tbody>
-          {eduList.map((v, i) => {
+          {history.map((v, i) => {
             return (
               <tr key={i}>
                 <td>{v.year}</td>
