@@ -1,4 +1,5 @@
 import { useCallback, useState } from "react"
+import type { MouseEvent } from "react"
 import Button from "react-bootstrap/Button"
 
 
@@ -27,7 +28,7 @@ export function CopyBtn({ text }: CopyBtnProps): JSX.Element {
     setIcon(checkIcon)
   }, [])
 
-  const onMouseLeave = useCallback((event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  const onMouseLeave = useCallback((event: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => {
     event.currentTarget.blur()
     window.setTimeout(setIcon, 1000, clipboardIcon)
   }, [])
