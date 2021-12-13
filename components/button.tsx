@@ -33,6 +33,6 @@ export function CopyBtn({ text }: CopyBtnProps): JSX.Element {
   }, [])
 
   return (
-    <Button variant="outline-dark" size="sm" onClick={onClick} onMouseLeave={onMouseLeave} className="btn copy-btn">{icon}</Button>
+    <Button size="sm" variant="outline-dark" onClick={onClick} onMouseLeave={onMouseLeave} className="btn copy-btn">{icon}</Button>
   )
 }
