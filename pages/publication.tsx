@@ -1,9 +1,9 @@
 import papers from "../public/papers.json"
 import type { ComponentProps } from "./_app"
 import Layout from "../components/layout"
+import TextBox from "../components/text-box"
 import Table from "react-bootstrap/Table"
 import { CopyBtn } from "../components/button"
-import TextBox from "../components/text-box"
 
 
 const dateTimeFormat = new Intl.DateTimeFormat(
