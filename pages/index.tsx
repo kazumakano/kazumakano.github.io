@@ -2,8 +2,8 @@ import styles from "../styles/Home.module.css"
 import history from "../public/history.json"
 import type { ComponentProps } from "./_app"
 import Layout from "../components/layout"
-import Table from "react-bootstrap/Table"
 import TextBox from "../components/text-box"
+import Table from "react-bootstrap/Table"
 import { RoundImg } from "../components/image"
 
 const IMG_SRC = `https://github.com/${process.env.NEXT_PUBLIC_USER_NAME}.png`
