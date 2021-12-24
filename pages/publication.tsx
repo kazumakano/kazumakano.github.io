@@ -3,6 +3,7 @@ import type { ComponentProps } from "./_app"
 import Layout from "../components/layout"
 import Table from "react-bootstrap/Table"
 import { CopyBtn } from "../components/button"
+import TextBox from "../components/text-box"
 
 
 const dateTimeFormat = new Intl.DateTimeFormat(
@@ -16,6 +17,7 @@ const dateTimeFormat = new Intl.DateTimeFormat(
 export default function Publication({ pageIndex, transDirect, setPage }: ComponentProps): JSX.Element {
   return (
     <Layout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="publication">
+      <TextBox>
       <h2>international</h2>
       <Table hover striped>
         <thead>
@@ -42,6 +44,7 @@ export default function Publication({ pageIndex, transDirect, setPage }: Compone
         This is publication page. This is publication page. This is publication page. This is publication page. This is publication page.<br />
         This is publication page.
       </p>
+      </TextBox>
     </Layout>
   )
 }

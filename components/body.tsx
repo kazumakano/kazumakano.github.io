@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 
-interface BodyProps {
+type BodyProps = {
   children: ReactNode
 }
 

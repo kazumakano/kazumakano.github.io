@@ -1,7 +1,7 @@
 import type { ReactNode } from "react"
 
 
-interface TextBoxProps {
+type TextBoxProps = {
   children: ReactNode
 }
 

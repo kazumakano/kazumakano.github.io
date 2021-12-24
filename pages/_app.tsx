@@ -48,7 +48,7 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   )
 }
 
-export interface ComponentProps {
+export type ComponentProps = {
   pageIndex: number
   transDirect: number
   setPage: Dispatch<SetStateAction<[number, number]>>

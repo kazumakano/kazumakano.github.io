@@ -25,13 +25,6 @@ a {
   overflow-x: hidden;
 }
 
-#container {
-  display: flex;
-  height: 80%;
-  justify-content: center;
-  width: 100%;
-}
-
 #progress-icon {
   position: fixed;
   top: 92%;
@@ -40,7 +33,14 @@ a {
   height: 6%;
 }
 
-#slide {
+#slide-wrapper {
+  display: flex;
+  height: 80%;
+  justify-content: center;
+  width: 100%;
+}
+
+#slide-container {
   width: 80%;
 }
 

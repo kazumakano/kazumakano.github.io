@@ -1,10 +1,10 @@
-interface ImgProps {
+type ImgProps = {
   src: string
 }
 
-export function HalfImg({ src }: ImgProps): JSX.Element {
+export default function Img({ src }: ImgProps): JSX.Element {
   return (
-    <div className="half-img">
+    <div className="img">
       <img src={src} />
     </div>
   )

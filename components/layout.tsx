@@ -1,56 +1,31 @@
-import type { ComponentProps } from "../pages/_app"
-import type { ReactNode } from "react"
+import type { Dispatch, ReactNode, SetStateAction } from "react"
 import ProgressIcon from "./progress-icon"
 import Slide from "./slide"
 import Header from "./header"
 import Body from "./body"
-import TextBox, { HalfTextBox } from "./text-box"
-import { HalfImg } from "./image"
+import TextBox from "./text-box"
 
 
-interface LayoutProps extends ComponentProps {
+type LayoutProps = {
   children: ReactNode
+  pageIndex: number
+  transDirect: number
+  setPage: Dispatch<SetStateAction<[number, number]>>
   title: string
 }
 
-export default function Layout({ pageIndex, transDirect, setPage, children, title }: LayoutProps): JSX.Element {
+export default function Layout({ children, pageIndex, transDirect, setPage, title }: LayoutProps): JSX.Element {
   return (
-    <div id="container">
-      <ProgressIcon pageIndex={pageIndex} transDirect={transDirect} />
-
+    <>
       <Slide pageIndex={pageIndex} transDirect={transDirect} setPage={setPage}>
         <Header title={title} />
 
         <Body>
-          <TextBox>
-            {children}
-          </TextBox>
+          {children}
         </Body>
       </Slide>
-    </div>
-  )
-}
 
-interface TextAndImgLayoutProps extends LayoutProps {
-  imgSrc: string
-}
-
-export function TextAndImgLayout({ pageIndex, transDirect, setPage, children, title, imgSrc }: TextAndImgLayoutProps): JSX.Element {
-  return (
-    <div id="container">
       <ProgressIcon pageIndex={pageIndex} transDirect={transDirect} />
-
-      <Slide pageIndex={pageIndex} transDirect={transDirect} setPage={setPage}>
-        <Header title={title} />
-
-        <Body>
-          <HalfTextBox>
-            {children}
-          </HalfTextBox>
-
-          <HalfImg src={imgSrc} />
-        </Body>
-      </Slide>
-    </div>
+    </>
   )
 }

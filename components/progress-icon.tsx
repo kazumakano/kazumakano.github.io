@@ -2,7 +2,7 @@ import { LEN } from "../pages/_app"
 import { motion } from "framer-motion"
 
 
-interface ProgressIconProps {
+type ProgressIconProps = {
   pageIndex: number
   transDirect: number
 }

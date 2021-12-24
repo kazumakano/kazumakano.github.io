@@ -1,6 +1,5 @@
 import contents from "../public/contents.json"
-import type { ComponentProps } from "../pages/_app"
-import type { ReactNode } from "react"
+import type { Dispatch, ReactNode, SetStateAction } from "react"
 import { useRouter } from "next/router"
 import { useCallback } from "react"
 import { LEN } from "../pages/_app"
@@ -8,8 +7,11 @@ import { motion } from "framer-motion"
 
 const SWIPE_POWER_THRESH = 10000
 
-interface SlideProps extends ComponentProps {
+type SlideProps = {
   children: ReactNode
+  pageIndex: number
+  transDirect: number
+  setPage: Dispatch<SetStateAction<[number, number]>>
 }
 
 const variants = {
@@ -46,35 +48,37 @@ export default function Slide({ pageIndex, transDirect, setPage, children }: Sli
   }, [pageIndex, router])
 
   return (
-    <motion.div
-      initial="enter"
-      animate="center"
-      exit="exit"
-      transition={{
-        x: {type: "spring", stiffness: 300, damping: 30},
-        opacity: {duration: 0.2}
-      }}
-      variants={variants}
-      custom={transDirect}
-      drag="x"
-      dragConstraints={{
-        left: 0,
-        right: 0
-      }}
-      dragElastic={1}
-      onDragEnd={(_, { offset, velocity }) => {
-        const swipePower = calcSwipePower(offset.x, velocity.x)
+    <div id="slide-wrapper">
+      <motion.div
+        initial="enter"
+        animate="center"
+        exit="exit"
+        transition={{
+          x: {type: "spring", stiffness: 300, damping: 30},
+          opacity: {duration: 0.2}
+        }}
+        variants={variants}
+        custom={transDirect}
+        drag="x"
+        dragConstraints={{
+          left: 0,
+          right: 0
+        }}
+        dragElastic={1}
+        onDragEnd={(_, { offset, velocity }) => {
+          const swipePower = calcSwipePower(offset.x, velocity.x)
 
-        if (swipePower < -SWIPE_POWER_THRESH) {
-          onSwipe(1)
-        }
-        else if (swipePower > SWIPE_POWER_THRESH) {
-          onSwipe(-1)
-        }
-      }}
-      id="slide"
-    >
-      {children}
-    </motion.div>
+          if (swipePower < -SWIPE_POWER_THRESH) {
+            onSwipe(1)
+          }
+          else if (swipePower > SWIPE_POWER_THRESH) {
+            onSwipe(-1)
+          }
+        }}
+        id="slide-container"
+      >
+        {children}
+      </motion.div>
+    </div>
   )
 }
