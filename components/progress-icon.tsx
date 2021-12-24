@@ -1,4 +1,4 @@
-import { LEN } from "../pages/_app"
+import { CONTENTS_NUM } from "../pages/_app"
 import { motion } from "framer-motion"
 
 
@@ -10,11 +10,11 @@ type ProgressIconProps = {
 export default function ProgressIcon({ pageIndex, transDirect }: ProgressIconProps): JSX.Element  {
   const variants = {
     before: {
-      pathLength: ((((pageIndex - transDirect) % LEN) + LEN) % LEN) / (LEN - 1),
+      pathLength: ((((pageIndex - transDirect) % CONTENTS_NUM) + CONTENTS_NUM) % CONTENTS_NUM) / (CONTENTS_NUM - 1),
       opacity: 0
     },
     after: {
-      pathLength: pageIndex / (LEN - 1),
+      pathLength: pageIndex / (CONTENTS_NUM - 1),
       opacity: 1,
       transition: {
         pathLength: { type: "spring", duration: 1.5, bounce: 0 },
