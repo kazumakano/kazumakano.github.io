@@ -28,6 +28,7 @@ export default function Home({ pageIndex, transDirect, setPage }: ComponentProps
         
         <h2>experience</h2>
       </TextBox>
+
       <RoundImg enableMargins={[true, false]} proportion={30} src={IMG_SRC} />
     </Layout>
   )
