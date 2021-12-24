@@ -1,4 +1,4 @@
-import getBlockStyle from "./block-style"
+import useBlockStyle from "./block-style"
 
 
 type ImgProps = {
@@ -9,7 +9,7 @@ type ImgProps = {
 
 export function RoundImg({ enableMargins, proportion, src }: ImgProps): JSX.Element {
   return (
-    <div className="img round-img" style={getBlockStyle(enableMargins, proportion)}>
+    <div className="img round-img" style={useBlockStyle(enableMargins, proportion)}>
       <img src={src} />
     </div>
   )

@@ -1,5 +1,5 @@
 import type { ReactNode } from "react"
-import getBlockStyle from "./block-style"
+import useBlockStyle from "./block-style"
 
 
 type TextBoxProps = {
@@ -10,7 +10,7 @@ type TextBoxProps = {
 
 export default function TextBox({ children, enableMargins, proportion }: TextBoxProps): JSX.Element {
   return (
-    <div className="text-box" style={getBlockStyle(enableMargins, proportion)}>
+    <div className="text-box" style={useBlockStyle(enableMargins, proportion)}>
       <div>
         {children}
       </div>

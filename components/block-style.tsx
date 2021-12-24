@@ -10,18 +10,12 @@ type BlockStyle = {
   width: string
 }
 
-const useIsLandscape = () => {
+export default function useBlockStyle(enableMargins: [boolean, boolean], proportion: number): BlockStyle {
   const [isLandscape, setIsLandscape] = useState<boolean>(true)
 
   useEffect(() => {
     setIsLandscape(window.matchMedia("(orientation: landscape)").matches)
   }, [])
-
-  return isLandscape
-}
-
-export default function getBlockStyle(enableMargins: [boolean, boolean], proportion: number): BlockStyle {
-  const isLandscape = useIsLandscape()
 
   return {
     height: isLandscape ? "100%" : `calc(${proportion}% - 2px)`,
