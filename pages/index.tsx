@@ -4,7 +4,7 @@ import type { ComponentProps } from "./_app"
 import Layout from "../components/layout"
 import Table from "react-bootstrap/Table"
 import TextBox from "../components/text-box"
-import Image from "../components/image"
+import { RoundImg } from "../components/image"
 
 const IMG_SRC = "https://github.com/" + process.env.NEXT_PUBLIC_USER_NAME + ".png"
 
@@ -28,7 +28,7 @@ export default function Home({ pageIndex, transDirect, setPage }: ComponentProps
         
         <h2>experience</h2>
       </TextBox>
-      <Image enableMargins={[true, false]} proportion={30} src={IMG_SRC} />
+      <RoundImg enableMargins={[true, false]} proportion={30} src={IMG_SRC} />
     </Layout>
   )
 }

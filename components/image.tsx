@@ -7,9 +7,9 @@ type ImgProps = {
   src: string
 }
 
-export default function Img({ enableMargins, proportion, src }: ImgProps): JSX.Element {
+export function RoundImg({ enableMargins, proportion, src }: ImgProps): JSX.Element {
   return (
-    <div className="img" style={getBlockStyle(enableMargins, proportion)}>
+    <div className="img round-img" style={getBlockStyle(enableMargins, proportion)}>
       <img src={src} />
     </div>
   )
