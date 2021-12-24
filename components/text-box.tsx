@@ -11,7 +11,7 @@ type TextBoxProps = {
 export default function TextBox({ children, enableMargins, proportion }: TextBoxProps): JSX.Element {
   return (
     <div className="text-box" style={getBlockStyle(enableMargins, proportion)}>
-      <div className="text">
+      <div>
         {children}
       </div>
     </div>
