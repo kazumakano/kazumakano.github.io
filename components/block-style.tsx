@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 
-type DivStyle = {
+type BlockStyle = {
   height: string
   marginBottom: string
   marginLeft: string
@@ -10,7 +10,7 @@ type DivStyle = {
   width: string
 }
 
-function useIsLandscape(): boolean {
+const useIsLandscape = () => {
   const [isLandscape, setIsLandscape] = useState<boolean>(true)
 
   useEffect(() => {
@@ -20,7 +20,7 @@ function useIsLandscape(): boolean {
   return isLandscape
 }
 
-export default function getBlockStyle(enableMargins: [boolean, boolean], proportion: number): DivStyle {
+export default function getBlockStyle(enableMargins: [boolean, boolean], proportion: number): BlockStyle {
   const isLandscape = useIsLandscape()
 
   return {
