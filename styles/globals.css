@@ -25,14 +25,6 @@ a {
   overflow-x: hidden;
 }
 
-#progress-icon {
-  position: fixed;
-  top: 92%;
-  left: 92%;
-  width: 6%;
-  height: 6%;
-}
-
 #slide-wrapper {
   display: flex;
   height: 80%;
@@ -42,6 +34,14 @@ a {
 
 #slide-container {
   width: 80%;
+}
+
+#progress-icon {
+  position: fixed;
+  top: 92%;
+  left: 92%;
+  width: 6%;
+  height: 6%;
 }
 
 #header {
@@ -134,6 +134,19 @@ a {
   -webkit-user-drag: none;
 }
 
+.btn {
+  font-size: inherit;
+}
+
+.copy-btn {
+  border: none;
+}
+
+.copy-btn:hover {
+  background-color: inherit;
+  color: inherit;
+}
+
 /* for smart phone */
 @media (orientation: portrait) {
   #body {
@@ -158,17 +171,4 @@ a {
     height: 90%;
     width: auto;
   }
-}
-
-.btn {
-  font-size: inherit;
-}
-
-.copy-btn {
-  border: none;
-}
-
-.copy-btn:hover {
-  background-color: inherit;
-  color: inherit;
 }
