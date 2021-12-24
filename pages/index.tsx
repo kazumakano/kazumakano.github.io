@@ -6,7 +6,7 @@ import Table from "react-bootstrap/Table"
 import TextBox from "../components/text-box"
 import { RoundImg } from "../components/image"
 
-const IMG_SRC = "https://github.com/" + process.env.NEXT_PUBLIC_USER_NAME + ".png"
+const IMG_SRC = `https://github.com/${process.env.NEXT_PUBLIC_USER_NAME}.png`
 
 export default function Home({ pageIndex, transDirect, setPage }: ComponentProps): JSX.Element {
   return (
