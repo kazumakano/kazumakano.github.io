@@ -2,7 +2,7 @@ import { useCallback, useState } from "react"
 import type { MouseEvent } from "react"
 import Button from "react-bootstrap/Button"
 
-const ICON_LAG = 1000
+const ICON_LAG = 1000    // time lag to change icon
 
 type CopyBtnProps = {
   text: string
