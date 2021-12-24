@@ -8,14 +8,14 @@ import Head from "next/head"
 import { AnimatePresence } from "framer-motion"
 import type { Dispatch, SetStateAction } from "react"
 
-export const LEN = Object.keys(contents).length
+export const CONTENTS_NUM = Object.keys(contents).length
 
 export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   const [[pageIndex, transDirect], setPage] = useState([0, 0])
   const router = useRouter()
 
   const onPressKey = useCallback((keyDirect: number) => {
-    const nextPageIndex = (((pageIndex + keyDirect) % LEN) + LEN) % LEN
+    const nextPageIndex = (((pageIndex + keyDirect) % CONTENTS_NUM) + CONTENTS_NUM) % CONTENTS_NUM
 
     setPage([nextPageIndex, keyDirect])
     router.replace(contents[nextPageIndex])

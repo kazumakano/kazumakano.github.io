@@ -2,7 +2,7 @@ import contents from "../public/contents.json"
 import type { Dispatch, ReactNode, SetStateAction } from "react"
 import { useRouter } from "next/router"
 import { useCallback } from "react"
-import { LEN } from "../pages/_app"
+import { CONTENTS_NUM } from "../pages/_app"
 import { motion } from "framer-motion"
 
 const SWIPE_POWER_THRESH = 10000
@@ -41,14 +41,14 @@ export default function Slide({ pageIndex, transDirect, setPage, children }: Sli
   const router = useRouter()
 
   const onSwipe = useCallback((swipeDirect: number) => {
-    const nextPageIndex = (((pageIndex + swipeDirect) % LEN) + LEN) % LEN
+    const nextPageIndex = (((pageIndex + swipeDirect) % CONTENTS_NUM) + CONTENTS_NUM) % CONTENTS_NUM
 
     setPage([nextPageIndex, swipeDirect])
     router.replace(contents[nextPageIndex])
   }, [pageIndex, router])
 
   return (
-    <div id="slide-wrapper">
+    <div id="slide">
       <motion.div
         initial="enter"
         animate="center"
@@ -75,7 +75,6 @@ export default function Slide({ pageIndex, transDirect, setPage, children }: Sli
             onSwipe(-1)
           }
         }}
-        id="slide-container"
       >
         {children}
       </motion.div>

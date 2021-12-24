@@ -17,7 +17,7 @@ const dateTimeFormat = new Intl.DateTimeFormat(
 export default function Publication({ pageIndex, transDirect, setPage }: ComponentProps): JSX.Element {
   return (
     <Layout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="publication">
-      <TextBox>
+      <TextBox enableMargins={[false, false]} proportion={100}>
       <h2>international</h2>
       <Table hover striped>
         <thead>

@@ -1,9 +1,8 @@
 import type { Dispatch, ReactNode, SetStateAction } from "react"
-import ProgressIcon from "./progress-icon"
 import Slide from "./slide"
 import Header from "./header"
 import Body from "./body"
-import TextBox from "./text-box"
+import ProgressIcon from "./progress-icon"
 
 
 type LayoutProps = {
