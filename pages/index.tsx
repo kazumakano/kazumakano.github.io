@@ -6,7 +6,6 @@ import TextBox from "../components/text-box"
 import Table from "react-bootstrap/Table"
 import { RoundImg } from "../components/image"
 
-const IMG_SRC = `https://github.com/${process.env.NEXT_PUBLIC_USER_NAME}.png`
 
 export default function Home({ pageIndex, transDirect, setPage }: ComponentProps): JSX.Element {
   return (
@@ -29,7 +28,7 @@ export default function Home({ pageIndex, transDirect, setPage }: ComponentProps
         <h2>experience</h2>
       </TextBox>
 
-      <RoundImg enableMargins={[true, false]} proportion={30} src={IMG_SRC} />
+      <RoundImg enableMargins={[true, false]} proportion={30} src={`https://github.com/${process.env.NEXT_PUBLIC_USER_NAME}.png`} />
     </Layout>
   )
 }
