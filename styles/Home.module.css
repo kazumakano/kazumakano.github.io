@@ -1,0 +1,28 @@
+.name {
+  font-size: 3em;
+  text-align: center;
+}
+
+.eduTable > tbody > tr:first-child > td:first-child {
+  padding-right: 2px;
+}
+
+.eduTable > tbody > tr:first-child > td:nth-child(2) {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.eduTable > tbody > tr:first-child > td:nth-child(3) {
+  padding-left: 2px;
+  padding-right: 10px;
+}
+
+.eduTable > tbody > tr:first-child > td:last-child {
+  padding-bottom: 0;
+  padding-left: 10px;
+}
+
+.eduTable > tbody > tr:last-child > td {
+  padding-left: 10px;
+  padding-top: 0;
+}
