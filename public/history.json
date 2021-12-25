@@ -1,10 +1,12 @@
 [
   {
-    "year": 2022,
-    "desc": "Guraduate Nagoya Univ Engineering"
+    "year": [2018, 2022],
+    "department": "Department of Electrical Engineering, Electronics, and Information Engineering",
+    "school": "School of Engineering, Nagoya University"
   },
   {
-    "year": 2024,
-    "desc": "Graduate Nagoya Univ"
+    "year": [2022, null],
+    "department": "Department of Information and Communication Engineering",
+    "school": "Graduate School of Engineering, Nagoya University"
   }
 ]
