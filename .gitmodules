@@ -1,0 +1,3 @@
+[submodule "list-all-repos-langs"]
+	path = list-all-repos-langs
+	url = https://github.com/kazumakano/list-all-repos-langs.js.git
