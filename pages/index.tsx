@@ -17,9 +17,9 @@ export default function Home({ pageIndex, transDirect, setPage }: ComponentProps
             return (
               <tbody key={i}>
                 <tr>
-                  <td rowSpan={2}>{v.year[0]}</td>
+                  <td rowSpan={2}>{v.term[0]}</td>
                   <td rowSpan={2}>~</td>
-                  <td rowSpan={2}>{v.year[1]}</td>
+                  <td rowSpan={2}>{v.term[1]}</td>
                   <td>{v.department}</td>
                 </tr>
                 <tr>

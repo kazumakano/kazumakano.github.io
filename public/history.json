@@ -1,11 +1,11 @@
 [
   {
-    "year": [2018, 2022],
+    "term": [2018, 2022],
     "department": "Department of Electrical Engineering, Electronics, and Information Engineering",
     "school": "School of Engineering, Nagoya University"
   },
   {
-    "year": [2022, null],
+    "term": [2022, null],
     "department": "Department of Information and Communication Engineering",
     "school": "Graduate School of Engineering, Nagoya University"
   }
