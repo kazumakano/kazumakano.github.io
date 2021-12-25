@@ -36,6 +36,14 @@ a {
   width: 80%;
 }
 
+#progress-icon {
+  position: fixed;
+  top: 92%;
+  left: 92%;
+  width: 6%;
+  height: 6%;
+}
+
 #header {
   align-items: center;
   backdrop-filter: blur(10px);
@@ -58,14 +66,6 @@ a {
   margin-top: 4px;
 }
 
-#progress-icon {
-  position: fixed;
-  top: 92%;
-  left: 92%;
-  width: 6%;
-  height: 6%;
-}
-
 .text-box {
   align-items: center;
   backdrop-filter: blur(10px);
@@ -77,7 +77,6 @@ a {
 }
 
 .text-box > div {
-  align-items: center;
   display: flex;
   flex-direction: column;
   font-size: large;
@@ -91,6 +90,8 @@ a {
 
 .text-box > div > h2 {
   border-bottom: solid darkturquoise;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 0.1em;
   padding-left: 1em;
   padding-right: 1em;
@@ -98,12 +99,18 @@ a {
 }
 
 .text-box > div > table {
+  margin-left: auto;
+  margin-right: auto;
   vertical-align: middle;
   width: auto;
 }
 
 .text-box > div > table > thead > tr > th {
   text-transform: capitalize;
+}
+
+.text-box > div > table > tbody >tr > td {
+  white-space: nowrap;
 }
 
 .img {
