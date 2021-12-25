@@ -1,10 +1,12 @@
 [
   {
-    "title": "A data-driven approach for online pre-impact fall detection with wearable devices",
-    "date": [2021, 10]
+    "date": [2021, 10],
+    "conference": "ABC 2021",
+    "title": "A data-driven approach for online pre-impact fall detection with wearable devices"
   },
   {
-    "title": "Sample title",
-    "date": [2022, 1]
+    "date": [2022, 6],
+    "conference": "HCII 2022",
+    "title": "Sample title"
   }
 ]
