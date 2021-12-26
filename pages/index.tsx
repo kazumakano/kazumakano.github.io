@@ -15,21 +15,19 @@ export default function Home({ pageIndex, transDirect, setPage }: ComponentProps
 
         <h2>education</h2>
         <Table borderless className={styles.eduTable} id={styles.eduTable}>
-          {history.map((v, i) => {
-            return (
-              <tbody key={i}>
-                <tr>
-                  <td rowSpan={2}>{v.term[0]}</td>
-                  <td rowSpan={2}>~</td>
-                  <td rowSpan={2}>{v.term[1]}</td>
-                  <td>{v.department}</td>
-                </tr>
-                <tr>
-                  <td>{v.school}</td>
-                </tr>
-              </tbody>
-            )
-          })}
+          {history.map((v, i) => (
+            <tbody key={i}>
+              <tr>
+                <td rowSpan={2}>{v.term[0]}</td>
+                <td rowSpan={2}>~</td>
+                <td rowSpan={2}>{v.term[1]}</td>
+                <td>{v.department}</td>
+              </tr>
+              <tr>
+                <td>{v.school}</td>
+              </tr>
+            </tbody>
+          ))}
         </Table>
 
         <h2>experience</h2>

@@ -29,16 +29,14 @@ export default function Publication({ pageIndex, transDirect, setPage }: Compone
             </tr>
           </thead>
           <tbody>
-            {papers.map((v, i) => {
-              return (
-                <tr key={i}>
-                  <td>{dateTimeFormat.format(new Date(v.date[0], v.date[1] - 1))}</td>
-                  <td>{v.title}</td>
-                  <td>{v.conference}</td>
-                  <td><CopyBtn text={v.title} /></td>
-                </tr>
-              )
-            })}
+            {papers.map((v, i) => (
+              <tr key={i}>
+                <td>{dateTimeFormat.format(new Date(v.date[0], v.date[1] - 1))}</td>
+                <td>{v.title}</td>
+                <td>{v.conference}</td>
+                <td><CopyBtn text={v.title} /></td>
+              </tr>
+            ))}
           </tbody>
         </Table>
       </TextBox>
