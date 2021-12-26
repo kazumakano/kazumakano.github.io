@@ -29,12 +29,12 @@ export default function Publication({ pageIndex, transDirect, setPage }: Compone
             </tr>
           </thead>
           <tbody>
-            {papers.map((v, i) => (
+            {papers.map((p, i) => (
               <tr key={i}>
-                <td>{dateTimeFormat.format(new Date(v.date[0], v.date[1] - 1))}</td>
-                <td>{v.title}</td>
-                <td>{v.conference}</td>
-                <td><CopyBtn text={v.title} /></td>
+                <td>{dateTimeFormat.format(new Date(p.date[0], p.date[1] - 1))}</td>
+                <td>{p.title}</td>
+                <td>{p.conference}</td>
+                <td><CopyBtn text={p.title} /></td>
               </tr>
             ))}
           </tbody>

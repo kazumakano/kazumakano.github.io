@@ -15,16 +15,16 @@ export default function Home({ pageIndex, transDirect, setPage }: ComponentProps
 
         <h2>education</h2>
         <Table borderless className={styles.eduTable} id={styles.eduTable}>
-          {history.map((v, i) => (
+          {history.map((h, i) => (
             <tbody key={i}>
               <tr>
-                <td rowSpan={2}>{v.term[0]}</td>
+                <td rowSpan={2}>{h.term[0]}</td>
                 <td rowSpan={2}>~</td>
-                <td rowSpan={2}>{v.term[1]}</td>
-                <td>{v.department}</td>
+                <td rowSpan={2}>{h.term[1]}</td>
+                <td>{h.department}</td>
               </tr>
               <tr>
-                <td>{v.school}</td>
+                <td>{h.school}</td>
               </tr>
             </tbody>
           ))}
