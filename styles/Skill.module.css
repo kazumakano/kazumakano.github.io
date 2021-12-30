@@ -3,3 +3,37 @@
   margin-right: auto;
   margin-top: 20px;
 }
+
+.progressBars > div {
+  align-items: center;
+  border-radius: 15px;
+  height: 30px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 2px;
+}
+
+.progressBars > div > div {
+  align-self: stretch;
+  margin-left: 1px;
+  margin-right: 1px;
+  min-width: 26px;
+}
+
+.progressBars > div > div:first-child {
+  border-bottom-left-radius: 13px;
+  border-top-left-radius: 13px;
+  margin-left: 0;
+}
+
+.progressBars > div > div:nth-last-child(2) {
+  border-bottom-right-radius: 13px;
+  border-top-right-radius: 13px;
+  margin-right: 0;
+}
+
+.label {
+  font-size: medium;
+  margin-left: auto;
+  margin-right: 10px;
+}

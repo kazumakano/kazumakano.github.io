@@ -24,21 +24,16 @@ const PROGRESS_BAR_CONFS: ProgressBarConf[] = [
   },
   {
     colors: {
-      CSS: "#563d7c"
-    },
-    label: "CSS"
-  },
-  {
-    colors: {
       Go: "#375eab"
     },
     label: "Go"
   },
   {
     colors: {
-      HTML: "#e44b23"
+      HTML: "#e44b23",
+      CSS: "#563d7c"
     },
-    label: "HTML"
+    label: "HTML / CSS"
   },
   {
     colors: {
@@ -51,12 +46,12 @@ const PROGRESS_BAR_CONFS: ProgressBarConf[] = [
       JavaScript: "#f1e05a",
       TypeScript: "#2b7489"
     },
-    label: "JS/TS"
+    label: "JS / TS"
   },
   {
     colors: {
-      "Jupyter Notebook": "#da5b0b",
-      Python: "#3572a5"
+      Python: "#3572a5",
+      "Jupyter Notebook": "#da5b0b"
     },
     label: "Python"
   }
@@ -78,11 +73,17 @@ const useLangDict = () => {
   return langDict
 }
 
+const downIcon = (
+  <svg height="1em" width="1em">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+  </svg>
+)
+
 type ProgressBarsProps = {
   langDict: LangDict | null
 }
 
-const calcProportion = (bytes: number) => 10 * Math.log(bytes)
+const calcProportion = (bytes: number) => bytes / 10000
 
 const ProgressBars = ({ langDict }: ProgressBarsProps) => {
   if (langDict == null) {
@@ -94,20 +95,18 @@ const ProgressBars = ({ langDict }: ProgressBarsProps) => {
     return (
       <>
         {PROGRESS_BAR_CONFS.map((c, i) => (
-          <div key={i}>
-            {`${c.label}:`}
+          <div className={styles.progressBars} key={i}>
             <div className="progress">
               {Object.keys(c.colors).map(l => (
                 <div
                   className="progress-bar"
                   style={{
                     backgroundColor: c.colors[l],
-                    width: calcProportion(l in langDict ? langDict[l] : 0)
+                    width: `${l in langDict ? calcProportion(langDict[l]) : 0}%`
                   }}
-                >
-                  {langDict[l]}
-                </div>
+                />
               ))}
+              <span className={styles.label}>{c.label}</span>
             </div>
           </div>
         ))}
@@ -118,12 +117,20 @@ const ProgressBars = ({ langDict }: ProgressBarsProps) => {
 
 export default function Skill({ pageIndex, transDirect, setPage }: ComponentProps): JSX.Element {
   const langDict = useLangDict()
+  // const langDict = {
+  //   CSS: 133028,
+  //   HTML: 69052,
+  //   JavaScript: 86798,
+  //   "Jupyter Notebook": 3803,
+  //   Python: 270743,
+  //   TypeScript: 16135
+  // }
 
   return (
     <Layout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="skill">
       <TextBox enableMargins={[false, true]} proportion={50}>
         <h2>language</h2>
-        <p>bytes in public repositories</p>
+        <p>{downIcon} bytes in public repositories</p>
         <ProgressBars langDict={langDict} />
       </TextBox>
 
