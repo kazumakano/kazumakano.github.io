@@ -68,7 +68,7 @@ const useLangDict = () => {
 
   useEffect(() => {
     getLangDict()
-  }, [])
+  })
 
   return langDict
 }
