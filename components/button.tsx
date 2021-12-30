@@ -27,12 +27,12 @@ export function CopyBtn({ text }: CopyBtnProps): JSX.Element {
   const onClick = useCallback(async () => {
     await navigator.clipboard.writeText(text)
     setIcon(checkIcon)
-  }, [])
+  }, [setIcon, text])
 
   const onMouseLeave = useCallback((event: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => {
     event.currentTarget.blur()
     window.setTimeout(setIcon, ICON_LAG, clipboardIcon)
-  }, [])
+  }, [setIcon])
 
   return (
     <Button size="sm" variant="outline-dark" onClick={onClick} onMouseLeave={onMouseLeave} className="btn copy-btn">{icon}</Button>

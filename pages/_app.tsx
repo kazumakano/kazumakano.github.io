@@ -19,7 +19,7 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 
     setPage([nextPageIndex, keyDirect])
     router.replace(contents[nextPageIndex])
-  }, [pageIndex, router])
+  }, [pageIndex, setPage, router])
 
   useKey(8, () => onPressKey(-1))     // back space key
   useKey(13, () => onPressKey(1))     // enter key

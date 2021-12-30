@@ -62,7 +62,7 @@ const useLangDict = () => {
   
   const getLangDict = useCallback(async () => {
     setLangDict(await listAllReposLangs(process.env.NEXT_PUBLIC_USER_NAME!, process.env.NEXT_PUBLIC_TOKEN!))
-  }, [])
+  }, [setLangDict])
 
   useEffect(() => {
     getLangDict()

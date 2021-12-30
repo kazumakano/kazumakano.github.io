@@ -45,7 +45,7 @@ export default function Slide({ pageIndex, transDirect, setPage, children }: Sli
 
     setPage([nextPageIndex, swipeDirect])
     router.replace(contents[nextPageIndex])
-  }, [pageIndex, router])
+  }, [pageIndex, setPage, router])
 
   return (
     <div id="slide">
