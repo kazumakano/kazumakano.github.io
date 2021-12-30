@@ -61,9 +61,7 @@ const useLangDict = () => {
   let [langDict, setLangDict] = useState<LangDict | null>(null)
   
   const getLangDict = useCallback(async () => {
-    langDict =  await listAllReposLangs(process.env.NEXT_PUBLIC_USER_NAME!, process.env.NEXT_PUBLIC_TOKEN!)
-    setLangDict(langDict)
-    console.log(langDict)
+    setLangDict(await listAllReposLangs(process.env.NEXT_PUBLIC_USER_NAME!, process.env.NEXT_PUBLIC_TOKEN!))
   }, [])
 
   useEffect(() => {
