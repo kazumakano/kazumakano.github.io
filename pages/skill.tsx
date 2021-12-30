@@ -97,9 +97,10 @@ const ProgressBars = ({ langDict }: ProgressBarsProps) => {
         {PROGRESS_BAR_CONFS.map((c, i) => (
           <div className={styles.progressBars} key={i}>
             <div className="progress">
-              {Object.keys(c.colors).map(l => (
+              {Object.keys(c.colors).map((l, j) => (
                 <div
                   className="progress-bar"
+                  key={j}
                   style={{
                     backgroundColor: c.colors[l],
                     width: `${l in langDict ? calcProportion(langDict[l]) : 0}%`
