@@ -90,7 +90,7 @@ export default function LangBars(): JSX.Element {
     return (
       <>
         {LANG_BAR_CONFS.map((c, i) => (
-          <div className={styles.langBars} key={i}>
+          <div className={styles.langBar} key={i}>
             <div className="progress">
               {Object.keys(c.colors).map((l, j) => (
                 <div
