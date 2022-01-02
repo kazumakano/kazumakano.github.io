@@ -22,7 +22,7 @@ const nextJsLogo = (
 const reactLogo = (
   <svg viewBox="-11.5 -11.5 23 23" className={styles.logo}>
     <circle cx="0" cy="0" r="2.05" />
-    <g stroke-width="1">
+    <g strokeWidth="1">
       <ellipse rx="11" ry="4.2" />
       <ellipse rx="11" ry="4.2" transform="rotate(60)" />
       <ellipse rx="11" ry="4.2" transform="rotate(120)" />
