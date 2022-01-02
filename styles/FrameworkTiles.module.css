@@ -1,0 +1,80 @@
+.frameworkTiles > div {
+  display: flex;
+}
+
+.frameworkTiles > div > div {
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  flex-shrink: 0;
+  padding: 10px;
+  width: calc(100% / 3);
+}
+
+.frameworkTiles > div:last-child > div {
+  animation-direction: reverse;
+}
+
+.frameworkTiles > div > div:first-child {
+  animation-delay: -3s;
+  animation-name: slide-1;
+}
+
+.frameworkTiles > div > div:nth-child(2) {
+  animation-delay: -2s;
+  animation-name: slide-2;
+}
+
+.frameworkTiles > div > div:nth-child(3) {
+  animation-delay: -1s;
+  animation-name: slide-3;
+}
+
+.frameworkTiles > div > div:last-child {
+  animation-name: slide-4;
+}
+
+.logo > circle, .logo > path {
+  fill: black;
+}
+
+.logo > g {
+  fill: none;
+  stroke: black;
+}
+
+@keyframes slide-1 {
+  from {
+    transform: translateX(300%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-2 {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes slide-3 {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-300%);
+  }
+}
+
+@keyframes slide-4 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-400%);
+  }
+}
