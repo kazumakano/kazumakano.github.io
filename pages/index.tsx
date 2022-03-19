@@ -11,7 +11,7 @@ export default function Home({ pageIndex, transDirect, setPage }: ComponentProps
   return (
     <Layout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="about me">
       <TextBox enableMargins={[false, true]} proportion={70}>
-        <p className={styles.name}>I'm Kazuma Kano</p>
+        <p className={styles.name}>I&apos;m Kazuma Kano</p>
 
         <h2>education</h2>
         <Table borderless className={styles.eduTable} id={styles.eduTable}>
