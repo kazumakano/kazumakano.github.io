@@ -25,6 +25,7 @@ export default function Publication({ pageIndex, transDirect, setPage }: Compone
               <th>date</th>
               <th>title</th>
               <th>conference</th>
+              <th>authorship</th>
               <th></th>
             </tr>
           </thead>
@@ -34,11 +35,14 @@ export default function Publication({ pageIndex, transDirect, setPage }: Compone
                 <td>{dateTimeFormat.format(new Date(p.date[0], p.date[1] - 1))}</td>
                 <td>{p.title}</td>
                 <td>{p.conference}</td>
+                <td>{p.authorship}</td>
                 <td><CopyBtn text={p.title} /></td>
               </tr>
             ))}
           </tbody>
         </Table>
+
+        <h2>Domestic</h2>
       </TextBox>
     </Layout>
   )

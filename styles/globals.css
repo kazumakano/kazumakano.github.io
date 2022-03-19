@@ -79,7 +79,6 @@ a {
 .text-box > div {
   display: flex;
   flex-direction: column;
-  font-size: large;
   max-height: 100%;
   overflow: scroll;
   width: 100%;

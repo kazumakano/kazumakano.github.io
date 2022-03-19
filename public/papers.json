@@ -1,12 +1,14 @@
 [
   {
+    "authorship": "co-author",
     "date": [2021, 10],
     "conference": "ABC 2021",
     "title": "A data-driven approach for online pre-impact fall detection with wearable devices"
   },
   {
+    "authorship": "lead author",
     "date": [2022, 6],
-    "conference": "HCII 2022",
-    "title": "Sample title"
+    "conference": "HCI International 2022",
+    "title": "Smartphone Localization with Solar-Powered BLE Beacons in Warehouse"
   }
 ]
