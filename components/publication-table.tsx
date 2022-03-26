@@ -1,19 +1,12 @@
 import papers from "../public/papers.json"
 import Table from "react-bootstrap/Table"
+import { getFormattedDate } from "./datetime"
 import { CopyBtn } from "../components/button"
 
 
 type PublicationTableProps = {
   isInternational: boolean
 } 
-
-const dateTimeFormat = new Intl.DateTimeFormat(
-  "en-US",
-  {
-    month: "short",
-    year: "numeric"
-  }
-)
 
 export default function PublicationTable({ isInternational }: PublicationTableProps): JSX.Element {
   return (
@@ -30,7 +23,7 @@ export default function PublicationTable({ isInternational }: PublicationTablePr
     <tbody>
       {(isInternational ? papers.international : papers.domestic).map((p, i) => (
         <tr key={i}>
-          <td>{dateTimeFormat.format(new Date(p.date[0], p.date[1] - 1))}</td>
+          <td>{getFormattedDate(p.date[1], p.date[0])}</td>
           <td>{p.title}</td>
           <td>{p.conference}</td>
           <td>{p.authorship}</td>
