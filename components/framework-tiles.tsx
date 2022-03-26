@@ -27,8 +27,8 @@ export function FrameworkTile({ color, icon, index, name, url }: FrameworkTilePr
       onMouseOut={useCallback(() => setIsMouseOver(false), [])}
       onMouseOver={useCallback(() => setIsMouseOver(true), [])}
       style={{
-        gridColumn: `${index[0] + 1}`,
-        gridRow: `${index[1] + 1}`
+        gridColumn: index[0] + 1,
+        gridRow: index[1] + 1
       }}
     >
       <Link href={url}>
