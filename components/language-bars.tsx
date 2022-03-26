@@ -56,13 +56,19 @@ const LANG_BAR_CONFS: LangBarConf[] = [
 
 const useLangDict = () => {
   let [langDict, setLangDict] = useState<LangDict | null>(null)
-  
-  const getLangDict = useCallback(async () => {
-    setLangDict(await listAllReposLangs(process.env.NEXT_PUBLIC_USER_NAME!))
-  }, [setLangDict])
 
   useEffect(() => {
-    getLangDict()
+    let isMounted = true
+
+    listAllReposLangs(process.env.NEXT_PUBLIC_USER_NAME!).then((value) => {
+      if (isMounted) {
+        setLangDict(value)
+      }
+    })
+
+    return () => {
+      isMounted = false;
+    }
   })
 
   return langDict
