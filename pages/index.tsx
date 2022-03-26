@@ -14,7 +14,7 @@ export default function Home({ pageIndex, transDirect, setPage }: ComponentProps
         <p className={styles.name}>I&apos;m Kazuma Kano</p>
 
         <h2>education</h2>
-        <Table borderless className={styles.eduTable} id={styles.eduTable}>
+        <Table borderless className={styles.eduTable}>
           {history.map((h, i) => (
             <tbody key={i}>
               <tr>
