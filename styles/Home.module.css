@@ -1,4 +1,4 @@
-.name {
+.greeting {
   font-size: 3em;
   text-align: center;
 }
@@ -25,4 +25,26 @@
 .eduTable > tbody > tr:last-child > td {
   padding-left: 10px;
   padding-top: 0;
+}
+
+.expTable > tbody > tr > td:first-child {
+  padding-right: 2px;
+}
+
+.expTable > tbody > tr > td:nth-child(2) {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.expTable > tbody > tr > td:nth-child(3) {
+  padding-left: 2px;
+  padding-right: 10px;
+}
+
+.expTable > tbody > tr > td:last-child {
+  padding-left: 10px;
+}
+
+.expTable > tbody > tr > td:last-child > a:hover {
+  color: inherit;
 }

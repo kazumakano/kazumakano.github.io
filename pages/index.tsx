@@ -4,6 +4,7 @@ import type { ComponentProps } from "./_app"
 import Layout from "../components/layout"
 import TextBox from "../components/text-box"
 import Table from "react-bootstrap/Table"
+import Link from "next/link"
 import { RoundImg } from "../components/image"
 
 
@@ -11,11 +12,11 @@ export default function Home({ pageIndex, transDirect, setPage }: ComponentProps
   return (
     <Layout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="about me">
       <TextBox enableMargins={[false, true]} proportion={70}>
-        <p className={styles.name}>I&apos;m Kazuma Kano</p>
+        <p className={styles.greeting}>I&apos;m Kazuma Kano.</p>
 
         <h2>education</h2>
         <Table borderless className={styles.eduTable}>
-          {history.map((h, i) => (
+          {history.education.map((h, i) => (
             <tbody key={i}>
               <tr>
                 <td rowSpan={2}>{h.term[0]}</td>
@@ -31,6 +32,18 @@ export default function Home({ pageIndex, transDirect, setPage }: ComponentProps
         </Table>
 
         <h2>experience</h2>
+        <Table borderless className={styles.expTable}>
+          <tbody>
+            {history.experience.map((h, i) => (
+              <tr key={i}>
+                <td>{h.term[0]}</td>
+                <td>~</td>
+                <td>{h.term[1]}</td>
+                <td><Link href={h.url}><a target="_blank">{h.title}</a></Link></td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
       </TextBox>
 
       <RoundImg alt="avatar" enableMargins={[true, false]} proportion={30} src={`https://github.com/${process.env.NEXT_PUBLIC_USER_NAME}.png`} />

@@ -54,11 +54,11 @@ export default function Skill({ pageIndex, transDirect, setPage }: ComponentProp
 
       <TextBox enableMargins={[true, false]} proportion={50}>
         <h2>framework</h2>
-        <FrameworkGrid gridShape={[3, 2]}>
+        <FrameworkGrid gridShape={[4, 1]}>
           <FrameworkTile color="#61dafb" icon={reactIcon} index={[0, 0]} name="React" url={"https://ja.reactjs.org/"} />
           <FrameworkTile color="black" icon={nextJsIcon} index={[1, 0]} name="Next.js" url={"https://nextjs.org/"} />
           <FrameworkTile color="#092e20" icon={djangoIcon} index={[2, 0]} name="Django" url={"https://www.djangoproject.com/"} />
-          <FrameworkTile color="#f05732" icon={pyTorchIcon} index={[0, 1]} name="PyTorch" url={"https://pytorch.org/"} />
+          <FrameworkTile color="#f05732" icon={pyTorchIcon} index={[3, 0]} name="PyTorch" url={"https://pytorch.org/"} />
         </FrameworkGrid>
       </TextBox>
     </Layout>
