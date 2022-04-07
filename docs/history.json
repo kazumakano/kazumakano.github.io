@@ -1,12 +1,21 @@
-[
-  {
-    "department": "Department of Electrical Engineering, Electronics, and Information Engineering",
-    "school": "School of Engineering, Nagoya University",
-    "term": [2018, 2022]
-  },
-  {
-    "department": "Department of Information and Communication Engineering",
-    "school": "Graduate School of Engineering, Nagoya University",
-    "term": [2022, null]
-  }
-]
+{
+  "education": [
+    {
+      "department": "Department of Electrical Engineering, Electronics, and Information Engineering",
+      "school": "School of Engineering, Nagoya University",
+      "term": [2018, 2022]
+    },
+    {
+      "department": "Department of Information and Communication Engineering",
+      "school": "Graduate School of Engineering, Nagoya University",
+      "term": [2022, null]
+    }
+  ],
+  "experience": [
+    {
+      "term": [2022, null],
+      "title": "Graduate Program for Lifestyle Revolution based on Transdisciplinary Mobility Innovation",
+      "url": "https://www.tmi.mirai.nagoya-u.ac.jp/"
+    }
+  ]
+}
