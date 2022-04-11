@@ -15,9 +15,10 @@ type LangBarConf = {
 const LANG_BAR_CONFS: LangBarConf[] = [
   {
     colors: {
-      C: "#555555"
+      C: "#555555",
+      "C++": "#f34b7d"
     },
-    label: "C"
+    label: "C / C++"
   },
   {
     colors: {
@@ -78,14 +79,6 @@ const calcProportion = (bytes: number) => bytes / 10000
 
 export default function LangBars(): JSX.Element {
   const langDict = useLangDict()
-  // const langDict: LangDict = {
-  //   CSS: 133028,
-  //   HTML: 69052,
-  //   JavaScript: 86798,
-  //   "Jupyter Notebook": 3803,
-  //   Python: 270743,
-  //   TypeScript: 16135
-  // }
 
   if (langDict == null) {
     return (
