@@ -3,14 +3,17 @@
     {
       "department": "Department of Electrical Engineering, Electronics, and Information Engineering",
       "school": "School of Engineering, Nagoya University",
-      "term": [2018, 2022]
+      "term": [2018, 2022],
+      "url": "https://www.nuee.nagoya-u.ac.jp/"
     },
     {
       "department": "Department of Information and Communication Engineering",
       "school": "Graduate School of Engineering, Nagoya University",
-      "term": [2022, null]
+      "term": [2022, null],
+      "url": "https://www.nuee.nagoya-u.ac.jp/"
     }
   ],
+
   "experience": [
     {
       "term": [2022, null],

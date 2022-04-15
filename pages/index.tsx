@@ -1,5 +1,6 @@
 import styles from "../styles/Home.module.css"
 import history from "../public/history.json"
+import type { ReactNode } from "react"
 import type { ComponentProps } from "./_app"
 import Layout from "../components/layout"
 import TextBox from "../components/text-box"
@@ -7,6 +8,15 @@ import Table from "react-bootstrap/Table"
 import Link from "next/link"
 import { RoundImg } from "../components/image"
 
+
+type LinkedTdProps = {
+  children: ReactNode
+  url: string
+}
+
+const LinkedTd = ({ children, url }: LinkedTdProps) => (
+  <td><Link href={url}><a target="_blank">{children}</a></Link></td>
+)
 
 export default function Home({ pageIndex, transDirect, setPage }: ComponentProps): JSX.Element {
   return (
@@ -22,10 +32,10 @@ export default function Home({ pageIndex, transDirect, setPage }: ComponentProps
                 <td rowSpan={2}>{h.term[0]}</td>
                 <td rowSpan={2}>~</td>
                 <td rowSpan={2}>{h.term[1]}</td>
-                <td>{h.department}</td>
+                <LinkedTd url={h.url}>{h.department}</LinkedTd>
               </tr>
               <tr>
-                <td>{h.school}</td>
+                <LinkedTd url={h.url}>{h.school}</LinkedTd>
               </tr>
             </tbody>
           ))}
@@ -39,7 +49,7 @@ export default function Home({ pageIndex, transDirect, setPage }: ComponentProps
                 <td>{h.term[0]}</td>
                 <td>~</td>
                 <td>{h.term[1]}</td>
-                <td><Link href={h.url}><a target="_blank">{h.title}</a></Link></td>
+                <LinkedTd url={h.url}>{h.title}</LinkedTd>
               </tr>
             ))}
           </tbody>
