@@ -35,6 +35,14 @@ export function CopyBtn({ text }: CopyBtnProps): JSX.Element {
   }, [setIcon])
 
   return (
-    <Button size="sm" variant="outline-dark" onClick={onClick} onMouseLeave={onMouseLeave} className="btn copy-btn">{icon}</Button>
+    <Button
+      size="sm"
+      variant="outline-dark"
+      onClick={onClick}
+      onMouseLeave={onMouseLeave}
+      className="btn copy-btn"
+    >
+      {icon}
+    </Button>
   )
 }
