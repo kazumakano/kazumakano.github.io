@@ -6,6 +6,7 @@
 
 .langBar > div {
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.05);
   border-radius: 15px;
   height: 30px;
   margin-bottom: 5px;
