@@ -3,7 +3,7 @@ import type { ComponentProps } from "./_app"
 import { useCallback, useState } from "react"
 import Layout from "../components/layout"
 import TextBox from "../components/text-box"
-import { MailerBtn } from "../components/button"
+import { CopyBtn, MailerBtn } from "../components/button"
 
 
 export default function Contact({ setIsInputting, pageIndex, transDirect, setPage }: ComponentProps): JSX.Element {
@@ -37,6 +37,14 @@ export default function Contact({ setIsInputting, pageIndex, transDirect, setPag
       <TextBox enableMargins={[true, false]} proportion={50}>
         <h2>mail</h2>
         <div className={styles.mailForm}>
+          <div>
+            <label htmlFor="mail-to">to</label>
+            <div id="mail-to">
+              <span>{process.env.NEXT_PUBLIC_EMAIL}</span>
+              <CopyBtn text={process.env.NEXT_PUBLIC_EMAIL!} />  
+            </div>
+          </div>
+
           <div>
             <label htmlFor="mail-subject">subject</label>
             <input
