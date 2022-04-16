@@ -29,7 +29,7 @@ export default function Contact({ setIsInputting, pageIndex, transDirect, setPag
   const uri = getUri()
 
   return (
-    <Layout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="skill">
+    <Layout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="contact">
       <TextBox enableMargins={[false, true]} proportion={50}>
         <h2>social</h2>
       </TextBox>
