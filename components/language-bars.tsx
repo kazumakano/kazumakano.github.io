@@ -1,5 +1,5 @@
 import styles from "../styles/LangBars.module.css"
-import { useCallback, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import type { LangDict } from "../list-all-repos-langs/src/list-all-repos-langs"
 import listAllReposLangs from "../list-all-repos-langs/src/list-all-repos-langs"
 import Spinner from "react-bootstrap/Spinner"
