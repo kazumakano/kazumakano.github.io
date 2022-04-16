@@ -143,6 +143,11 @@ a {
   color: inherit;
 }
 
+.mailer-btn {
+  fill: currentColor;
+  width: 100px;
+}
+
 /* for smart phone */
 @media (orientation: portrait) {
   #body {

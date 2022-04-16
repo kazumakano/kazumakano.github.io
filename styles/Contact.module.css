@@ -1,0 +1,60 @@
+.mailForm {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.mailForm > div {
+  align-items: center;
+  display: flex;
+}
+
+.mailForm > div:first-child {
+  margin-bottom: 10px;
+}
+
+.mailForm > div:nth-child(2) {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.mailForm > button {
+  margin-top: 10px;
+}
+
+.mailForm > div > label {
+  text-transform: capitalize;
+  width: 80px;
+}
+
+.mailForm > div:first-child > input {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 15px;
+  height: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: calc(100% - 80px);
+}
+
+.mailForm > div:first-child > input:focus {
+  outline: none;
+}
+
+.mailForm > div:nth-child(2) > textarea {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 15px;
+  height: 200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  resize: none;
+  width: calc(100% - 80px);
+}
+
+.mailForm > div:nth-child(2) > textarea:focus {
+  outline: none;
+}
+
+.mailForm > div:nth-child(2) > textarea::-webkit-scrollbar {
+  display: none;
+}
