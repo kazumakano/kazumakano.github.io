@@ -60,7 +60,7 @@ const sendIcon = (
 
 export function MailerBtn({ uri }: MailerBtnProps): JSX.Element {
   return (
-    <Link href={uri}>
+    <Link href={uri} passHref>
       <Button
         size="sm"
         variant="dark"
