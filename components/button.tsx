@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react"
 import type { MouseEvent } from "react"
 import Button from "react-bootstrap/Button"
+import Link from "next/link"
 
 const ICON_LAG = 1000    // time lag to change icon
 
@@ -44,5 +45,29 @@ export function CopyBtn({ text }: CopyBtnProps): JSX.Element {
     >
       {icon}
     </Button>
+  )
+}
+
+type MailerBtnProps = {
+  uri: string
+}
+
+const sendIcon = (
+  <svg height="1em" width="1em">
+    <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
+  </svg>
+)
+
+export function MailerBtn({ uri }: MailerBtnProps): JSX.Element {
+  return (
+    <Link href={uri}>
+      <Button
+        size="sm"
+        variant="dark"
+        className="btn mailer-btn"
+      >
+        {sendIcon}
+      </Button>
+    </Link>
   )
 }
