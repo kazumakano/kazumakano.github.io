@@ -1,9 +1,28 @@
 import styles from "../styles/FrameworkTiles.module.css"
+import type { ReactNode } from "react"
 import { useCallback, useState } from "react"
 import Link from "next/link"
 import { AnimatePresence, motion } from "framer-motion"
-import type { ReactNode } from "react"
 
+
+type FrameworkGridProps = {
+  children: ReactNode
+  gridShape: [number, number]
+}
+
+export function FrameworkGrid({ children, gridShape }: FrameworkGridProps): JSX.Element {
+  return (
+    <div
+      className={styles.frameworkGrid}
+      style={{
+        gridTemplateColumns: "1fr ".repeat(gridShape[0]),
+        gridTemplateRows: "1fr ".repeat(gridShape[1])
+      }}
+    >
+      {children}
+    </div>
+  )
+}
 
 type FrameworkTileProps = {
   color: string
@@ -46,25 +65,6 @@ export function FrameworkTile({ color, icon, index, name, url }: FrameworkTilePr
           </AnimatePresence>
         </a>
       </Link>
-    </div>
-  )
-}
-
-type FrameworkGridProps = {
-  children: ReactNode
-  gridShape: [number, number]
-}
-
-export function FrameworkGrid({ children, gridShape }: FrameworkGridProps): JSX.Element {
-  return (
-    <div
-      className={styles.frameworkGrid}
-      style={{
-        gridTemplateColumns: "1fr ".repeat(gridShape[0]),
-        gridTemplateRows: "1fr ".repeat(gridShape[1])
-      }}
-    >
-      {children}
     </div>
   )
 }
