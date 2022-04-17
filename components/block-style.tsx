@@ -15,7 +15,7 @@ export default function useBlockStyle(enableMargins: [boolean, boolean], proport
 
   useEffect(() => {
     setIsLandscape(window.matchMedia("(orientation: landscape)").matches)
-  }, [])
+  }, [setIsLandscape])
 
   return {
     height: isLandscape ? "100%" : `calc(${proportion}% - 2px)`,
