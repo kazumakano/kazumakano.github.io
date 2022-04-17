@@ -24,8 +24,8 @@ export function FrameworkTile({ color, icon, index, name, url }: FrameworkTilePr
 
   return (
     <div
-      onMouseOut={useCallback(() => setIsMouseOver(false), [])}
-      onMouseOver={useCallback(() => setIsMouseOver(true), [])}
+      onMouseOut={useCallback(() => setIsMouseOver(false), [setIsMouseOver])}
+      onMouseOver={useCallback(() => setIsMouseOver(true), [setIsMouseOver])}
       style={{
         gridColumn: index[0] + 1,
         gridRow: index[1] + 1
