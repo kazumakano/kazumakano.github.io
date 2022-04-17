@@ -7,9 +7,9 @@ import type { ReactNode } from "react"
 
 type FrameworkTileProps = {
   color: string
-  icon: JSX.Element,
-  index: [number, number],
-  name: string,
+  icon: JSX.Element
+  index: [number, number]
+  name: string
   url: string
 }
 
@@ -51,7 +51,7 @@ export function FrameworkTile({ color, icon, index, name, url }: FrameworkTilePr
 }
 
 type FrameworkGridProps = {
-  children: ReactNode,
+  children: ReactNode
   gridShape: [number, number]
 }
 
