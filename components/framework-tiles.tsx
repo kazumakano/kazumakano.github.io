@@ -58,7 +58,7 @@ type FrameworkGridProps = {
 export function FrameworkGrid({ children, gridShape }: FrameworkGridProps): JSX.Element {
   return (
     <div
-      className={styles.frameworkTiles}
+      className={styles.frameworkGrid}
       style={{
         gridTemplateColumns: "1fr ".repeat(gridShape[0]),
         gridTemplateRows: "1fr ".repeat(gridShape[1])
