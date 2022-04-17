@@ -61,7 +61,7 @@ const useLangDict = () => {
   useEffect(() => {
     let isMounted = true
 
-    listAllReposLangs(process.env.NEXT_PUBLIC_USER_NAME!).then((value) => {
+    listAllReposLangs(process.env.NEXT_PUBLIC_GITHUB_USER_NAME!).then((value) => {
       if (isMounted) {
         setLangDict(value)
       }
