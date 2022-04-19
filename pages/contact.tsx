@@ -57,7 +57,7 @@ export default function Contact({ setIsInputting, pageIndex, transDirect, setPag
             @{process.env.NEXT_PUBLIC_TWITTER_USER_NAME}
           </SocialTile>
           <SocialTile color="black" icon={githubIcon} reverse={true} url={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB_USER_NAME}`}>
-            Github<br />
+            GitHub<br />
             @{process.env.NEXT_PUBLIC_GITHUB_USER_NAME}
           </SocialTile>
         </SocialGrid>
