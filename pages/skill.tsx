@@ -43,6 +43,15 @@ const reactIcon = (
   </svg>
 )
 
+const unityIcon = (
+  <svg viewBox="400 400 1200 1200">
+    <path d="M1513.54,1229.86V693l-465-268.44V630.46l182.19,105.18c6.59,3.65,6.76,14,0,17.64l-216.55,125a20.34,20.34,0,0,1-20.4,0l-216.53-125c-6.61-3.62-6.8-14,0-17.66L959.41,630.45V424.53L494.46,693v536.89l178.34-103V916.51c-.13-7.53,8.74-12.83,15.29-8.78l216.54,125a20.38,20.38,0,0,1,10.2,17.68v250c.17,7.49-8.66,12.86-15.21,8.87L717.39,1204.11l-178.34,103,465,268.44,465-268.44-178.34-103L1108.43,1309.3c-6.46,3.88-15.49-1.14-15.26-8.84v-250a20.36,20.36,0,0,1,10.22-17.67l216.52-125c6.44-3.92,15.53,1.11,15.29,8.82v210.34Z" />
+    <path d="M1004,1575.52l465-268.44-178.34-103L1108.43,1309.3c-6.46,3.88-15.49-1.14-15.26-8.84v-250a20.39,20.39,0,0,1,10.21-17.67l216.53-125c6.44-3.92,15.53,1.11,15.29,8.82v210.34l178.34,103V693L1004,987.15Z" />
+    <path d="M1048.58,424.53V630.46l182.19,105.18c6.59,3.65,6.76,14,0,17.64l-216.55,125a20.34,20.34,0,0,1-20.4,0l-216.53-125c-6.61-3.62-6.8-14,0-17.66L959.41,630.46V424.53L494.46,693,1004,987.15,1513.54,693Z" />
+    <path d="M899.62,1309.33,717.39,1204.11l-178.34,103,465,268.44V987.15L494.46,693v536.89l178.34-103V916.51c-.13-7.53,8.74-12.83,15.29-8.78l216.54,125a20.38,20.38,0,0,1,10.2,17.68v250C915,1308,906.17,1313.32,899.62,1309.33Z" />
+  </svg>
+)
+
 export default function Skill({ pageIndex, transDirect, setPage }: ComponentProps): JSX.Element {
   return (
     <Layout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="skill">
@@ -54,11 +63,12 @@ export default function Skill({ pageIndex, transDirect, setPage }: ComponentProp
 
       <TextBox enableMargins={[true, false]} proportion={50}>
         <h2>framework</h2>
-        <FrameworkGrid gridShape={[4, 1]}>
-          <FrameworkTile color="#61dafb" icon={reactIcon} index={[0, 0]} name="React" url={"https://ja.reactjs.org/"} />
+        <FrameworkGrid gridShape={[4, 2]}>
+          <FrameworkTile color="#092e20" icon={djangoIcon} index={[0, 0]} name="Django" url={"https://www.djangoproject.com/"} />
           <FrameworkTile color="black" icon={nextJsIcon} index={[1, 0]} name="Next.js" url={"https://nextjs.org/"} />
-          <FrameworkTile color="#092e20" icon={djangoIcon} index={[2, 0]} name="Django" url={"https://www.djangoproject.com/"} />
-          <FrameworkTile color="#f05732" icon={pyTorchIcon} index={[3, 0]} name="PyTorch" url={"https://pytorch.org/"} />
+          <FrameworkTile color="#f05732" icon={pyTorchIcon} index={[2, 0]} name="PyTorch" url={"https://pytorch.org/"} />
+          <FrameworkTile color="#61dafb" icon={reactIcon} index={[3, 0]} name="React" url={"https://ja.reactjs.org/"} />
+          <FrameworkTile color="black" icon={unityIcon} index={[0, 1]} name="Unity" url={"https://unity.com/ja/"} />
         </FrameworkGrid>
       </TextBox>
     </Layout>
