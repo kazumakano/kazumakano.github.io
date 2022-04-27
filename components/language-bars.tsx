@@ -22,6 +22,12 @@ const LANG_BAR_CONFS: LangBarConf[] = [
   },
   {
     colors: {
+      "C#": "#178600"
+    },
+    label: "C#"
+  },
+  {
+    colors: {
       Go: "#375eab"
     },
     label: "Go"
