@@ -28,7 +28,10 @@ export default function Home({ pageIndex, transDirect, setPage }: ComponentProps
   return (
     <Layout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="about me">
       <TextBox enableMargins={[false, true]} proportion={70}>
-        <p className={styles.greeting}>I&apos;m Kazuma Kano.</p>
+        <p className={styles.greeting}>
+          kazuma kano<br />
+          engineering student
+        </p>
 
         <h2>education</h2>
         <Table borderless className={styles.eduTable}>

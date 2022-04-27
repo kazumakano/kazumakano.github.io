@@ -1,6 +1,7 @@
 .greeting {
   font-size: 3em;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .eduTable > tbody > tr:first-child > td:first-child {
