@@ -3,11 +3,13 @@ import history from "../public/history.json"
 import type { ReactNode } from "react"
 import Link from "next/link"
 import type { ComponentProps } from "./_app"
+import { useEffect, useState } from "react"
 import Layout from "../components/layout"
 import TextBox from "../components/text-box"
 import Table from "react-bootstrap/Table"
 import { RoundImg } from "../components/image"
 
+const HINT_DELAY = 5000
 
 type LinkedTdProps = {
   children: ReactNode
@@ -25,47 +27,63 @@ const LinkedTd = ({ children, url }: LinkedTdProps) => (
 )
 
 export default function Home({ pageIndex, transDirect, setPage }: ComponentProps): JSX.Element {
-  return (
-    <Layout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="about me">
-      <TextBox enableMargins={[false, true]} proportion={70}>
-        <p className={styles.greeting}>
-          kazuma kano<br />
-          engineering student
+  const [hintMsg, setHintMsg] = useState<JSX.Element>(<></>)
+
+  useEffect(() => {
+    window.setTimeout(setHintMsg, HINT_DELAY, (
+      <div className={styles.hintMsg}>
+        <p>
+          press <kbd>Enter</kbd> or swipe
         </p>
+      </div>
+    ))
+  }, [setHintMsg])
 
-        <h2>education</h2>
-        <Table borderless className={styles.eduTable}>
-          {history.education.map((h, i) => (
-            <tbody key={i}>
-              <tr>
-                <td rowSpan={2}>{h.term[0]}</td>
-                <td rowSpan={2}>~</td>
-                <td rowSpan={2}>{h.term[1]}</td>
-                <LinkedTd url={h.url}>{h.department}</LinkedTd>
-              </tr>
-              <tr>
-                <LinkedTd url={h.url}>{h.school}</LinkedTd>
-              </tr>
-            </tbody>
-          ))}
-        </Table>
+  return (
+    <>
+      <Layout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="about me">
+        <TextBox enableMargins={[false, true]} proportion={70}>
+          <p className={styles.greeting}>
+            kazuma kano<br />
+            engineering student
+          </p>
 
-        <h2>experience</h2>
-        <Table borderless className={styles.expTable}>
-          <tbody>
-            {history.experience.map((h, i) => (
-              <tr key={i}>
-                <td>{h.term[0]}</td>
-                <td>~</td>
-                <td>{h.term[1]}</td>
-                <LinkedTd url={h.url}>{h.title}</LinkedTd>
-              </tr>
+          <h2>education</h2>
+          <Table borderless className={styles.eduTable}>
+            {history.education.map((h, i) => (
+              <tbody key={i}>
+                <tr>
+                  <td rowSpan={2}>{h.term[0]}</td>
+                  <td rowSpan={2}>~</td>
+                  <td rowSpan={2}>{h.term[1]}</td>
+                  <LinkedTd url={h.url}>{h.department}</LinkedTd>
+                </tr>
+                <tr>
+                  <LinkedTd url={h.url}>{h.school}</LinkedTd>
+                </tr>
+              </tbody>
             ))}
-          </tbody>
-        </Table>
-      </TextBox>
+          </Table>
 
-      <RoundImg alt="avatar" enableMargins={[true, false]} proportion={30} src={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB_USER_NAME}.png`} />
-    </Layout>
+          <h2>experience</h2>
+          <Table borderless className={styles.expTable}>
+            <tbody>
+              {history.experience.map((h, i) => (
+                <tr key={i}>
+                  <td>{h.term[0]}</td>
+                  <td>~</td>
+                  <td>{h.term[1]}</td>
+                  <LinkedTd url={h.url}>{h.title}</LinkedTd>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        </TextBox>
+
+        <RoundImg alt="avatar" enableMargins={[true, false]} proportion={30} src={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB_USER_NAME}.png`} />
+      </Layout>
+
+      {hintMsg}
+    </>
   )
 }
