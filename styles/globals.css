@@ -137,21 +137,16 @@ a {
   border-radius: 50%;
 }
 
-.btn {
-  font-size: inherit;
-}
-
 .copy-btn {
   border: none;
 }
 
 .copy-btn:hover {
   background-color: inherit;
-  color: inherit;
 }
 
 .mailer-btn {
-  fill: currentColor;
+  fill: white;
   width: 100px;
 }
 
