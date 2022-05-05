@@ -58,6 +58,12 @@ const LANG_BAR_CONFS: LangBarConf[] = [
       "Jupyter Notebook": "#da5b0b"
     },
     label: "Python"
+  },
+  {
+    colors: {
+      R: "#198CE7"
+    },
+    label: "R"
   }
 ]
 
