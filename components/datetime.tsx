@@ -1,4 +1,4 @@
-const dateTimeFormat = new Intl.DateTimeFormat(
+const dateFormat = new Intl.DateTimeFormat(
   "en-US",
   {
     month: "short",
@@ -6,6 +6,11 @@ const dateTimeFormat = new Intl.DateTimeFormat(
   }
 )
 
-export function getFormattedDate(month: number, year: number): string {
-  return dateTimeFormat.format(new Date(year, month - 1))
+export function getFormattedDate(month?: number, year?: number): string | null {
+  if (month == null || year == null) {
+    return null
+  }
+  else {
+    return dateFormat.format(new Date(year, month - 1))
+  }
 }

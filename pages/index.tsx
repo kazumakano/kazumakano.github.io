@@ -7,6 +7,7 @@ import { useEffect, useState } from "react"
 import Layout from "../components/layout"
 import TextBox from "../components/text-box"
 import Table from "react-bootstrap/Table"
+import { getFormattedDate } from "../components/datetime"
 import { RoundImg } from "../components/image"
 
 const HINT_DELAY = 5000
@@ -59,9 +60,9 @@ export default function Home({ pageIndex, transDirect, setPage }: ComponentProps
             {history.education.map((h, i) => (
               <tbody key={i}>
                 <tr>
-                  <td rowSpan={2}>{h.term[0]}</td>
+                  <td rowSpan={2}>{getFormattedDate(h.term[0]?.[1], h.term[0]?.[0])}</td>
                   <td rowSpan={2}>~</td>
-                  <td rowSpan={2}>{h.term[1]}</td>
+                  <td rowSpan={2}>{getFormattedDate(h.term[1]?.[1], h.term[1]?.[0])}</td>
                   <LinkedTd url={h.url}>{h.department}</LinkedTd>
                 </tr>
                 <tr>
@@ -76,9 +77,9 @@ export default function Home({ pageIndex, transDirect, setPage }: ComponentProps
             <tbody>
               {history.experience.map((h, i) => (
                 <tr key={i}>
-                  <td>{h.term[0]}</td>
+                  <td>{getFormattedDate(h.term[0]?.[1], h.term[0]?.[0])}</td>
                   <td>~</td>
-                  <td>{h.term[1]}</td>
+                  <td>{getFormattedDate(h.term[1]?.[1], h.term[1]?.[0])}</td>
                   <LinkedTd url={h.url}>{h.title}</LinkedTd>
                 </tr>
               ))}
