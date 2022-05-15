@@ -1,0 +1,20 @@
+.code {
+  border-right-style: solid;
+  color: white;
+  font-size: xxx-large;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: 0.5em;
+  margin-top: auto;
+  padding-bottom: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.5em;
+}
+
+.msg {
+  color: white;
+  font-size: x-large;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-top: auto;
+}
