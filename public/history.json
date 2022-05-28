@@ -16,6 +16,16 @@
 
   "experience": [
     {
+      "term": [[2019, 2], [2019, 3]],
+      "title": "Oregon Experience Program in Eugene, Oregon, at the University of Oregon",
+      "url": "https://oep.uoregon.edu/"
+    },
+    {
+      "term": [[2020, 2], [2020, 3]],
+      "title": "Intensive General English Full Time Course at NZLC Auckland",
+      "url": "https://nzlc.ac.nz/"
+    },
+    {
       "term": [[2022, 4], null],
       "title": "Graduate Program for Lifestyle Revolution based on Transdisciplinary Mobility Innovation",
       "url": "https://www.tmi.mirai.nagoya-u.ac.jp/"
