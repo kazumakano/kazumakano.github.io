@@ -18,7 +18,8 @@ a {
 
 #__next {
   align-items: center;
-  background-image: url("../public/fushimi-inari-taisha.jpeg");
+  background-image: url("../public/mirai-tower.jpeg");
+  background-position: center;
   background-size: cover;
   display: flex;
   height: 100%;
