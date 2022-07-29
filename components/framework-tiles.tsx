@@ -7,18 +7,11 @@ import { AnimatePresence, motion } from "framer-motion"
 
 type FrameworkGridProps = {
   children: ReactNode
-  gridShape: [number, number]
 }
 
-export function FrameworkGrid({ children, gridShape }: FrameworkGridProps): JSX.Element {
+export function FrameworkGrid({ children }: FrameworkGridProps): JSX.Element {
   return (
-    <div
-      className={styles.frameworkGrid}
-      style={{
-        gridTemplateColumns: "1fr ".repeat(gridShape[0]),
-        gridTemplateRows: "1fr ".repeat(gridShape[1])
-      }}
-    >
+    <div className={styles.frameworkGrid}>
       {children}
     </div>
   )
@@ -27,12 +20,11 @@ export function FrameworkGrid({ children, gridShape }: FrameworkGridProps): JSX.
 type FrameworkTileProps = {
   color: string
   icon: JSX.Element
-  index: [number, number]
   name: string
   url: string
 }
 
-export function FrameworkTile({ color, icon, index, name, url }: FrameworkTileProps): JSX.Element {
+export function FrameworkTile({ color, icon, name, url }: FrameworkTileProps): JSX.Element {
   const [isMouseOver, setIsMouseOver] = useState<boolean>(false)
 
   const nameTile = (
@@ -45,10 +37,6 @@ export function FrameworkTile({ color, icon, index, name, url }: FrameworkTilePr
     <div
       onMouseEnter={useCallback(() => setIsMouseOver(true), [setIsMouseOver])}
       onMouseLeave={useCallback(() => setIsMouseOver(false), [setIsMouseOver])}
-      style={{
-        gridColumn: index[0] + 1,
-        gridRow: index[1] + 1
-      }}
     >
       <Link href={url}>
         <a target="_blank">

@@ -70,13 +70,13 @@ export default function Skill({ pageIndex, transDirect, setPage }: ComponentProp
 
       <TextBox enableMargins={[true, false]} proportion={50}>
         <h2><span className={styles.frameworkHeader}>Framework and Tool</span></h2>
-        <FrameworkGrid gridShape={[4, 2]}>
-          <FrameworkTile color="#092e20" icon={djangoIcon} index={[0, 0]} name="Django" url="https://www.djangoproject.com/" />
-          <FrameworkTile color="black" icon={nextJsIcon} index={[1, 0]} name="Next.js" url="https://nextjs.org/" />
-          <FrameworkTile color="#f05732" icon={pyTorchIcon} index={[2, 0]} name="PyTorch" url="https://pytorch.org/" />
-          <FrameworkTile color="#61dafb" icon={reactIcon} index={[3, 0]} name="React" url="https://ja.reactjs.org/" />
-          <FrameworkTile color="black" icon={unityIcon} index={[0, 1]} name="Unity" url="https://unity.com/ja/" />
-          <FrameworkTile color="#2496ed" icon={dockerIcon} index={[1, 1]} name="Docker" url="https://www.docker.com/" />
+        <FrameworkGrid>
+          <FrameworkTile color="#092e20" icon={djangoIcon} name="Django" url="https://www.djangoproject.com/" />
+          <FrameworkTile color="black" icon={nextJsIcon} name="Next.js" url="https://nextjs.org/" />
+          <FrameworkTile color="#f05732" icon={pyTorchIcon} name="PyTorch" url="https://pytorch.org/" />
+          <FrameworkTile color="#61dafb" icon={reactIcon} name="React" url="https://ja.reactjs.org/" />
+          <FrameworkTile color="black" icon={unityIcon} name="Unity" url="https://unity.com/ja/" />
+          <FrameworkTile color="#2496ed" icon={dockerIcon} name="Docker" url="https://www.docker.com/" />
         </FrameworkGrid>
       </TextBox>
     </Layout>
