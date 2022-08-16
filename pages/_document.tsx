@@ -6,7 +6,7 @@ const BG_IMGS = [
 ]
 
 const getRandInt = (maxNum: number) => {
-  return Math.round(Date.now()) % maxNum
+  return Math.round(Date.now()) % maxNum    // timestamp at build
 }
 
 export default function Document(): JSX.Element {
