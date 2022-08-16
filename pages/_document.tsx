@@ -1,5 +1,13 @@
 import { Html, Head, Main, NextScript } from "next/document"
 
+const BG_IMGS = [
+  "/fushimi-inari-taisha.jpeg",
+  "/mirai-tower.jpeg"
+]
+
+const getRandInt = (maxNum: number) => {
+  return Math.round(Date.now()) % maxNum
+}
 
 export default function Document(): JSX.Element {
   return (
@@ -13,7 +21,7 @@ export default function Document(): JSX.Element {
         />
       </Head>
 
-      <body>
+      <body style={{backgroundImage: `url(${BG_IMGS[getRandInt(BG_IMGS.length)]})`}}>
         <Main />
         <NextScript />
       </body>
