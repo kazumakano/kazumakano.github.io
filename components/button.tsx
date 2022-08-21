@@ -26,7 +26,7 @@ export function CopyBtn({ text }: CopyBtnProps): JSX.Element {
   const [icon, setIcon] = useState<JSX.Element>(clipboardIcon)
 
   const onClick = useCallback(async () => {
-    await navigator.clipboard.writeText(text)
+    await window.navigator.clipboard.writeText(text)
     setIcon(checkIcon)
   }, [setIcon, text])
 
