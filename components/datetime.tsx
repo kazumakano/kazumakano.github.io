@@ -11,6 +11,6 @@ export function getFormattedDate(month?: number, year?: number): string | null {
     return null
   }
   else {
-    return dateFormat.format(new window.Date(year, month - 1))
+    return dateFormat.format(new Date(year, month - 1))
   }
 }
