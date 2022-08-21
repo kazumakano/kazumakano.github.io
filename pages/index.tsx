@@ -37,13 +37,15 @@ export default function Home({ pageIndex, transDirect, setPage }: ComponentProps
   const [hintMsg, setHintMsg] = useState<JSX.Element>(<></>)
 
   useEffect(() => {
-    window.setTimeout(setHintMsg, HINT_DELAY, (
+    const timerId = window.setTimeout(setHintMsg, HINT_DELAY, (
       <div className={styles.hintMsg}>
         <p>
           press <kbd>Enter</kbd> or swipe {rightIcon}
         </p>
       </div>
     ))
+
+    return () => window.clearTimeout(timerId)
   }, [setHintMsg])
 
   return (
