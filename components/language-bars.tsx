@@ -71,17 +71,13 @@ const useLangDict = () => {
   let [langDict, setLangDict] = useState<LangDict | null>(null)
 
   useEffect(() => {
-    let isMounted = true
+    const ctrler = new window.AbortController()
 
-    listAllReposLangs(process.env.NEXT_PUBLIC_GITHUB_USER_NAME!).then(value => {
-      if (isMounted) {
-        setLangDict(value)
-      }
-    })
+    listAllReposLangs(process.env.NEXT_PUBLIC_GITHUB_USER_NAME!, undefined, ctrler.signal).then(value => {
+      setLangDict(value)
+    }).catch(() => {})
 
-    return () => {
-      isMounted = false;
-    }
+    return () => ctrler.abort()
   }, [setLangDict])
 
   return langDict
