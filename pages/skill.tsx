@@ -12,6 +12,12 @@ const downIcon = (
   </svg>
 )
 
+const expoIcon = (
+  <svg viewBox="0 -1 24 23">
+    <path d="M11.39 8.269c.19-.277.397-.312.565-.312.168 0 .447.035.637.312 1.49 2.03 3.95 6.075 5.765 9.06 1.184 1.945 2.093 3.44 2.28 3.63.7.714 1.66.269 2.218-.541.549-.797.701-1.357.701-1.954 0-.407-7.958-15.087-8.759-16.309C14.027.98 13.775.683 12.457.683h-.988c-1.315 0-1.505.297-2.276 1.472C8.392 3.377.433 18.057.433 18.463c0 .598.153 1.158.703 1.955.558.81 1.518 1.255 2.218.54.186-.19 1.095-1.684 2.279-3.63 1.815-2.984 4.267-7.029 5.758-9.06z" />
+  </svg>
+)
+
 const djangoIcon = (
   <svg viewBox="2 2 20 20">
     <path d="M11,3v5.159C10.653,8.018,9.904,8,9.535,8C6.759,8,4.19,9.306,4.19,13c0,4.42,3.48,5,5.81,5c0.92,0,3-0.09,4-0.38V3H11z M9.97,15.533c-1.31,0-2.58-0.413-2.58-2.533s1.27-2.45,2.58-2.45c0.32,0,0.68,0.06,1.03,0.14v4.703 C10.65,15.473,10.29,15.533,9.97,15.533z" />
@@ -72,9 +78,10 @@ export default function Skill({ pageIndex, transDirect, setPage }: ComponentProp
         <h2><span className={styles.frameworkHeader}>Framework and Tool</span></h2>
         <FrameworkGrid>
           <FrameworkTile color="#092e20" icon={djangoIcon} name="Django" url="https://www.djangoproject.com/" />
-          <FrameworkTile color="black" icon={nextJsIcon} name="Next.js" url="https://nextjs.org/" />
           <FrameworkTile color="#f05732" icon={pyTorchIcon} name="PyTorch" url="https://pytorch.org/" />
-          <FrameworkTile color="#61dafb" icon={reactIcon} name="React" url="https://ja.reactjs.org/" />
+          <FrameworkTile color="#61dafb" icon={reactIcon} name="React / React Native" url="https://ja.reactjs.org/" />
+          <FrameworkTile color="black" icon={expoIcon} name="Expo" url="https://expo.dev/" />
+          <FrameworkTile color="black" icon={nextJsIcon} name="Next.js" url="https://nextjs.org/" />
           <FrameworkTile color="black" icon={unityIcon} name="Unity" url="https://unity.com/ja/" />
           <FrameworkTile color="#2496ed" icon={dockerIcon} name="Docker" url="https://www.docker.com/" />
         </FrameworkGrid>
