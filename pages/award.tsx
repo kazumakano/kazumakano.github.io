@@ -10,7 +10,13 @@ export default function Award({ pageIndex, transDirect, setPage }: ComponentProp
   return (
     <Layout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="award">
       <TextBox enableMargins={[false, false]} proportion={100}>
-        <Table borderless>
+        <Table hover striped>
+          <thead>
+            <tr>
+              <th>date</th>
+              <th>title</th>
+            </tr>
+          </thead>
           <tbody>
             {awards.map((a, i) => (
               <tr key={i}>
