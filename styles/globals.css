@@ -138,6 +138,10 @@ a {
   text-transform: capitalize;
 }
 
+.text-box > div > h2.no-caps {
+  text-transform: none;
+}
+
 .text-box > div > table {
   margin-left: auto;
   margin-right: auto;

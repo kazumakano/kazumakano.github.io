@@ -27,5 +27,13 @@
       "conference": "HCI International 2022",
       "title": "Smartphone Localization with Solar-Powered BLE Beacons in Warehouse"
     }
+  ],
+
+  "poster": [
+    {
+      "date": [2022, 11],
+      "conference": "SCEWC22",
+      "title": "Smart Warehouse"
+    }
   ]
 }
