@@ -25,7 +25,7 @@ const useRandIdx = (maxIdx: number) => {
     ).then(data => {
       setIdx(Math.round(data.unixtime) % maxIdx)
     }))
-  }, [setIdx])
+  }, [maxIdx, setIdx])
 
   return idx
 }
