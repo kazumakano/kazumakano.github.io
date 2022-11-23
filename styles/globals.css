@@ -28,6 +28,15 @@ a {
   overflow-x: hidden;
 }
 
+#background {
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
 #slide {
   display: flex;
   height: 80%;
