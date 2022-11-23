@@ -1,6 +1,7 @@
 import { Html, Head, Main, NextScript } from "next/document"
 
 const BG_IMGS = [
+  "barcelona.jpeg",
   "/fushimi-inari-taisha.jpeg",
   "/mirai-tower.jpeg"
 ]
