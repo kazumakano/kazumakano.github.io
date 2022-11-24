@@ -12,6 +12,7 @@
 
 .nameTile {
   align-items: center;
+  border-radius: 20px;
   color: white;
   display: flex;
   font-size: large;
