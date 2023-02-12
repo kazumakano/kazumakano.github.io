@@ -2,38 +2,41 @@
   "domestic": [
     {
       "authorship": "co-author",
-      "date": [2022, 3],
       "conference": "WSSIT 2022",
-      "title": "機械学習による慣性センサを用いた転倒動作検知に関する研究"
+      "date": [2022, 3],
+      "title": "機械学習による慣性センサを用いた転倒動作検知に関する研究",
+      "type": "proceedings"
     },
     {
       "authorship": "lead author",
-      "date": [2022, 7],
       "conference": "DICOMO 2022",
-      "title": "物流倉庫におけるソーラー式BLEビーコンとPDRを用いたハイブリッド測位"
+      "date": [2022, 7],
+      "title": "物流倉庫におけるソーラー式BLEビーコンとPDRを用いたハイブリッド測位",
+      "type": "proceedings"
     }
   ],
 
   "international": [
     {
       "authorship": "co-author",
-      "date": [2021, 10],
       "conference": "ABC 2021",
-      "title": "A Data-Driven Approach for Online Pre-impact Fall Detection with Wearable Devices"
+      "date": [2021, 10],
+      "title": "A Data-Driven Approach for Online Pre-impact Fall Detection with Wearable Devices",
+      "type": "proceedings"
     },
     {
       "authorship": "lead author",
-      "date": [2022, 6],
       "conference": "HCI International 2022",
-      "title": "Smartphone Localization with Solar-Powered BLE Beacons in Warehouse"
-    }
-  ],
-
-  "poster": [
+      "date": [2022, 6],
+      "title": "Smartphone Localization with Solar-Powered BLE Beacons in Warehouse",
+      "type": "proceedings"
+    },
     {
-      "date": [2022, 11],
+      "authorship": null,
       "conference": "SCEWC 22",
-      "title": "Smart Warehouse"
+      "date": [2022, 11],
+      "title": "Smart Warehouse",
+      "type": "exhibition"
     }
   ]
 }
