@@ -11,13 +11,14 @@ type LayoutProps = {
   transDirect: number
   setPage: Dispatch<SetStateAction<[number, number]>>
   title: string
+  noCapsHeader?: boolean
 }
 
-export default function Layout({ children, pageIndex, transDirect, setPage, title }: LayoutProps): JSX.Element {
+export default function Layout({ children, pageIndex, transDirect, setPage, title, noCapsHeader }: LayoutProps): JSX.Element {
   return (
     <>
       <Slide pageIndex={pageIndex} transDirect={transDirect} setPage={setPage}>
-        <Header title={title} />
+        <Header title={title} noCaps={noCapsHeader} />
 
         <Body>
           {children}

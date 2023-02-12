@@ -72,6 +72,10 @@ a {
   text-transform: capitalize;
 }
 
+#header > h1.no-caps {
+  text-transform: none;
+}
+
 #body {
   display: flex;
   height: calc(90% - 2px);
