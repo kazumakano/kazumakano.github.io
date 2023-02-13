@@ -77,6 +77,12 @@ const pyTorchIcon = (
   </svg>
 )
 
+const pyTorchLightningIcon = (
+  <svg viewBox="0 0 24 24">
+    <path d="M12 0L1.75 6v12L12 24l10.25-6V6zm-1.775 18l1.08-4.657-2.428-2.397L13.79 6l-1.082 4.665 2.414 2.384z" />
+  </svg>
+)
+
 const reactIcon = (
   <svg viewBox="-11.5 -11.5 23 23">
     <circle cx="0" cy="0" r="2.05" fill="black" />
@@ -121,6 +127,7 @@ export default function Skill({ pageIndex, transDirect, setPage }: ComponentProp
           <FrameworkTile color="black" icon={flaskIcon} name="Flask" url="https://flask.palletsprojects.com/" />
           <FrameworkTile color="#ff4b4b" icon={streamlitIcon} name="Streamlit" url="https://streamlit.io/" />
           <FrameworkTile color="#f05732" icon={pyTorchIcon} name="PyTorch" url="https://pytorch.org/" />
+          <FrameworkTile color="#792de4" icon={pyTorchLightningIcon} name="PyTorch Lightning" url="https://www.pytorchlightning.ai/" />
           <FrameworkTile color="#61dafb" icon={reactIcon} name="React / React Native" url="https://ja.reactjs.org/" />
           <FrameworkTile color="black" icon={nextJsIcon} name="Next.js" url="https://nextjs.org/" />
           <FrameworkTile color="black" icon={expoIcon} name="Expo" url="https://expo.dev/" />
