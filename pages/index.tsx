@@ -11,6 +11,12 @@ import { getFormattedDate } from "../components/datetime"
 import { RoundImg } from "../components/image"
 
 const HINT_DELAY = 5000
+const TAGS = [
+  "indoor positioning",
+  "human activity recognition",
+  "human computer interaction",
+  "deep learning"
+]
 
 type LinkedTdProps = {
   children: ReactNode
@@ -54,9 +60,7 @@ export default function Home({ pageIndex, transDirect, setPage }: ComponentProps
         <TextBox enableMargins={[false, true]} proportion={70}>
           <p className={styles.greeting}>kazuma kano</p>
           <ul className={styles.tags}>
-            <li>indoor positioning</li>
-            <li>deep learning</li>
-            <li>human computer interaction</li>
+            {TAGS.map((t, i) => <li key={i}>{t}</li>)}
           </ul>
 
           <h2>education</h2>
