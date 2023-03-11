@@ -1,0 +1,20 @@
+{
+  "award": [
+    {
+      "date": [2021, 11],
+      "title": "第2回東海ユビキタスコンピューティング研究室合同研究発表会 優秀賞"
+    },
+    {
+      "date": [2022, 3],
+      "title": "電子情報通信学会東海支部 令和三年度学業成績優秀賞"
+    }
+  ],
+
+  "qualification": [
+    {
+      "date": [2023, 3],
+      "title": "JDLA Deep Learning for ENGINEER 2023#1",
+      "url": "https://www.jdla.org/certificate/engineer/"
+    }
+  ]
+}

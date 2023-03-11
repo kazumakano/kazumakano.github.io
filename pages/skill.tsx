@@ -122,7 +122,7 @@ export default function Skill({ pageIndex, transDirect, setPage }: ComponentProp
     <Layout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="skill">
       <TextBox enableMargins={[false, true]} proportion={50}>
         <h2>language</h2>
-        <p>{downIcon} bytes in public repositories</p>
+        <p>{downIcon} bytes in GitHub public repositories</p>
         <LangBars />
       </TextBox>
 
