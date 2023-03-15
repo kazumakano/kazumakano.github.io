@@ -22,5 +22,8 @@
     "eslint": "7",
     "eslint-config-next": "12.0.4",
     "typescript": "4.5.2"
+  },
+  "resolutions": {
+    "@types/react": "17.0.35"
   }
 }
