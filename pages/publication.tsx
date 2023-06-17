@@ -40,7 +40,7 @@ const PublicationTable = ({ isInternational }: PublicationTableProps) => (
 
 export default function Publication({ pageIndex, transDirect, setPage }: ComponentProps): JSX.Element {
   return (
-    <Layout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="Publication">
+    <Layout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="Publication & Presentation">
       <TextBox enableMargins={[false, false]} proportion={100}>
         <h2>international</h2>
         <PublicationTable isInternational={true} />
