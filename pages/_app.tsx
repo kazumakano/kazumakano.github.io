@@ -30,7 +30,7 @@ const useRandIdx = (maxIdx: number) => {
   return idx
 }
 
-export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+export default function App({ Component, pageProps }: AppProps): JSX.Element {
   const bgImgIdx = useRandIdx(BG_IMGS.length)
   const [isInputting, setIsInputting] = useState<boolean>(false)
   const [[pageIndex, transDirect], setPage] = useState<[number, number]>([0, 0])
