@@ -1,6 +1,6 @@
 import papers from "../public/papers.json"
 import Table from "react-bootstrap/Table"
-import { getFormattedDate } from "../components/datetime"
+import { getFormattedDate } from "../hooks/datetime"
 import { CopyBtn } from "../components/button"
 import type { ComponentProps } from "./_app"
 import Layout from "../components/layout"
