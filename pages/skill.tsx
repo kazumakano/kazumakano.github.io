@@ -1,10 +1,13 @@
 import styles from "../styles/Skill.module.css"
 import type { ComponentProps } from "./_app"
+import type { LangColors } from "../components/language-bars"
 import Layout from "../components/layout"
 import TextBox from "../components/text-box"
 import LangBars from "../components/language-bars"
 import { FrameworkGrid, FrameworkTile } from "../components/framework-tiles"
 
+
+type SkillProps = ComponentProps & {langColors: LangColors}
 
 const blenderIcon = (
   <svg viewBox="0 -50 650 600">
@@ -117,13 +120,13 @@ const unityIcon = (
   </svg>
 )
 
-export default function Skill({ pageIndex, transDirect, setPage }: ComponentProps): JSX.Element {
+export default function Skill({ langColors, pageIndex, transDirect, setPage }: SkillProps): JSX.Element {
   return (
     <Layout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="skill">
       <TextBox enableMargins={[false, true]} proportion={50}>
         <h2>language</h2>
         <p>{downIcon} bytes in GitHub public repositories</p>
-        <LangBars />
+        <LangBars colors={langColors} />
       </TextBox>
 
       <TextBox enableMargins={[true, false]} proportion={50}>
@@ -146,4 +149,11 @@ export default function Skill({ pageIndex, transDirect, setPage }: ComponentProp
       </TextBox>
     </Layout>
   )
+}
+
+export const getStaticProps = async () => {
+  const res = await fetch("https://raw.githubusercontent.com/ozh/github-colors/master/colors.json")
+  const langColors = await res.json()
+
+  return {props: {langColors: langColors}}
 }
