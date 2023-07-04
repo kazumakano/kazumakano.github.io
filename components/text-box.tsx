@@ -1,5 +1,5 @@
 import type { ReactNode } from "react"
-import useBlockStyle from "./block-style"
+import useBlockStyle from "../hooks/block-style"
 
 
 type TextBoxProps = {
