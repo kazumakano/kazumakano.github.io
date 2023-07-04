@@ -1,7 +1,5 @@
 import type { Dispatch, ReactNode, SetStateAction } from "react"
 import Slide from "./slide"
-import Header from "./header"
-import Body from "./body"
 import ProgressIcon from "./progress-icon"
 
 
@@ -18,11 +16,13 @@ export default function Layout({ children, pageIndex, transDirect, setPage, titl
   return (
     <>
       <Slide pageIndex={pageIndex} transDirect={transDirect} setPage={setPage}>
-        <Header title={title} noCaps={noCapsHeader} />
+        <div id="header">
+          <h1 className={noCapsHeader ? "no-caps" : undefined}>{title}</h1>
+        </div>
 
-        <Body>
+        <div id="body">
           {children}
-        </Body>
+        </div>
       </Slide>
 
       <ProgressIcon pageIndex={pageIndex} transDirect={transDirect} />
