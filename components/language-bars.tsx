@@ -6,66 +6,55 @@ import Spinner from "react-bootstrap/Spinner"
 
 
 type LangBarConf = {
-  colors: {
-    [lang: string]: string
-  }
+  langs: string[]
   label: string
 }
 
 const LANG_BAR_CONFS: LangBarConf[] = [
   {
-    colors: {
-      C: "#555555",
-      "C++": "#f34b7d"
-    },
+    langs: ["C", "C++"],
     label: "C / C++"
   },
   {
-    colors: {
-      "C#": "#178600"
-    },
+    langs: ["C#"],
     label: "C#"
   },
   {
-    colors: {
-      Go: "#375eab"
-    },
+    langs: ["Go"],
     label: "Go"
   },
   {
-    colors: {
-      HTML: "#e44b23",
-      CSS: "#563d7c"
-    },
+    langs: ["HTML", "CSS"],
     label: "HTML / CSS"
   },
   {
-    colors: {
-      Java: "#b07219"
-    },
+    langs: ["Java"],
     label: "Java"
   },
   {
-    colors: {
-      JavaScript: "#f1e05a",
-      TypeScript: "#2b7489"
-    },
+    langs: ["JavaScript", "TypeScript"],
     label: "JS / TS"
   },
   {
-    colors: {
-      Python: "#3572a5",
-      "Jupyter Notebook": "#da5b0b"
-    },
+    langs: ["Python", "Jupyter Notebook"],
     label: "Python"
   },
   {
-    colors: {
-      R: "#198CE7"
-    },
+    langs: ["R"],
     label: "R"
   }
 ]
+
+export type LangColors = {
+  [lang: string]: {
+    color: string
+    url: string
+  }
+}
+
+type LangBarsProps = {
+  colors: LangColors
+}
 
 const useLangDict = () => {
   let [langDict, setLangDict] = useState<LangDict | null>(null)
@@ -85,7 +74,7 @@ const useLangDict = () => {
 
 const calcProportion = (bytes: number) => bytes / 10000
 
-export default function LangBars(): JSX.Element {
+export default function LangBars({ colors }: LangBarsProps): JSX.Element {
   const langDict = useLangDict()
 
   if (langDict == null) {
@@ -99,11 +88,11 @@ export default function LangBars(): JSX.Element {
         {LANG_BAR_CONFS.map((c, i) => (
           <div className={styles.langBar} key={i}>
             <div className="progress">
-              {Object.keys(c.colors).map((l, j) => (
+              {c.langs.map((l, j) => (
                 <div
                   key={j}
                   style={{
-                    backgroundColor: c.colors[l],
+                    backgroundColor: colors[l].color,
                     width: `${l in langDict ? calcProportion(langDict[l]) : 0}%`
                   }}
                 />
