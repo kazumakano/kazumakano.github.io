@@ -20,11 +20,7 @@ const useRandIdx = (maxIdx: number) => {
   const [idx, setIdx] = useState<number | null>(null)
 
   useEffect(() => {
-    fetch("https://worldtimeapi.org/api/timezone/Asia/Tokyo/").then(res => (
-      res.json()
-    ).then(data => {
-      setIdx(Math.round(data.unixtime) % maxIdx)
-    }))
+    setIdx(Math.floor(maxIdx * Math.random()))
   }, [maxIdx, setIdx])
 
   return idx
