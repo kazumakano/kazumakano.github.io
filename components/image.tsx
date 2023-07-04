@@ -1,4 +1,4 @@
-import useBlockStyle from "./block-style"
+import useBlockStyle from "../hooks/block-style"
 
 
 type ImgProps = {
