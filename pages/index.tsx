@@ -7,7 +7,7 @@ import { useEffect, useState } from "react"
 import Layout from "../components/layout"
 import TextBox from "../components/text-box"
 import Table from "react-bootstrap/Table"
-import { getFormattedDate } from "../components/datetime"
+import { getFormattedDate } from "../hooks/datetime"
 import { RoundImg } from "../components/image"
 
 const HINT_DELAY = 5000
