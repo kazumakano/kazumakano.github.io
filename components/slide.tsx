@@ -1,7 +1,8 @@
 import contents from "../public/contents.json"
 import type { Dispatch, ReactNode, SetStateAction } from "react"
+import { IsPcCtx } from "./client"
+import { useCallback, useContext } from "react"
 import { useRouter } from "next/router"
-import { useCallback } from "react"
 import { CONTENTS_NUM } from "../pages/_app"
 import { motion } from "framer-motion"
 
@@ -38,6 +39,7 @@ const calcSwipePower = (offset: number, velocity: number) => {
 }
 
 export default function Slide({ pageIndex, transDirect, setPage, children }: SlideProps): JSX.Element {
+  const isPc = useContext(IsPcCtx)
   const router = useRouter()
 
   const onSwipe = useCallback((swipeDirect: number) => {
@@ -59,7 +61,7 @@ export default function Slide({ pageIndex, transDirect, setPage, children }: Sli
         }}
         variants={variants}
         custom={transDirect}
-        drag="x"
+        drag={isPc ? "x" : false}
         dragConstraints={{
           left: 0,
           right: 0

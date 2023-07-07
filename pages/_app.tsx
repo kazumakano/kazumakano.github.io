@@ -6,7 +6,7 @@ import { useRouter } from "next/router"
 import { useKey } from "rooks"
 import Head from "next/head"
 import { AnimatePresence } from "framer-motion"
-import { IsLandscapeCtxProvider } from "../components/window-orientation"
+import { ClientCtxProvider } from "../components/client"
 import type { Dispatch, SetStateAction } from "react"
 
 const BG_IMGS = [
@@ -55,9 +55,9 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
 
       <AnimatePresence initial={false}>
         <div id="background" style={{backgroundImage: bgImgIdx == null ? undefined : `url(${BG_IMGS[bgImgIdx]})`}}>
-          <IsLandscapeCtxProvider>
+          <ClientCtxProvider>
             <Component {...pageProps} setIsInputting={setIsInputting} pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} />
-          </IsLandscapeCtxProvider>
+          </ClientCtxProvider>
         </div>
       </AnimatePresence>
     </>

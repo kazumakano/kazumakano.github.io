@@ -2,14 +2,16 @@ import type { ReactNode } from "react"
 import { createContext, useCallback, useContext, useEffect, useState } from "react"
 
 
-type IsLandscapeCtxProviderProps = {
+type ClientCtxProviderProps = {
   children: ReactNode
 }
 
 export const IsLandscapeCtx = createContext<boolean>(true)
+export const IsPcCtx = createContext<boolean>(true)
 
-export function IsLandscapeCtxProvider({ children }: IsLandscapeCtxProviderProps): JSX.Element {
+export function ClientCtxProvider({ children }: ClientCtxProviderProps): JSX.Element {
   const [isLandscape, setIsLandscape] = useState<boolean>(true)
+  const [isPc, setIsPc] = useState<boolean>(true)
   const [winSize, setWinSize] = useState<[number, number] | null>(null)
 
   const onResizeWin = useCallback(() => setWinSize([window.innerWidth, window.innerHeight]), [setWinSize])
@@ -18,12 +20,18 @@ export function IsLandscapeCtxProvider({ children }: IsLandscapeCtxProviderProps
     setIsLandscape(window.matchMedia("(orientation: landscape)").matches)
     window.addEventListener("resize", onResizeWin)
     return () => window.removeEventListener("resize", onResizeWin)
-  }, [setIsLandscape, winSize])
+  }, [setIsLandscape, onResizeWin, winSize])
+
+  useEffect(() => {
+    setIsPc(!/Android|iPad|iPhone|iPod/.test(window.navigator.userAgent))
+  }, [setIsPc])
 
   return (
-    <IsLandscapeCtx.Provider value={isLandscape}>
-      {children}
-    </IsLandscapeCtx.Provider>
+    <IsPcCtx.Provider value={isPc}>
+      <IsLandscapeCtx.Provider value={isLandscape}>
+        {children}
+      </IsLandscapeCtx.Provider>
+    </IsPcCtx.Provider>
   )
 }
 

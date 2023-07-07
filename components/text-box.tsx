@@ -1,5 +1,5 @@
 import type { ReactNode } from "react"
-import { useBlockStyle } from "./window-orientation"
+import { useBlockStyle } from "./client"
 
 
 type TextBoxProps = {
