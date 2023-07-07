@@ -3,7 +3,8 @@ import history from "../public/history.json"
 import type { ReactNode } from "react"
 import Link from "next/link"
 import type { ComponentProps } from "./_app"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
+import { IsPcCtx } from "../components/client"
 import Layout from "../components/layout"
 import TextBox from "../components/text-box"
 import Table from "react-bootstrap/Table"
@@ -41,6 +42,7 @@ const rightIcon = (
 
 export default function Home({ pageIndex, transDirect, setPage }: ComponentProps): JSX.Element {
   const [hintMsg, setHintMsg] = useState<JSX.Element>(<></>)
+  const isPc = useContext(IsPcCtx)
 
   useEffect(() => {
     const timerId = window.setTimeout(setHintMsg, HINT_DELAY, (
@@ -56,7 +58,7 @@ export default function Home({ pageIndex, transDirect, setPage }: ComponentProps
 
   return (
     <>
-      {hintMsg}
+      {isPc ? hintMsg : null}
 
       <Layout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="about me">
         <TextBox enableMargins={[false, true]} proportion={70}>
