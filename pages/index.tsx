@@ -56,6 +56,8 @@ export default function Home({ pageIndex, transDirect, setPage }: ComponentProps
 
   return (
     <>
+      {hintMsg}
+
       <Layout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="about me">
         <TextBox enableMargins={[false, true]} proportion={70}>
           <p className={styles.greeting}>kazuma kano</p>
@@ -97,8 +99,6 @@ export default function Home({ pageIndex, transDirect, setPage }: ComponentProps
 
         <RoundImg alt="avatar" enableMargins={[true, false]} proportion={30} src={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB_USER_NAME}.png`} />
       </Layout>
-
-      {hintMsg}
     </>
   )
 }

@@ -37,6 +37,18 @@ a {
   width: 100%;
 }
 
+.mv-btn {
+  display: flex;
+  height: 100%;
+  position: fixed;
+  transition-duration: 0.5s;
+  width: 8%;
+}
+
+.mv-btn > svg {
+  fill: rgba(255, 255, 255, 0.8);
+}
+
 #slide {
   display: flex;
   height: 80%;
@@ -50,10 +62,10 @@ a {
 
 #progress-icon {
   position: fixed;
-  top: 92%;
-  left: 92%;
-  width: 6%;
   height: 6%;
+  left: 92%;
+  top: 92%;
+  width: 6%;
 }
 
 #header {
@@ -190,7 +202,6 @@ a {
   width: 100px;
 }
 
-/* for smart phone */
 @media (orientation: portrait) {
   #body {
     flex-direction: column;
