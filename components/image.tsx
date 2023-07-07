@@ -1,4 +1,4 @@
-import useBlockStyle from "../hooks/block-style"
+import { useBlockStyle } from "./window-orientation"
 
 
 type ImgProps = {

@@ -1,16 +1,14 @@
-import { useCallback, useEffect, useState } from "react"
+import type { ReactNode } from "react"
+import { createContext, useCallback, useContext, useEffect, useState } from "react"
 
 
-type BlockStyle = {
-  height: string
-  marginBottom: string
-  marginLeft: string
-  marginRight: string
-  marginTop: string
-  width: string
+type IsLandscapeCtxProviderProps = {
+  children: ReactNode
 }
 
-export default function useBlockStyle(enableMargins: [boolean, boolean], proportion: number): BlockStyle {
+export const IsLandscapeCtx = createContext<boolean>(true)
+
+export function IsLandscapeCtxProvider({ children }: IsLandscapeCtxProviderProps): JSX.Element {
   const [isLandscape, setIsLandscape] = useState<boolean>(true)
   const [winSize, setWinSize] = useState<[number, number] | null>(null)
 
@@ -21,6 +19,25 @@ export default function useBlockStyle(enableMargins: [boolean, boolean], proport
     window.addEventListener("resize", onResizeWin)
     return () => window.removeEventListener("resize", onResizeWin)
   }, [setIsLandscape, winSize])
+
+  return (
+    <IsLandscapeCtx.Provider value={isLandscape}>
+      {children}
+    </IsLandscapeCtx.Provider>
+  )
+}
+
+type BlockStyle = {
+  height: string
+  marginBottom: string
+  marginLeft: string
+  marginRight: string
+  marginTop: string
+  width: string
+}
+
+export function useBlockStyle(enableMargins: [boolean, boolean], proportion: number): BlockStyle {
+  const isLandscape = useContext(IsLandscapeCtx)
 
   return {
     height: isLandscape ? "100%" : `calc(${proportion}% - 2px)`,
