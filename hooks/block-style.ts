@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 
 
 type BlockStyle = {
@@ -12,10 +12,15 @@ type BlockStyle = {
 
 export default function useBlockStyle(enableMargins: [boolean, boolean], proportion: number): BlockStyle {
   const [isLandscape, setIsLandscape] = useState<boolean>(true)
+  const [winSize, setWinSize] = useState<[number, number] | null>(null)
+
+  const onResizeWin = useCallback(() => setWinSize([window.innerWidth, window.innerHeight]), [setWinSize])
 
   useEffect(() => {
     setIsLandscape(window.matchMedia("(orientation: landscape)").matches)
-  }, [setIsLandscape])
+    window.addEventListener("resize", onResizeWin)
+    return () => window.removeEventListener("resize", onResizeWin)
+  }, [setIsLandscape, winSize])
 
   return {
     height: isLandscape ? "100%" : `calc(${proportion}% - 2px)`,
