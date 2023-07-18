@@ -30,17 +30,17 @@ const useRandIdx = (maxIdx: number) => {
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
   const bgImgIdx = useRandIdx(BG_IMGS.length)
   const [isInputting, setIsInputting] = useState<boolean>(false)
-  const [[pageIndex, transDirect], setPage] = useState<[number, number]>([0, 0])
   const router = useRouter()
+  const pageIndex = contents.indexOf(router.pathname)
+  const [transDirect, setTransDirect] = useState<number>(0)
 
   const onPressKey = useCallback((keyDirect: number) => {
     if (!isInputting) {
+      setTransDirect(keyDirect)
       const nextPageIndex = (((pageIndex + keyDirect) % CONTENTS_NUM) + CONTENTS_NUM) % CONTENTS_NUM
-
-      setPage([nextPageIndex, keyDirect])
       router.replace(contents[nextPageIndex])
     }
-  }, [isInputting, pageIndex, setPage, router])
+  }, [isInputting, pageIndex, router, setTransDirect])
 
   useKey([8, 37], () => onPressKey(-1))        // back space or left
   useKey([13, 32, 39], () => onPressKey(1))    // enter, space, or right
@@ -56,7 +56,7 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
       <AnimatePresence initial={false}>
         <div id="background" style={{backgroundImage: bgImgIdx >= 0 ? `url(${BG_IMGS[bgImgIdx]})` : undefined}}>
           <ClientCtxProvider>
-            <Component {...pageProps} setIsInputting={setIsInputting} pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} />
+            <Component {...pageProps} setIsInputting={setIsInputting} pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect} />
           </ClientCtxProvider>
         </div>
       </AnimatePresence>
@@ -68,5 +68,5 @@ export type ComponentProps = {
   setIsInputting: Dispatch<SetStateAction<boolean>>
   pageIndex: number
   transDirect: number
-  setPage: Dispatch<SetStateAction<[number, number]>>
+  setTransDirect: Dispatch<SetStateAction<number>>
 }

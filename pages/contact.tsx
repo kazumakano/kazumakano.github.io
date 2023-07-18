@@ -21,7 +21,7 @@ const twitterIcon = (
   </svg>
 )
 
-export default function Contact({ setIsInputting, pageIndex, transDirect, setPage }: ComponentProps): JSX.Element {
+export default function Contact({ setIsInputting, pageIndex, transDirect, setTransDirect }: ComponentProps): JSX.Element {
   const [mailBody, setMailBody] = useState<string>("")
   const [mailSubject, setMailSubject] = useState<string>("")
 
@@ -48,7 +48,7 @@ export default function Contact({ setIsInputting, pageIndex, transDirect, setPag
   }, [setMailBody])
 
   return (
-    <Layout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="contact">
+    <Layout pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect} title="contact">
       <TextBox enableMargins={[false, true]} proportion={50}>
         <h2>social</h2>
         <SocialGrid>

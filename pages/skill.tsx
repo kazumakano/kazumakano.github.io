@@ -133,9 +133,9 @@ const unityIcon = (
   </svg>
 )
 
-export default function Skill({ langColors, pageIndex, transDirect, setPage }: SkillProps): JSX.Element {
+export default function Skill({ langColors, pageIndex, transDirect, setTransDirect }: SkillProps): JSX.Element {
   return (
-    <Layout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="skill">
+    <Layout pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect} title="skill">
       <TextBox enableMargins={[false, true]} proportion={50}>
         <h2>language</h2>
         <p>{downIcon} bytes in GitHub public repositories</p>

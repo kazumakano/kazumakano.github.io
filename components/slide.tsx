@@ -12,7 +12,7 @@ type SlideProps = {
   children: ReactNode
   pageIndex: number
   transDirect: number
-  setPage: Dispatch<SetStateAction<[number, number]>>
+  setTransDirect: Dispatch<SetStateAction<number>>
 }
 
 const variants = {
@@ -38,16 +38,15 @@ const calcSwipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity
 }
 
-export default function Slide({ pageIndex, transDirect, setPage, children }: SlideProps): JSX.Element {
+export default function Slide({ children, pageIndex, transDirect, setTransDirect }: SlideProps): JSX.Element {
   const isPc = useContext(IsPcCtx)
   const router = useRouter()
 
   const onSwipe = useCallback((swipeDirect: number) => {
+    setTransDirect(swipeDirect)
     const nextPageIndex = (((pageIndex + swipeDirect) % CONTENTS_NUM) + CONTENTS_NUM) % CONTENTS_NUM
-
-    setPage([nextPageIndex, swipeDirect])
     router.replace(contents[nextPageIndex])
-  }, [pageIndex, setPage, router])
+  }, [pageIndex, router, setTransDirect])
 
   return (
     <div id="slide">

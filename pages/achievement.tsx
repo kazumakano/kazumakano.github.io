@@ -8,9 +8,9 @@ import { getFormattedDate } from "../hooks/datetime"
 import Link from "next/link"
 
 
-export default function Achievement({ pageIndex, transDirect, setPage }: ComponentProps): JSX.Element {
+export default function Achievement({ pageIndex, transDirect, setTransDirect }: ComponentProps): JSX.Element {
   return (
-    <Layout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="achievement">
+    <Layout pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect} title="achievement">
       <TextBox enableMargins={[false, false]} proportion={100}>
         <h2>award</h2>
         <Table borderless>

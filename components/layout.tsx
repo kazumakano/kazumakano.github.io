@@ -11,7 +11,7 @@ import ProgressIcon from "./progress-icon"
 type MvBtnProps = {
   isLeft: boolean
   pageIndex: number
-  setPage: Dispatch<SetStateAction<[number, number]>>
+  setTransDirect: Dispatch<SetStateAction<number>>
 }
 
 const leftIcon = (
@@ -26,17 +26,16 @@ const rightIcon = (
   </svg>
 )
 
-const MvBtn = ({ isLeft, pageIndex, setPage }: MvBtnProps) => {
+const MvBtn = ({ isLeft, pageIndex, setTransDirect }: MvBtnProps) => {
   const [isMouseOver, setIsMouseOver] = useState<boolean>(false)
   const isPc = useContext(IsPcCtx)
   const router = useRouter()
 
   const onClick = useCallback((direct: number) => {
+    setTransDirect(direct)
     const nextPageIndex = (((pageIndex + direct) % CONTENTS_NUM) + CONTENTS_NUM) % CONTENTS_NUM
-
-    setPage([nextPageIndex, direct])
     router.replace(contents[nextPageIndex])
-  }, [pageIndex, setPage, router])
+  }, [pageIndex, router, setTransDirect])
 
   return (
     <div
@@ -58,15 +57,15 @@ type LayoutProps = {
   children: ReactNode
   pageIndex: number
   transDirect: number
-  setPage: Dispatch<SetStateAction<[number, number]>>
+  setTransDirect: Dispatch<SetStateAction<number>>
   title: string
   noCapsHeader?: boolean
 }
 
-export default function Layout({ children, pageIndex, transDirect, setPage, title, noCapsHeader }: LayoutProps): JSX.Element {
+export default function Layout({ children, pageIndex, transDirect, setTransDirect, title, noCapsHeader }: LayoutProps): JSX.Element {
   return (
     <>
-      <Slide pageIndex={pageIndex} transDirect={transDirect} setPage={setPage}>
+      <Slide pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect}>
         <div id="header">
           <h1 className={noCapsHeader ? "no-caps" : undefined}>{title}</h1>
         </div>
@@ -77,8 +76,8 @@ export default function Layout({ children, pageIndex, transDirect, setPage, titl
       </Slide>
 
       <ProgressIcon pageIndex={pageIndex} transDirect={transDirect} />
-      <MvBtn isLeft={true} pageIndex={pageIndex} setPage={setPage} />
-      <MvBtn isLeft={false} pageIndex={pageIndex} setPage={setPage} />
+      <MvBtn isLeft={true} pageIndex={pageIndex} setTransDirect={setTransDirect} />
+      <MvBtn isLeft={false} pageIndex={pageIndex} setTransDirect={setTransDirect} />
     </>
   )
 }

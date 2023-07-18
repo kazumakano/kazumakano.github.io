@@ -40,7 +40,7 @@ const rightIcon = (
   </svg>
 )
 
-export default function Home({ pageIndex, transDirect, setPage }: ComponentProps): JSX.Element {
+export default function Home({ pageIndex, transDirect, setTransDirect }: ComponentProps): JSX.Element {
   const [hintMsg, setHintMsg] = useState<JSX.Element>(<></>)
   const isPc = useContext(IsPcCtx)
 
@@ -60,7 +60,7 @@ export default function Home({ pageIndex, transDirect, setPage }: ComponentProps
     <>
       {isPc ? hintMsg : null}
 
-      <Layout pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} title="about me">
+      <Layout pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect} title="about me">
         <TextBox enableMargins={[false, true]} proportion={70}>
           <p className={styles.greeting}>kazuma kano</p>
           <ul className={styles.tags}>
