@@ -18,7 +18,7 @@ const BG_IMGS = [
 export const CONTENTS_NUM = Object.keys(contents).length
 
 const useRandIdx = (maxIdx: number) => {
-  const [idx, setIdx] = useState<number | null>(null)
+  const [idx, setIdx] = useState<number>(-1)
 
   useEffect(() => {
     setIdx(Math.floor(maxIdx * Math.random()))
@@ -54,7 +54,7 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
       </Head>
 
       <AnimatePresence initial={false}>
-        <div id="background" style={{backgroundImage: bgImgIdx == null ? undefined : `url(${BG_IMGS[bgImgIdx]})`}}>
+        <div id="background" style={{backgroundImage: bgImgIdx >= 0 ? `url(${BG_IMGS[bgImgIdx]})` : undefined}}>
           <ClientCtxProvider>
             <Component {...pageProps} setIsInputting={setIsInputting} pageIndex={pageIndex} transDirect={transDirect} setPage={setPage} />
           </ClientCtxProvider>

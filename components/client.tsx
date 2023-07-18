@@ -12,7 +12,7 @@ export const IsPcCtx = createContext<boolean>(true)
 export function ClientCtxProvider({ children }: ClientCtxProviderProps): JSX.Element {
   const [isLandscape, setIsLandscape] = useState<boolean>(true)
   const [isPc, setIsPc] = useState<boolean>(true)
-  const [winSize, setWinSize] = useState<[number, number] | null>(null)
+  const [winSize, setWinSize] = useState<[number, number]>([-1, -1])
 
   const onResizeWin = useCallback(() => setWinSize([window.innerWidth, window.innerHeight]), [setWinSize])
 
