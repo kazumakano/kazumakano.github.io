@@ -37,6 +37,13 @@
       "date": [2022, 11],
       "title": "Smart Warehouse",
       "type": "exhibition"
+    },
+    {
+      "authorship":"lead author",
+      "conference": "IPIN 2023",
+      "date": [2023, 9],
+      "title": "Gait-Robust Heading Estimation Using Horizontal Acceleration for Smartphone-based PDR",
+      "type": "proceedings"
     }
   ]
 }
