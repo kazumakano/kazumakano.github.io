@@ -1,9 +1,8 @@
-import contents from "../public/contents.json"
 import type { Dispatch, ReactNode, SetStateAction } from "react"
 import { useCallback, useContext, useState } from "react"
 import { IsPcCtx } from "./client"
 import { useRouter } from "next/router"
-import { CONTENTS_NUM } from "../pages/_app"
+import { CONTENTS } from "../pages/_app"
 import Slide from "./slide"
 import ProgressIcon from "./progress-icon"
 
@@ -33,8 +32,8 @@ const MvBtn = ({ isLeft, pageIndex, setTransDirect }: MvBtnProps) => {
 
   const onClick = useCallback((direct: number) => {
     setTransDirect(direct)
-    const nextPageIndex = (((pageIndex + direct) % CONTENTS_NUM) + CONTENTS_NUM) % CONTENTS_NUM
-    router.replace(contents[nextPageIndex])
+    const nextPageIndex = (((pageIndex + direct) % CONTENTS.length) + CONTENTS.length) % CONTENTS.length
+    router.replace(CONTENTS[nextPageIndex])
   }, [pageIndex, router, setTransDirect])
 
   return (

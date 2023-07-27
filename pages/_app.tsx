@@ -1,5 +1,4 @@
 import "../styles/globals.css"
-import contents from "../public/contents.json"
 import { useCallback, useEffect, useState } from "react"
 import type { AppProps } from "next/app"
 import { useRouter } from "next/router"
@@ -15,7 +14,13 @@ const BG_IMGS = [
   "/mirai-tower.jpeg"
 ]
 
-export const CONTENTS_NUM = Object.keys(contents).length
+export const CONTENTS = [
+  "/",
+  "/publication",
+  "/achievement",
+  "/skill",
+  "/contact"
+]
 
 const useRandIdx = (maxIdx: number) => {
   const [idx, setIdx] = useState<number>(-1)
@@ -31,14 +36,14 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
   const bgImgIdx = useRandIdx(BG_IMGS.length)
   const [isInputting, setIsInputting] = useState<boolean>(false)
   const router = useRouter()
-  const pageIndex = contents.indexOf(router.pathname)
+  const pageIndex = CONTENTS.indexOf(router.pathname)
   const [transDirect, setTransDirect] = useState<number>(0)
 
   const onPressKey = useCallback((keyDirect: number) => {
     if (!isInputting) {
       setTransDirect(keyDirect)
-      const nextPageIndex = (((pageIndex + keyDirect) % CONTENTS_NUM) + CONTENTS_NUM) % CONTENTS_NUM
-      router.replace(contents[nextPageIndex])
+      const nextPageIndex = (((pageIndex + keyDirect) % CONTENTS.length) + CONTENTS.length) % CONTENTS.length
+      router.replace(CONTENTS[nextPageIndex])
     }
   }, [isInputting, pageIndex, router, setTransDirect])
 

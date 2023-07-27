@@ -1,9 +1,8 @@
-import contents from "../public/contents.json"
 import type { Dispatch, ReactNode, SetStateAction } from "react"
 import { IsPcCtx } from "./client"
 import { useCallback, useContext } from "react"
 import { useRouter } from "next/router"
-import { CONTENTS_NUM } from "../pages/_app"
+import { CONTENTS } from "../pages/_app"
 import { motion } from "framer-motion"
 
 const SWIPE_POWER_THRESH = 10000
@@ -44,8 +43,8 @@ export default function Slide({ children, pageIndex, transDirect, setTransDirect
 
   const onSwipe = useCallback((swipeDirect: number) => {
     setTransDirect(swipeDirect)
-    const nextPageIndex = (((pageIndex + swipeDirect) % CONTENTS_NUM) + CONTENTS_NUM) % CONTENTS_NUM
-    router.replace(contents[nextPageIndex])
+    const nextPageIndex = (((pageIndex + swipeDirect) % CONTENTS.length) + CONTENTS.length) % CONTENTS.length
+    router.replace(CONTENTS[nextPageIndex])
   }, [pageIndex, router, setTransDirect])
 
   return (
