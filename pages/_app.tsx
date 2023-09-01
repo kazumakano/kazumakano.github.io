@@ -11,6 +11,7 @@ import type { Dispatch, SetStateAction } from "react"
 const BG_IMGS = [
   "/barcelona.jpeg",
   "/fushimi-inari-taisha.jpeg",
+  "/golconda.jpeg",
   "/mirai-tower.jpeg"
 ]
 
