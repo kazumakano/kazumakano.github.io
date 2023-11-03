@@ -2,6 +2,8 @@ import styles from "../styles/Achievement.module.css"
 import achieves from "../public/achievements.json"
 import type { ReactNode } from "react"
 import type { ComponentProps } from "./_app"
+import { useRef } from "react"
+import usePinch from "../hooks/pinch"
 import Layout from "../components/layout"
 import TextBox from "../components/text-box"
 import Table from "react-bootstrap/Table"
@@ -25,9 +27,14 @@ const LinkedTd = ({ children, url }: LinkedTdProps) => (
 )
 
 export default function Achievement({ pageIndex, transDirect, setTransDirect }: ComponentProps): JSX.Element {
+  const pinchSrcEleRef = useRef<HTMLDivElement>(null)
+  const pinchTgtEleRef = useRef<HTMLDivElement>(null)
+
+  usePinch(pinchSrcEleRef.current, pinchTgtEleRef.current)
+
   return (
     <Layout pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect} title="achievement">
-      <TextBox enableMargins={[false, false]} proportion={100}>
+      <TextBox enableMargins={[false, false]} proportion={100} innerRef={pinchTgtEleRef} outerRef={pinchSrcEleRef}>
         <h2>award</h2>
         <Table borderless className={styles.achieveTable}>
           <tbody>

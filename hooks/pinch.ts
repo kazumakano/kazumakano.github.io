@@ -34,6 +34,12 @@ export default function usePinch(srcEle: HTMLElement | null, tgtEle: HTMLElement
     }
   }
 
+  useEffect(() => {
+    if (tgtEle != null) {
+      tgtEle.style.zoom = "1"
+    }
+  }, [tgtEle])
+
   if (srcEle != null && tgtEle != null) {
     srcEle.onpointerdown = onPointerDown
     srcEle.onpointermove = onPointerMove
@@ -42,10 +48,4 @@ export default function usePinch(srcEle: HTMLElement | null, tgtEle: HTMLElement
     srcEle.onpointerout = onReset
     srcEle.onpointerleave = onReset
   }
-
-  useEffect(() => {
-    if (tgtEle != null) {
-      tgtEle.style.zoom = "1"
-    }
-  }, [tgtEle])
 }
