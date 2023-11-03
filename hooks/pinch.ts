@@ -15,7 +15,7 @@ export default function usePinch(srcEle: HTMLElement | null, tgtEle: HTMLElement
     setEvList(evList)
 
     if (evList.length == 2) {
-      const dist = Math.abs(evList[0].clientX - evList[1].clientX)
+      const dist = Math.hypot(evList[0].clientX - evList[1].clientX, evList[0].clientY - evList[1].clientY)
 
       if (initDist < 0) {
         setInitStates([dist, parseFloat(tgtEle!.style.zoom)])
@@ -26,7 +26,7 @@ export default function usePinch(srcEle: HTMLElement | null, tgtEle: HTMLElement
   }
 
   const onReset = (ev: PointerEvent) => {
-    evList.splice(evList.findIndex(e => e.pointerId === ev.pointerId))
+    evList.splice(evList.findIndex(e => e.pointerId === ev.pointerId), 1)
     setEvList(evList)
 
     if (evList.length < 2) {
