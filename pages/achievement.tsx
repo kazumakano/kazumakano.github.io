@@ -5,7 +5,7 @@ import type { ComponentProps } from "./_app"
 import Layout from "../components/layout"
 import TextBox from "../components/text-box"
 import Table from "react-bootstrap/Table"
-import { getFormattedDate } from "../hooks/datetime"
+import { getFormattedDate } from "../functions/datetime"
 import Link from "next/link"
 
 

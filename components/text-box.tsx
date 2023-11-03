@@ -1,4 +1,4 @@
-import type { ReactNode } from "react"
+import type { ReactNode, RefObject } from "react"
 import { useBlockStyle } from "./client"
 
 
@@ -6,12 +6,14 @@ type TextBoxProps = {
   children: ReactNode
   enableMargins: [boolean, boolean]
   proportion: number
+  innerRef?: RefObject<HTMLDivElement>
+  outerRef?: RefObject<HTMLDivElement>
 }
 
-export default function TextBox({ children, enableMargins, proportion }: TextBoxProps): JSX.Element {
+export default function TextBox({ children, enableMargins, proportion, innerRef, outerRef }: TextBoxProps): JSX.Element {
   return (
-    <div className="text-box" style={useBlockStyle(enableMargins, proportion)}>
-      <div>
+    <div className="text-box" ref={outerRef} style={useBlockStyle(enableMargins, proportion)}>
+      <div ref={innerRef}>
         {children}
       </div>
     </div>

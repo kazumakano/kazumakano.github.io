@@ -3,12 +3,13 @@ import history from "../public/history.json"
 import type { ReactNode } from "react"
 import Link from "next/link"
 import type { ComponentProps } from "./_app"
-import { useContext, useEffect, useState } from "react"
+import { useContext, useEffect, useRef, useState } from "react"
 import { IsPcCtx } from "../components/client"
+import usePinch from "../hooks/pinch"
 import Layout from "../components/layout"
 import TextBox from "../components/text-box"
 import Table from "react-bootstrap/Table"
-import { getFormattedDate } from "../hooks/datetime"
+import { getFormattedDate } from "../functions/datetime"
 import { RoundImg } from "../components/image"
 
 const HINT_DELAY = 5000
@@ -43,6 +44,8 @@ const rightIcon = (
 export default function Home({ pageIndex, transDirect, setTransDirect }: ComponentProps): JSX.Element {
   const [hintMsg, setHintMsg] = useState<JSX.Element>(<></>)
   const isPc = useContext(IsPcCtx)
+  const pinchSrcEleRef = useRef<HTMLDivElement>(null)
+  const pinchTgtEleRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const timerId = window.setTimeout(setHintMsg, HINT_DELAY, (
@@ -56,12 +59,14 @@ export default function Home({ pageIndex, transDirect, setTransDirect }: Compone
     return () => window.clearTimeout(timerId)
   }, [setHintMsg])
 
+  usePinch(pinchSrcEleRef.current, pinchTgtEleRef.current)
+
   return (
     <>
       {isPc ? hintMsg : null}
 
       <Layout pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect} title="about me">
-        <TextBox enableMargins={[false, true]} proportion={70}>
+        <TextBox enableMargins={[false, true]} proportion={70} innerRef={pinchTgtEleRef} outerRef={pinchSrcEleRef}>
           <p className={styles.greeting}>kazuma kano</p>
           <ul className={styles.tags}>
             {TAGS.map((t, i) => <li key={i}>{t}</li>)}
