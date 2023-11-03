@@ -1,36 +1,36 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 
 export default function usePinch(srcEle: HTMLElement | null, tgtEle: HTMLElement | null): void {
-  const [evCache, setEvCache] = useState<PointerEvent[]>([])
-  const [prevDiff, setPrevDiff] = useState<number>(-1)
+  const [evList, setEvList] = useState<PointerEvent[]>([])
+  const [[initDist, initZoom], setInitStates] = useState<[number, number]>([-1, -1])
 
   const onPointerDown = (ev: PointerEvent) => {
-    evCache.push(ev)
-    setEvCache(evCache)
+    evList.push(ev)
+    setEvList(evList)
   }
 
   const onPointerMove = (ev: PointerEvent) => {
-    evCache[evCache.findIndex(e => e.pointerId == ev.pointerId)] = ev
-    setEvCache(evCache)
+    evList[evList.findIndex(e => e.pointerId == ev.pointerId)] = ev
+    setEvList(evList)
 
-    if (evCache.length == 2) {
-      const curDiff = Math.abs(evCache[0].clientX - evCache[1].clientX)
+    if (evList.length == 2) {
+      const dist = Math.abs(evList[0].clientX - evList[1].clientX)
 
-      if (prevDiff > 0) {
-        tgtEle!.style.zoom = (curDiff / 100).toString()
+      if (initDist < 0) {
+        setInitStates([dist, parseFloat(tgtEle!.style.zoom)])
+      } else {
+        tgtEle!.style.zoom = (dist / initDist * initZoom).toString()
       }
-
-      setPrevDiff(curDiff)
     }
   }
 
   const onReset = (ev: PointerEvent) => {
-    evCache.splice(evCache.findIndex(e => e.pointerId === ev.pointerId), 1)
-    setEvCache(evCache)
+    evList.splice(evList.findIndex(e => e.pointerId === ev.pointerId))
+    setEvList(evList)
 
-    if (evCache.length < 2) {
-      setPrevDiff(-1)
+    if (evList.length < 2) {
+      setInitStates([-1, -1])
     }
   }
 
@@ -42,4 +42,10 @@ export default function usePinch(srcEle: HTMLElement | null, tgtEle: HTMLElement
     srcEle.onpointerout = onReset
     srcEle.onpointerleave = onReset
   }
+
+  useEffect(() => {
+    if (tgtEle != null) {
+      tgtEle.style.zoom = "1"
+    }
+  }, [tgtEle])
 }
