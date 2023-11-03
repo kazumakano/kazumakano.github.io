@@ -11,41 +11,30 @@ export default function usePinch(srcEle: HTMLElement | null, tgtEle: HTMLElement
   }
 
   const onPointerMove = (ev: PointerEvent) => {
-    const index = evCache.findIndex(
-      (cachedEv) => cachedEv.pointerId === ev.pointerId,
-    );
-    evCache[index] = ev
+    evCache[evCache.findIndex(e => e.pointerId == ev.pointerId)] = ev
     setEvCache(evCache)
-  
-    if (tgtEle != null && evCache.length === 2) {
-      const curDiff = Math.abs(evCache[0].clientX - evCache[1].clientX);
-  
+
+    if (evCache.length == 2) {
+      const curDiff = Math.abs(evCache[0].clientX - evCache[1].clientX)
+
       if (prevDiff > 0) {
-        if (curDiff > prevDiff) {
-          tgtEle.style.zoom = `${curDiff / 100}`
-        }
-        if (curDiff < prevDiff) {
-          tgtEle.style.zoom = `${curDiff / 100}`
-        }
+        tgtEle!.style.zoom = (curDiff / 100).toString()
       }
-  
-      setPrevDiff(curDiff);
+
+      setPrevDiff(curDiff)
     }
   }
 
   const onReset = (ev: PointerEvent) => {
-    const index = evCache.findIndex(
-      (cachedEv) => cachedEv.pointerId === ev.pointerId,
-    );
-    evCache.splice(index, 1)
+    evCache.splice(evCache.findIndex(e => e.pointerId === ev.pointerId), 1)
     setEvCache(evCache)
-  
+
     if (evCache.length < 2) {
       setPrevDiff(-1)
     }
   }
 
-  if (srcEle != null) {
+  if (srcEle != null && tgtEle != null) {
     srcEle.onpointerdown = onPointerDown
     srcEle.onpointermove = onPointerMove
     srcEle.onpointerup = onReset
