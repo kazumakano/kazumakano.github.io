@@ -67,8 +67,8 @@ export default function Contact({ setIsInputting, pageIndex, transDirect, setTra
         <h2>mail</h2>
         <div className={styles.mailForm}>
           <div>
-            <label htmlFor="mail-to">to</label>
-            <div id="mail-to">
+            <span>to</span>
+            <div>
               <span>{process.env.NEXT_PUBLIC_EMAIL}</span>
               <CopyBtn text={process.env.NEXT_PUBLIC_EMAIL!} />  
             </div>
