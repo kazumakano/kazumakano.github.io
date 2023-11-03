@@ -14,15 +14,15 @@ export default function usePinch(srcEle: HTMLElement | null, tgtEle: HTMLElement
     evList[evList.findIndex(e => e.pointerId == ev.pointerId)] = ev
     setEvList(evList)
 
-    if (evList.length == 2) {
+    if (tgtEle != null && evList.length == 2) {
       const dist = Math.hypot(evList[0].clientX - evList[1].clientX, evList[0].clientY - evList[1].clientY)
 
       if (initDist < 0) {
         // @ts-expect-error
-        setInitStates([dist, parseFloat(tgtEle!.style.zoom)])
+        setInitStates([dist, parseFloat(tgtEle.style.zoom)])
       } else {
         // @ts-expect-error
-        tgtEle!.style.zoom = (dist / initDist * initZoom).toString()
+        tgtEle.style.zoom = (dist / initDist * initZoom).toString()
       }
     }
   }
@@ -43,7 +43,7 @@ export default function usePinch(srcEle: HTMLElement | null, tgtEle: HTMLElement
     }
   }, [tgtEle])
 
-  if (srcEle != null && tgtEle != null) {
+  if (srcEle != null) {
     srcEle.onpointerdown = onPointerDown
     srcEle.onpointermove = onPointerMove
     srcEle.onpointerup = onReset
