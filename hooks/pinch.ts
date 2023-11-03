@@ -1,7 +1,8 @@
+import type { RefObject } from "react"
 import { useEffect, useState } from "react"
 
 
-export default function usePinch(srcEle: HTMLElement | null, tgtEle: HTMLElement | null): void {
+export default function usePinch(srcRef: RefObject<HTMLElement>, tgtRef: RefObject<HTMLElement>): void {
   const [evList, setEvList] = useState<PointerEvent[]>([])
   const [[initDist, initZoom], setInitStates] = useState<[number, number]>([-1, -1])
 
@@ -14,15 +15,15 @@ export default function usePinch(srcEle: HTMLElement | null, tgtEle: HTMLElement
     evList[evList.findIndex(e => e.pointerId == ev.pointerId)] = ev
     setEvList(evList)
 
-    if (tgtEle != null && evList.length == 2) {
+    if (tgtRef.current != null && evList.length == 2) {
       const dist = Math.hypot(evList[0].clientX - evList[1].clientX, evList[0].clientY - evList[1].clientY)
 
       if (initDist < 0) {
         // @ts-expect-error
-        setInitStates([dist, parseFloat(tgtEle.style.zoom)])
+        setInitStates([dist, parseFloat(tgtRef.current.style.zoom)])
       } else {
         // @ts-expect-error
-        tgtEle.style.zoom = (dist / initDist * initZoom).toString()
+        tgtRef.current.style.zoom = (dist / initDist * initZoom).toString()
       }
     }
   }
@@ -37,18 +38,20 @@ export default function usePinch(srcEle: HTMLElement | null, tgtEle: HTMLElement
   }
 
   useEffect(() => {
-    if (tgtEle != null) {
+    if (tgtRef.current != null) {
       // @ts-expect-error
-      tgtEle.style.zoom = "1"
+      tgtRef.current.style.zoom = "1"
     }
-  }, [tgtEle])
+  }, [tgtRef.current])
 
-  if (srcEle != null) {
-    srcEle.onpointerdown = onPointerDown
-    srcEle.onpointermove = onPointerMove
-    srcEle.onpointerup = onReset
-    srcEle.onpointercancel = onReset
-    srcEle.onpointerout = onReset
-    srcEle.onpointerleave = onReset
-  }
+  useEffect(() => {
+    if (srcRef.current != null) {
+      srcRef.current.onpointerdown = onPointerDown
+      srcRef.current.onpointermove = onPointerMove
+      srcRef.current.onpointerup = onReset
+      srcRef.current.onpointercancel = onReset
+      srcRef.current.onpointerout = onReset
+      srcRef.current.onpointerleave = onReset
+    }
+  })
 }

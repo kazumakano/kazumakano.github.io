@@ -3,6 +3,8 @@ import Table from "react-bootstrap/Table"
 import { getFormattedDate } from "../functions/datetime"
 import { CopyBtn } from "../components/button"
 import type { ComponentProps } from "./_app"
+import { useRef } from "react"
+import usePinch from "../hooks/pinch"
 import Layout from "../components/layout"
 import TextBox from "../components/text-box"
 
@@ -41,9 +43,14 @@ const PublicationTable = ({ isInternational }: PublicationTableProps) => (
 )
 
 export default function Publication({ pageIndex, transDirect, setTransDirect }: ComponentProps): JSX.Element {
+  const pinchSrcRef = useRef<HTMLDivElement>(null)
+  const pinchTgtRef = useRef<HTMLDivElement>(null)
+
+  usePinch(pinchSrcRef, pinchTgtRef)
+
   return (
     <Layout pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect} title="Publication & Presentation">
-      <TextBox enableMargins={[false, false]} proportion={100}>
+      <TextBox enableMargins={[false, false]} proportion={100} innerRef={pinchTgtRef} outerRef={pinchSrcRef}>
         <h2>international</h2>
         <PublicationTable isInternational={true} />
 

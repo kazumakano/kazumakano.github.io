@@ -44,8 +44,8 @@ const rightIcon = (
 export default function Home({ pageIndex, transDirect, setTransDirect }: ComponentProps): JSX.Element {
   const [hintMsg, setHintMsg] = useState<JSX.Element>(<></>)
   const isPc = useContext(IsPcCtx)
-  const pinchSrcEleRef = useRef<HTMLDivElement>(null)
-  const pinchTgtEleRef = useRef<HTMLDivElement>(null)
+  const pinchSrcRef = useRef<HTMLDivElement>(null)
+  const pinchTgtRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const timerId = window.setTimeout(setHintMsg, HINT_DELAY, (
@@ -59,14 +59,14 @@ export default function Home({ pageIndex, transDirect, setTransDirect }: Compone
     return () => window.clearTimeout(timerId)
   }, [setHintMsg])
 
-  usePinch(pinchSrcEleRef.current, pinchTgtEleRef.current)
+  usePinch(pinchSrcRef, pinchTgtRef)
 
   return (
     <>
       {isPc ? hintMsg : null}
 
       <Layout pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect} title="about me">
-        <TextBox enableMargins={[false, true]} proportion={70} innerRef={pinchTgtEleRef} outerRef={pinchSrcEleRef}>
+        <TextBox enableMargins={[false, true]} proportion={70} innerRef={pinchTgtRef} outerRef={pinchSrcRef}>
           <p className={styles.greeting}>kazuma kano</p>
           <ul className={styles.tags}>
             {TAGS.map((t, i) => <li key={i}>{t}</li>)}
