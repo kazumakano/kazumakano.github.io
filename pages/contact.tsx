@@ -29,7 +29,7 @@ export default function Contact({ setIsInputting, pageIndex, transDirect, setTra
   const [mailSubject, setMailSubject] = useState<string>("")
 
   const onChange = useCallback(event => setMailBody(event.target.value.replace(/\n/g, "%0d%0a")), [setMailBody])
-  const onClickSwapBtn = useCallback(() => setMailAddrIdx((mailAddrIdx + 1) % mailAddrList.length), [mailAddrIdx, setMailAddrIdx, mailAddrList])
+  const onClickSwapBtn = useCallback(() => setMailAddrIdx((mailAddrIdx + 1) % mailAddrList.length), [mailAddrIdx, setMailAddrIdx])
 
   const uri = useMemo(() => {
     let uri = `mailto:${mailAddrList[mailAddrIdx]}`
@@ -43,7 +43,7 @@ export default function Contact({ setIsInputting, pageIndex, transDirect, setTra
       uri += `?subject=${mailSubject}`
     }
     return uri
-  }, [mailAddrIdx, mailAddrList, mailBody, mailSubject])
+  }, [mailAddrIdx, mailBody, mailSubject])
 
   return (
     <Layout pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect} title="contact">
