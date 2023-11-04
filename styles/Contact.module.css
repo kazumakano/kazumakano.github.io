@@ -26,7 +26,7 @@
   margin-top: 5px;
 }
 
-.mailForm > div > label, .mailForm > div > span {
+.mailForm > div > label {
   text-transform: capitalize;
   width: 80px;
 }
@@ -37,12 +37,14 @@
   width: calc(100% - 80px);
 }
 
-.mailForm > div:first-child > div > span {
-  margin-left: 15px;
-  margin-right: auto;
+.mailForm > div:first-child > div > select {
+  appearance: none;
+  background-color: inherit;
+  border-style: none;
+  color: black;
 }
 
-.mailForm > div:first-child > div > button {
+.mailForm > div:first-child > div > button:last-child {
   margin-left: auto;
   margin-right: 15px;
 }

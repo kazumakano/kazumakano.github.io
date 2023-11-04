@@ -199,11 +199,11 @@ a {
   border-radius: 50%;
 }
 
-.copy-btn {
+.copy-btn, .swap-btn {
   border: none;
 }
 
-.copy-btn:hover {
+.copy-btn:hover, .swap-btn:hover {
   background-color: inherit;
 }
 

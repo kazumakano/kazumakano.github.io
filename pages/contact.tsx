@@ -4,7 +4,7 @@ import { useCallback, useState } from "react"
 import Layout from "../components/layout"
 import TextBox from "../components/text-box"
 import { SocialGrid, SocialTile } from "../components/social-tiles"
-import { CopyBtn, MailerBtn } from "../components/button"
+import { CopyBtn, MailerBtn, SwapBtn } from "../components/button"
 
 
 const githubIcon = (
@@ -22,30 +22,24 @@ const twitterIcon = (
 )
 
 export default function Contact({ setIsInputting, pageIndex, transDirect, setTransDirect }: ComponentProps): JSX.Element {
+  const [mailAddrIdx, setMailAddrIdx] = useState<number>(0)
+  const mailAddrList = process.env.NEXT_PUBLIC_EMAIL == null ? [] : process.env.NEXT_PUBLIC_EMAIL.split(",")
   const [mailBody, setMailBody] = useState<string>("")
   const [mailSubject, setMailSubject] = useState<string>("")
 
-  const getUri = useCallback(() => {
-    let uri = `mailto:${process.env.NEXT_PUBLIC_EMAIL}`
+  const onChange = useCallback(event => setMailBody(event.target.value.replace(/\n/g, "%0d%0a")), [setMailBody])
+  const onClickSwapBtn = useCallback(() => setMailAddrIdx((mailAddrIdx + 1) % mailAddrList.length), [mailAddrIdx, setMailAddrIdx, mailAddrList])
 
-    if (mailBody != "" && mailSubject != "") {
-      uri += `?body=${mailBody}&subject=${mailSubject}`
-    }
-    else if (mailBody != "") {
-      uri += `?body=${mailBody}`
-    }
-    else if (mailSubject != "") {
-      uri += `?subject=${mailSubject}`
-    }
-
-    return uri
-  }, [mailBody, mailSubject])
-
-  const uri = getUri()
-
-  const onChange = useCallback(event => {
-    setMailBody(event.target.value.replace(/\n/g, "%0d%0a"))
-  }, [setMailBody])
+  let uri = `mailto:${mailAddrList[mailAddrIdx]}`
+  if (mailBody != "" && mailSubject != "") {
+    uri += `?body=${mailBody}&subject=${mailSubject}`
+  }
+  else if (mailBody != "") {
+    uri += `?body=${mailBody}`
+  }
+  else if (mailSubject != "") {
+    uri += `?subject=${mailSubject}`
+  }
 
   return (
     <Layout pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect} title="contact">
@@ -67,10 +61,15 @@ export default function Contact({ setIsInputting, pageIndex, transDirect, setTra
         <h2>mail</h2>
         <div className={styles.mailForm}>
           <div>
-            <span>to</span>
+            <label htmlFor="mail-to">to</label>
             <div>
-              <span>{process.env.NEXT_PUBLIC_EMAIL}</span>
-              <CopyBtn text={process.env.NEXT_PUBLIC_EMAIL!} />  
+              <SwapBtn onClick={onClickSwapBtn} />
+              <select disabled id="mail-to" value={mailAddrList[mailAddrIdx]}>
+                {mailAddrList.map((a, i) => (
+                  <option key={i} value={a}>{a}</option>
+                ))}
+              </select>
+              <CopyBtn text={mailAddrList[mailAddrIdx]} />  
             </div>
           </div>
 
