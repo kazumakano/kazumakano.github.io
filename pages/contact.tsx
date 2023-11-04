@@ -1,11 +1,13 @@
 import styles from "../styles/Contact.module.css"
 import type { ComponentProps } from "./_app"
-import { useCallback, useState } from "react"
+import { useCallback, useMemo, useState } from "react"
 import Layout from "../components/layout"
 import TextBox from "../components/text-box"
 import { SocialGrid, SocialTile } from "../components/social-tiles"
 import { CopyBtn, MailerBtn, SwapBtn } from "../components/button"
 
+
+const mailAddrList = process.env.NEXT_PUBLIC_EMAIL == null ? [] : process.env.NEXT_PUBLIC_EMAIL.split(",")
 
 const githubIcon = (
   <svg viewBox="0 0 16 16">
@@ -23,23 +25,25 @@ const twitterIcon = (
 
 export default function Contact({ setIsInputting, pageIndex, transDirect, setTransDirect }: ComponentProps): JSX.Element {
   const [mailAddrIdx, setMailAddrIdx] = useState<number>(0)
-  const mailAddrList = process.env.NEXT_PUBLIC_EMAIL == null ? [] : process.env.NEXT_PUBLIC_EMAIL.split(",")
   const [mailBody, setMailBody] = useState<string>("")
   const [mailSubject, setMailSubject] = useState<string>("")
 
   const onChange = useCallback(event => setMailBody(event.target.value.replace(/\n/g, "%0d%0a")), [setMailBody])
   const onClickSwapBtn = useCallback(() => setMailAddrIdx((mailAddrIdx + 1) % mailAddrList.length), [mailAddrIdx, setMailAddrIdx, mailAddrList])
 
-  let uri = `mailto:${mailAddrList[mailAddrIdx]}`
-  if (mailBody != "" && mailSubject != "") {
-    uri += `?body=${mailBody}&subject=${mailSubject}`
-  }
-  else if (mailBody != "") {
-    uri += `?body=${mailBody}`
-  }
-  else if (mailSubject != "") {
-    uri += `?subject=${mailSubject}`
-  }
+  const uri = useMemo(() => {
+    let uri = `mailto:${mailAddrList[mailAddrIdx]}`
+    if (mailBody != "" && mailSubject != "") {
+      uri += `?body=${mailBody}&subject=${mailSubject}`
+    }
+    else if (mailBody != "") {
+      uri += `?body=${mailBody}`
+    }
+    else if (mailSubject != "") {
+      uri += `?subject=${mailSubject}`
+    }
+    return uri
+  }, [mailAddrIdx, mailAddrList, mailBody, mailSubject])
 
   return (
     <Layout pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect} title="contact">
