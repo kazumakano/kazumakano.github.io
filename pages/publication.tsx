@@ -34,7 +34,7 @@ const PublicationTable = ({ isInternational }: PublicationTableProps) => (
           <td>{p.conference}</td>
           <td>{p.authorship}</td>
           <td>
-            {p.type == "exhibition" ? null : <CopyBtn text={p.title} />}
+            {p.type == "proceedings" ? <CopyBtn text={p.title} /> : null}
           </td>
         </tr>
       ))}

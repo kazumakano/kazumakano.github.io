@@ -15,6 +15,13 @@
       "type": "proceedings"
     },
     {
+      "authorship": null,
+      "conference": "大学院教育改革フォーラム2023",
+      "date": [2023, 12],
+      "title": "Gait-Robust Heading Estimation for PDR with Smartphones",
+      "type": "poster"
+    },
+    {
       "authorship": "lead author",
       "conference": "HCGSYMPO 2023",
       "date": [2023, 12],
