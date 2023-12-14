@@ -2,7 +2,8 @@
   "award": [
     {
       "date": [2021, 11],
-      "title": "第2回東海ユビキタスコンピューティング研究室合同研究発表会 優秀賞"
+      "title": "第2回東海ユビキタスコンピューティング研究室合同研究発表会 優秀賞",
+      "url": "https://kajilab.net/tokaiubi2021/"
     },
     {
       "date": [2022, 3],
@@ -12,6 +13,11 @@
       "date": [2023, 9],
       "title": "10th IPIN Competition on Indoor Localization Track 5 2nd Place",
       "url": "https://unit.aist.go.jp/harc/xDR-Challenge-2023/"
+    },
+    {
+      "date": [2023, 12],
+      "title": "HCGシンポジウム2023 特集テーマセッション賞",
+      "url": "https://www.hcg-ieice.org/hcg-symposium/2023/"
     }
   ],
 
