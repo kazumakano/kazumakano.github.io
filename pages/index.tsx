@@ -15,8 +15,7 @@ import { RoundImg } from "../components/image"
 const HINT_DELAY = 5000
 const TAGS = [
   "indoor positioning",
-  "human activity recognition",
-  "human computer interaction",
+  "activity recognition",
   "deep learning"
 ]
 
@@ -89,10 +88,10 @@ export default function Home({ pageIndex, transDirect, setTransDirect }: Compone
             ))}
           </Table>
 
-          <h2>experience</h2>
+          <h2>activity</h2>
           <Table borderless className={styles.expTable}>
             <tbody>
-              {history.experience.map((h, i) => (
+              {history.activity.map((h, i) => (
                 <tr key={i}>
                   <td>{getFormattedDate(h.term[0]?.[1], h.term[0]?.[0])}</td>
                   <td>~</td>

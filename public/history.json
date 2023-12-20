@@ -1,20 +1,5 @@
 {
-  "education": [
-    {
-      "department": "Department of Electrical Engineering, Electronics, and Information Engineering",
-      "school": "School of Engineering, Nagoya University",
-      "term": [[2018, 4], [2022, 3]],
-      "url": "https://www.nuee.nagoya-u.ac.jp/"
-    },
-    {
-      "department": "Department of Information and Communication Engineering",
-      "school": "Graduate School of Engineering, Nagoya University",
-      "term": [[2022, 4], null],
-      "url": "https://www.nuee.nagoya-u.ac.jp/"
-    }
-  ],
-
-  "experience": [
+  "activity": [
     {
       "term": [[2019, 2], [2019, 3]],
       "title": "Oregon Experience Program at the University of Oregon",
@@ -39,6 +24,21 @@
       "term": [[2023, 8], [2023, 8]],
       "title": "Learn in Bharat India Bootcamp organized by Suzuki Innovation Centre",
       "url": "https://sites.google.com/iith.ac.in/sicglobal/"
+    }
+  ],
+
+  "education": [
+    {
+      "department": "Department of Electrical Engineering, Electronics, and Information Engineering",
+      "school": "School of Engineering, Nagoya University",
+      "term": [[2018, 4], [2022, 3]],
+      "url": "https://www.nuee.nagoya-u.ac.jp/"
+    },
+    {
+      "department": "Department of Information and Communication Engineering",
+      "school": "Graduate School of Engineering, Nagoya University",
+      "term": [[2022, 4], null],
+      "url": "https://www.nuee.nagoya-u.ac.jp/"
     }
   ]
 }
