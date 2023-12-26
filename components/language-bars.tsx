@@ -57,7 +57,7 @@ type LangBarsProps = {
 }
 
 const useLangDict = () => {
-  let [langDict, setLangDict] = useState<LangDict | null>(null)
+  const [langDict, setLangDict] = useState<LangDict | null>(null)
 
   useEffect(() => {
     const ctrler = new window.AbortController()
