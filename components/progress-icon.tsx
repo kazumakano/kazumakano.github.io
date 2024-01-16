@@ -36,7 +36,7 @@ export default function ProgressIcon({ pageIndex, transDirect }: ProgressIconPro
         cx="50"
         cy="50"
         r="45"
-        stroke="white"
+        stroke="rgba(255, 255, 255, 0.8)"
         strokeWidth="10"
         style={{rotate: 270}}
       />
