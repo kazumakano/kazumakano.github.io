@@ -54,8 +54,8 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <>
       <Head>
-        <title>{process.env.NEXT_PUBLIC_TITLE}</title>
-        <meta name="description" content={process.env.NEXT_PUBLIC_DESC} />
+        <title>{process.env.NEXT_PUBLIC_NAME}</title>
+        <meta name="description" content="This is my profile site." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
