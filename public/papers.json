@@ -58,6 +58,13 @@
       "date": [2023, 9],
       "title": "Gait-Robust Heading Estimation Using Horizontal Acceleration for Smartphone-based PDR",
       "type": "proceedings"
+    },
+    {
+      "authorship": "co-author",
+      "conference": "PerCom 2024",
+      "date": [2024, 3],
+      "title": "Semi-Automated Framework for Digitalizing Multi-Product Warehouses with Large Scale Camera Arrays",
+      "type": "proceedings"
     }
   ]
 }
