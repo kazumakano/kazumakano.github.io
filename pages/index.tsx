@@ -9,7 +9,7 @@ import usePinch from "../hooks/pinch"
 import Layout from "../components/layout"
 import TextBox from "../components/text-box"
 import Table from "react-bootstrap/Table"
-import { getFormattedDate } from "../functions/datetime"
+import { getFormattedDate } from "../functions/utility"
 import { RoundImg } from "../components/image"
 
 const HINT_DELAY = 5000

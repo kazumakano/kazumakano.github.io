@@ -7,10 +7,5 @@ const dateFormat = new Intl.DateTimeFormat(
 )
 
 export function getFormattedDate(month?: number, year?: number): string | null {
-  if (month == null || year == null) {
-    return null
-  }
-  else {
-    return dateFormat.format(new Date(year, month - 1))
-  }
+  return month == null || year == null ? null : dateFormat.format(new Date(year, month - 1))
 }
