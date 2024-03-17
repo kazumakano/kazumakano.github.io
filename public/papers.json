@@ -27,6 +27,13 @@
       "date": [2023, 12],
       "title": "深層学習PDRとBLEビーコンを用いたハイブリッド測位",
       "type": "proceedings"
+    },
+    {
+      "authorship":"lead author",
+      "conference": "JIP",
+      "date": [2024, 6],
+      "title": "スマートフォンを用いた歩行者自律航法のための歩き方の違いに頑健な進行方向推定",
+      "type": "article"
     }
   ],
 
