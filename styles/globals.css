@@ -38,6 +38,14 @@ a {
   width: 100%;
 }
 
+#background::before {
+  backdrop-filter: blur(2px);
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
 .mv-btn {
   display: flex;
   height: 100%;
