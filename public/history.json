@@ -11,11 +11,6 @@
       "url": "https://nzlc.ac.nz/"
     },
     {
-      "term": [[2022, 4], null],
-      "title": "Graduate Program for Lifestyle Revolution based on Transdisciplinary Mobility Innovation",
-      "url": "https://www.tmi.mirai.nagoya-u.ac.jp/"
-    },
-    {
       "term": [[2022, 8], [2022, 9]],
       "title": "Internship Engineering Hackathon Course at LINE Corporation",
       "url": "https://linecorp.com/ja/career/newgrads/internship/"
@@ -39,6 +34,12 @@
       "school": "Graduate School of Engineering, Nagoya University",
       "term": [[2022, 4], null],
       "url": "https://www.nuee.nagoya-u.ac.jp/"
+    },
+    {
+      "department": "Graduate Program for Lifestyle Revolution based on Transdisciplinary Mobility Innovation",
+      "school": "Institutes of Innovation for Future Society, Nagoya University",
+      "term": [[2022, 4], null],
+      "url": "https://www.tmi.mirai.nagoya-u.ac.jp/"
     }
   ]
 }
