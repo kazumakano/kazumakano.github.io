@@ -18,10 +18,8 @@ type LinkedTdProps = {
 
 const LinkedTd = ({ children, url }: LinkedTdProps) => (
   <td>
-    <Link href={url}>
-      <a target="_blank">
-        {children}
-      </a>
+    <Link href={url} target="_blank">
+      {children}
     </Link>
   </td>
 )

@@ -24,10 +24,8 @@ type LabelProps = {
 
 const Label = ({ children, isLeft, url }: LabelProps) => (
   <div className={isLeft ? styles.leftLabel : styles.rightLabel}>
-    <Link href={url}>
-      <a target="_blank">
-        {children}  
-      </a>
+    <Link href={url} target="_blank">
+      {children}
     </Link>
   </div>
 )
@@ -41,13 +39,8 @@ type IconProps = {
 
 const Icon = ({ color, icon, isMouseOver, url }: IconProps) => (
   <div className={styles.icon}>
-    <Link href={url}>
-      <a
-        style={{fill: isMouseOver ? color : "inherit"}}
-        target="_blank"
-      >
-        {icon}  
-      </a>
+    <Link href={url} style={{fill: isMouseOver ? color : "inherit"}} target="_blank">
+      {icon}
     </Link>
   </div>
 )

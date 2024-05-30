@@ -38,20 +38,18 @@ export function FrameworkTile({ color, icon, name, url }: FrameworkTileProps): J
       onMouseEnter={useCallback(() => setIsMouseOver(true), [setIsMouseOver])}
       onMouseLeave={useCallback(() => setIsMouseOver(false), [setIsMouseOver])}
     >
-      <Link href={url}>
-        <a target="_blank">
-          <AnimatePresence exitBeforeEnter initial={false}>
-            <motion.div
-              key={isMouseOver ? 1 : 0}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
-            >
-              {isMouseOver ? nameTile : icon}
-            </motion.div>
-          </AnimatePresence>
-        </a>
+      <Link href={url} target="_blank">
+        <AnimatePresence exitBeforeEnter initial={false}>
+          <motion.div
+            key={isMouseOver ? 1 : 0}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            {isMouseOver ? nameTile : icon}
+          </motion.div>
+        </AnimatePresence>
       </Link>
     </div>
   )
