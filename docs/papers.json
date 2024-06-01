@@ -72,6 +72,13 @@
       "date": [2024, 3],
       "title": "Semi-Automated Framework for Digitalizing Multi-Product Warehouses with Large Scale Camera Arrays",
       "type": "proceedings"
+    },
+    {
+      "authorship": null,
+      "conference": "MobiSys 2024",
+      "date": [2024, 6],
+      "title": "A Data-Driven Approach for Person Identification with Wearable Sensors and Static Cameras",
+      "type": "poster"
     }
   ]
 }
