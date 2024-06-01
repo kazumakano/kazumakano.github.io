@@ -38,7 +38,7 @@ export function FrameworkTile({ color, icon, name, url }: FrameworkTileProps): J
       onMouseEnter={useCallback(() => setIsMouseOver(true), [setIsMouseOver])}
       onMouseLeave={useCallback(() => setIsMouseOver(false), [setIsMouseOver])}
     >
-      <Link href={url} target="_blank">
+      <Link href={url} passHref target="_blank">
         <AnimatePresence exitBeforeEnter initial={false}>
           <motion.div
             key={isMouseOver ? 1 : 0}
