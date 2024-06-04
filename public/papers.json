@@ -64,7 +64,7 @@
       "conference": "IPIN 2023",
       "date": [2023, 9],
       "title": "Gait-Robust Heading Estimation Using Horizontal Acceleration for Smartphone-based PDR",
-      "type": "proceedings"
+      "type": "proceedings (wip)"
     },
     {
       "authorship": "co-author",
@@ -78,7 +78,7 @@
       "conference": "MobiSys 2024",
       "date": [2024, 6],
       "title": "A Data-Driven Approach for Person Identification with Wearable Sensors and Static Cameras",
-      "type": "poster"
+      "type": "poster (workshop)"
     }
   ]
 }
