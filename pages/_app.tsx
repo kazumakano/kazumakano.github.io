@@ -12,8 +12,7 @@ const BG_IMGS = [
   "/barcelona.jpeg",
   "/fushimi-inari-taisha.jpeg",
   "/golconda.jpeg",
-  "/hakodate.jpeg",
-  "/mirai-tower.jpeg"
+  "/hakodate.jpeg"
 ]
 
 export const CONTENTS = [
