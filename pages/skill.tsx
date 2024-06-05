@@ -135,15 +135,15 @@ const unityIcon = (
 
 export default function Skill({ langColors, pageIndex, transDirect, setTransDirect }: SkillProps): JSX.Element {
   return (
-    <Layout pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect} title="skill">
+    <Layout pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect} title="skills">
       <TextBox enableMargins={[false, true]} proportion={50}>
-        <h2>language</h2>
+        <h2>languages</h2>
         <p>{downIcon} bytes in GitHub public repositories</p>
         <LangBars colors={langColors} />
       </TextBox>
 
       <TextBox enableMargins={[true, false]} proportion={50}>
-        <h2><span className={styles.frameworkHeader}>Framework and Tool</span></h2>
+        <h2><span className={styles.frameworkHeader}>Frameworks & Tools</span></h2>
         <FrameworkGrid>
           <FrameworkTile color="#092e20" icon={djangoIcon} name="Django" url="https://www.djangoproject.com/" />
           <FrameworkTile color="black" icon={flaskIcon} name="Flask" url="https://flask.palletsprojects.com/" />

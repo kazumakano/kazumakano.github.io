@@ -31,9 +31,9 @@ export default function Achievement({ pageIndex, transDirect, setTransDirect }: 
   usePinch(pinchSrcRef, pinchTgtRef)
 
   return (
-    <Layout pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect} title="achievement">
+    <Layout pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect} title="achievements">
       <TextBox enableMargins={[false, false]} proportion={100} innerRef={pinchTgtRef} outerRef={pinchSrcRef}>
-        <h2>award</h2>
+        <h2>awards</h2>
         <Table borderless className={styles.achieveTable}>
           <tbody>
             {achieves.award.map((a, i) => (
@@ -45,7 +45,7 @@ export default function Achievement({ pageIndex, transDirect, setTransDirect }: 
           </tbody>
         </Table>
 
-        <h2>qualification</h2>
+        <h2>qualifications</h2>
         <Table borderless className={styles.achieveTable}>
           <tbody>
             {achieves.qualification.map((q, i) => (
