@@ -49,7 +49,7 @@ export default function Publication({ pageIndex, transDirect, setTransDirect }: 
   usePinch(pinchSrcRef, pinchTgtRef)
 
   return (
-    <Layout pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect} title="Publications & Presentations">
+    <Layout pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect} title="publications & presentations">
       <TextBox enableMargins={[false, false]} proportion={100} innerRef={pinchTgtRef} outerRef={pinchSrcRef}>
         <h2>international</h2>
         <PublicationTable isInternational={true} />

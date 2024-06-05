@@ -1,4 +1,3 @@
-import styles from "../styles/Skill.module.css"
 import type { ComponentProps } from "./_app"
 import type { LangColors } from "../components/language-bars"
 import Layout from "../components/layout"
@@ -143,7 +142,7 @@ export default function Skill({ langColors, pageIndex, transDirect, setTransDire
       </TextBox>
 
       <TextBox enableMargins={[true, false]} proportion={50}>
-        <h2><span className={styles.frameworkHeader}>Frameworks & Tools</span></h2>
+        <h2>frameworks & tools</h2>
         <FrameworkGrid>
           <FrameworkTile color="#092e20" icon={djangoIcon} name="Django" url="https://www.djangoproject.com/" />
           <FrameworkTile color="black" icon={flaskIcon} name="Flask" url="https://flask.palletsprojects.com/" />
