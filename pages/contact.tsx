@@ -62,7 +62,7 @@ export default function Contact({ setIsInputting, pageIndex, transDirect, setTra
       </TextBox>
 
       <TextBox enableMargins={[true, false]} proportion={50}>
-        <h2>mail</h2>
+        <h2>email</h2>
         <div className={styles.mailForm}>
           <div>
             <label htmlFor="mail-to">to</label>
