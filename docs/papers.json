@@ -2,28 +2,28 @@
   "domestic": [
     {
       "authorship": "co-author",
-      "conference": "WSSIT 2022",
+      "conference": "WSSIT",
       "date": [2022, 3],
       "title": "機械学習による慣性センサを用いた転倒動作検知に関する研究",
       "type": "proceedings"
     },
     {
       "authorship": "lead author",
-      "conference": "DICOMO 2022",
+      "conference": "DICOMO",
       "date": [2022, 7],
       "title": "物流倉庫におけるソーラー式BLEビーコンとPDRを用いたハイブリッド測位",
       "type": "proceedings"
     },
     {
       "authorship": null,
-      "conference": "大学院教育改革フォーラム2023",
+      "conference": "大学院教育改革フォーラム",
       "date": [2023, 12],
       "title": "Gait-Robust Heading Estimation for Pedestrian Dead Reckoning with Smartphones",
       "type": "poster"
     },
     {
       "authorship": "lead author",
-      "conference": "HCGSYMPO 2023",
+      "conference": "HCGSYMPO",
       "date": [2023, 12],
       "title": "深層学習PDRとBLEビーコンを用いたハイブリッド測位",
       "type": "proceedings"
@@ -37,55 +37,90 @@
     },
     {
       "authorship": null,
-      "conference": "IRASF 2024",
+      "conference": "IRASF",
       "date": [2024, 7],
       "title": "プライバシーに配慮した人流・状態計測システム",
       "type": "exhibition"
+    },
+    {
+      "authorship": "lead author",
+      "conference": "MCC",
+      "date": [2024, 8],
+      "title": "ラベル付き前景セグメントを用いたパターン豊富でアノテーション漏れのない広角画像の合成",
+      "type": "proceedings"
+    },
+    {
+      "authorship": "co-author",
+      "conference": "東海支部連合大会",
+      "date": [2024, 8],
+      "title": "マルチカメラによるオクルージョン回避を用いた荷物置き場の占有状況検出",
+      "type": "proceedings"
+    },
+    {
+      "authorship": "co-author",
+      "conference": "東海支部連合大会",
+      "date": [2024, 8],
+      "title": "エッジ音声処理とCAN通信を用いた多数接続可能な発話方向推定システム",
+      "type": "proceedings"
+    },
+    {
+      "authorship": "co-author",
+      "conference": "東海支部連合大会",
+      "date": [2024, 8],
+      "title": "物流倉庫におけるスマートフォンを用いた作業者のタスク認識",
+      "type": "proceedings"
     }
   ],
 
   "international": [
     {
       "authorship": "co-author",
-      "conference": "ABC 2021",
+      "conference": "ABC",
       "date": [2021, 10],
       "title": "A Data-Driven Approach for Online Pre-impact Fall Detection with Wearable Devices",
       "type": "proceedings"
     },
     {
       "authorship": "lead author",
-      "conference": "HCII 2022",
+      "conference": "HCII",
       "date": [2022, 6],
       "title": "Smartphone Localization with Solar-Powered BLE Beacons in Warehouse",
       "type": "proceedings"
     },
     {
       "authorship": null,
-      "conference": "SCEWC 22",
+      "conference": "SCEWC",
       "date": [2022, 11],
       "title": "Smart Warehouse",
       "type": "exhibition"
     },
     {
       "authorship":"lead author",
-      "conference": "IPIN 2023",
+      "conference": "IPIN",
       "date": [2023, 9],
       "title": "Gait-Robust Heading Estimation Using Horizontal Acceleration for Smartphone-based PDR",
       "type": "proceedings (wip)"
     },
     {
       "authorship": "co-author",
-      "conference": "PerCom 2024",
+      "conference": "PerCom",
       "date": [2024, 3],
       "title": "Semi-Automated Framework for Digitalizing Multi-Product Warehouses with Large Scale Camera Arrays",
       "type": "proceedings"
     },
     {
       "authorship": null,
-      "conference": "MobiSys 2024",
+      "conference": "MobiSys",
       "date": [2024, 6],
       "title": "A Data-Driven Approach for Person Identification with Wearable Sensors and Static Cameras",
       "type": "poster (workshop)"
+    },
+    {
+      "authorship": "lead author",
+      "conference": "UbiComp / ISWC",
+      "date": [2024, 10],
+      "title": "Composite Image Generation Using labeled Segments for Pattern-Rich Dataset without Unannotated Target",
+      "type": "proceedings (workshop)"
     }
   ]
 }
