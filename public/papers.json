@@ -110,7 +110,7 @@
       "date": [2024, 6],
       "title": "A Data-Driven Approach for Person Identification with Wearable Sensors and Static Cameras",
       "type": "poster (workshop)",
-      "conferenceUrl": "https://www.sigmobile.org/mobisys/2024/asset.html"
+      "conferenceUrl": "https://www.sigmobile.org/mobisys/2024/"
     },
     {
       "authorship": "lead author",
@@ -118,7 +118,7 @@
       "date": [2024, 10],
       "title": "Composite Image Generation Using labeled Segments for Pattern-Rich Dataset without Unannotated Target",
       "type": "proceedings (workshop)",
-      "conferenceUrl": "http://hasca2024.hasc.jp/"
+      "conferenceUrl": "https://www.ubicomp.org/ubicomp-iswc-2024/"
     }
   ]
 }
