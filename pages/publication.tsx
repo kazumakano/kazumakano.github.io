@@ -1,4 +1,7 @@
+import styles from "../styles/Publication.module.css"
 import papers from "../public/papers.json"
+import type { ReactNode } from "react"
+import Link from "next/link"
 import Table from "react-bootstrap/Table"
 import { getFormattedDate } from "../functions/utility"
 import { CopyBtn } from "../components/button"
@@ -9,12 +12,25 @@ import Layout from "../components/layout"
 import TextBox from "../components/text-box"
 
 
+type LinkedTdProps = {
+  children: ReactNode
+  url: string
+}
+
+const LinkedTd = ({ children, url }: LinkedTdProps) => (
+  <td>
+    <Link href={url} target="_blank">
+      {children}
+    </Link>
+  </td>
+)
+
 type PublicationTableProps = {
   isInternational: boolean
 } 
 
 const PublicationTable = ({ isInternational }: PublicationTableProps) => (
-  <Table hover striped>
+  <Table className={styles.pubTable} hover striped>
     <thead>
       <tr>
         <th>date</th>
@@ -29,13 +45,11 @@ const PublicationTable = ({ isInternational }: PublicationTableProps) => (
       {(isInternational ? papers.international : papers.domestic).map((p, i) => (
         <tr key={i}>
           <td>{getFormattedDate(p.date[1], p.date[0])}</td>
-          <td>{p.title}</td>
+          {p.paperUrl ? <LinkedTd url={p.paperUrl}>{p.title}</LinkedTd> : <td>{p.title}</td>}
           <td>{p.type}</td>
-          <td>{p.conference}</td>
+          {p.conferenceUrl ? <LinkedTd url={p.conferenceUrl}>{p.conference}</LinkedTd> : <td>{p.conference}</td>}
           <td>{p.authorship}</td>
-          <td>
-            {p.type == "article" || p.type.startsWith("proceedings") ? <CopyBtn text={p.title} /> : null}
-          </td>
+          <td><CopyBtn text={p.title} /></td>
         </tr>
       ))}
     </tbody>

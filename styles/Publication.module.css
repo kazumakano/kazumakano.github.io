@@ -1,0 +1,7 @@
+.pubTable > tbody > tr > td, .pubTable > tbody > tr > td > button {
+  font-size: small;
+}
+
+.pubTable > tbody > tr > td > a {
+  color: inherit;
+}
