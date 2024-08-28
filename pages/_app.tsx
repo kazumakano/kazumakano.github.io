@@ -54,7 +54,7 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <>
       <Head>
-        <title>Kazuma KANO / 加納 一馬</title>
+        <title>Kazuma KANO</title>
         <meta name="description" content="This is my profile site." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
