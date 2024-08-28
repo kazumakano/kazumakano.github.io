@@ -64,7 +64,7 @@ export default function Home({ pageIndex, transDirect, setTransDirect }: Compone
 
       <Layout pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect} title="biography">
         <TextBox enableMargins={[false, true]} proportion={70} innerRef={pinchTgtRef} outerRef={pinchSrcRef}>
-          <p className={styles.greeting}>Kazuma KANO | 加納 一馬</p>
+          <p className={styles.greeting}>Kazuma KANO / 加納 一馬</p>
           <ul className={styles.tags}>
             {TAGS.map((t, i) => <li key={i}>{t}</li>)}
           </ul>
