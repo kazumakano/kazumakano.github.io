@@ -80,6 +80,15 @@
       "title": "マルチカメラによるオクルージョンに頑健な物流倉庫向け占有エリア検出手法",
       "type": "proceedings",
       "conferenceUrl": "https://www.tokai-rengo.jp/"
+    },
+    {
+      "authorship": "co-author",
+      "conference": "VRSJ",
+      "date": [2024, 9],
+      "title": "遠隔MRロボットアーム制御によるスマートな3Dスキャンシステム",
+      "type": "proceedings",
+      "conferenceUrl": "https://conference.vrsj.org/ac2024/",
+      "paperUrl": "https://conference.vrsj.org/ac2024/program/doc/1B2-12.pdf"
     }
   ],
 
@@ -142,6 +151,14 @@
       "date": [2024, 10],
       "title": "Composite Image Generation Using Labeled Segments for Pattern-Rich Dataset without Unannotated Target",
       "type": "proceedings (workshop)",
+      "conferenceUrl": "https://www.ubicomp.org/ubicomp-iswc-2024/"
+    },
+    {
+      "authorship": "co-author",
+      "conference": "UbiComp / ISWC",
+      "date": [2024, 10],
+      "title": "Demonstration:Remote 3D Scanning with VR and Robotic Arm",
+      "type":"proceedings (demo)",
       "conferenceUrl": "https://www.ubicomp.org/ubicomp-iswc-2024/"
     }
   ]
