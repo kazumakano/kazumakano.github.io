@@ -16,6 +16,7 @@ const HINT_DELAY = 5000
 const TAGS = [
   "indoor positioning",
   "activity recognition",
+  "computer vision",
   "deep learning"
 ]
 
