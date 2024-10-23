@@ -89,6 +89,14 @@
       "type": "proceedings",
       "conferenceUrl": "https://conference.vrsj.org/ac2024/",
       "paperUrl": "https://conference.vrsj.org/ac2024/program/doc/1B2-12.pdf"
+    },
+    {
+      "authorship": "co-author",
+      "conference": "SIGUBI",
+      "date": [2024, 11],
+      "title": "EngagedSync：MR共有空間内ユーザの相互状況理解向上のための適応的な周辺環境情報抽出・転送システム",
+      "type": "proceedings",
+      "conferenceUrl": "https://sigubi.ipsj.or.jp/seminar84/"
     }
   ],
 
@@ -162,6 +170,14 @@
       "type":"proceedings (demo)",
       "conferenceUrl": "https://www.ubicomp.org/ubicomp-iswc-2024/",
       "paperUrl": "https://dl.acm.org/doi/10.1145/3675094.3677548"
+    },
+    {
+      "authorship": null,
+      "conference": "SCEWC",
+      "date": [2024, 11],
+      "title": "Location AI for Smart Mobility",
+      "type": "exhibition",
+      "conferenceUrl": "https://www.smartcityexpo.com/"
     }
   ]
 }
