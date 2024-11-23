@@ -1,5 +1,5 @@
 {
-  "name": "about-me",
+  "name": "my-profile-site",
   "private": true,
   "scripts": {
     "dev": "next dev",
