@@ -5,46 +5,6 @@ import listAllReposLangs from "../list-all-repos-langs/src/list-all-repos-langs"
 import Spinner from "react-bootstrap/Spinner"
 
 
-type LangBarConf = {
-  langs: string[]
-  label: string
-}
-
-const LANG_BAR_CONFS: LangBarConf[] = [
-  {
-    langs: ["C", "C++"],
-    label: "C / C++"
-  },
-  {
-    langs: ["C#"],
-    label: "C#"
-  },
-  {
-    langs: ["Go"],
-    label: "Go"
-  },
-  {
-    langs: ["HTML", "CSS"],
-    label: "HTML / CSS"
-  },
-  {
-    langs: ["Java"],
-    label: "Java"
-  },
-  {
-    langs: ["JavaScript", "TypeScript"],
-    label: "JS / TS"
-  },
-  {
-    langs: ["Python", "Jupyter Notebook"],
-    label: "Python"
-  },
-  {
-    langs: ["R"],
-    label: "R"
-  }
-]
-
 export type LangColors = {
   [lang: string]: {
     color: string
@@ -54,6 +14,10 @@ export type LangColors = {
 
 type LangBarsProps = {
   colors: LangColors
+  confs: {
+    langs: string[]
+    label: string
+  }[]
 }
 
 const useLangDict = () => {
@@ -74,7 +38,7 @@ const useLangDict = () => {
 
 const calcProportion = (bytes: number) => bytes / 10000
 
-export default function LangBars({ colors }: LangBarsProps): JSX.Element {
+export default function LangBars({ colors, confs }: LangBarsProps): JSX.Element {
   const langDict = useLangDict()
 
   if (langDict == null) {
@@ -85,7 +49,7 @@ export default function LangBars({ colors }: LangBarsProps): JSX.Element {
   else {
     return (
       <>
-        {LANG_BAR_CONFS.map((c, i) => (
+        {confs.map((c, i) => (
           <div className={styles.langBar} key={i}>
             <div className="progress">
               {c.langs.map((l, j) => (

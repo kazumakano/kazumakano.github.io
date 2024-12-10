@@ -5,6 +5,40 @@ import TextBox from "../components/text-box"
 import LangBars from "../components/language-bars"
 import { FrameworkGrid, FrameworkTile } from "../components/framework-tiles"
 
+const LANG_BAR_CONFS = [
+  {
+    langs: ["C", "C++"],
+    label: "C / C++"
+  },
+  {
+    langs: ["C#"],
+    label: "C#"
+  },
+  {
+    langs: ["Go"],
+    label: "Go"
+  },
+  {
+    langs: ["HTML", "CSS"],
+    label: "HTML / CSS"
+  },
+  {
+    langs: ["Java"],
+    label: "Java"
+  },
+  {
+    langs: ["JavaScript", "TypeScript"],
+    label: "JS / TS"
+  },
+  {
+    langs: ["Python", "Jupyter Notebook"],
+    label: "Python"
+  },
+  {
+    langs: ["R"],
+    label: "R"
+  }
+]
 
 type SkillProps = ComponentProps & {langColors: LangColors}
 
@@ -167,7 +201,7 @@ export default function Skill({ langColors, pageIndex, transDirect, setTransDire
       <TextBox enableMargins={[false, true]} proportion={50}>
         <h2>languages</h2>
         <p>{downIcon} bytes in GitHub public repositories</p>
-        <LangBars colors={langColors} />
+        <LangBars colors={langColors} confs={LANG_BAR_CONFS} />
       </TextBox>
 
       <TextBox enableMargins={[true, false]} proportion={50}>
