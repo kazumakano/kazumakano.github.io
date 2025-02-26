@@ -19,7 +19,7 @@
 }
 
 .leftLabel, .rightLabel {
-  max-width: 384px;
+  max-width: 576px;
   width: calc(75% - 10px);
 }
 
@@ -32,7 +32,7 @@
 }
 
 .icon {
-  max-width: 128px;
+  max-width: 192px;
   width: calc(25% - 10px);
 }
 
