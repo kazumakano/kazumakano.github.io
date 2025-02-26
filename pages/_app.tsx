@@ -18,7 +18,8 @@ const BG_IMGS = [
 
 export const CONTENTS = [
   "/",
-  "/publication",
+  "/publication/international",
+  "/publication/domestic",
   "/achievement",
   "/skill",
   "/contact"
