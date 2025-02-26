@@ -1,6 +1,5 @@
 import styles from "../styles/Achievement.module.css"
 import achieves from "../public/achievements.json"
-import type { ReactNode } from "react"
 import type { ComponentProps } from "./_app"
 import { useRef } from "react"
 import usePinch from "../hooks/pinch"
