@@ -11,13 +11,15 @@ type LinkedTdProps = {
   url: string
 }
 
-const LinkedTd = ({ children, url }: LinkedTdProps) => (
-  <td>
-    <Link href={url} target="_blank">
-      {children}
-    </Link>
-  </td>
-)
+export function LinkedTd({ children, url }: LinkedTdProps): JSX.Element {
+  return (
+    <td>
+      <Link href={url} target="_blank">
+        {children}
+      </Link>
+    </td>
+  )
+}
 
 export type Paper = {
   authorship: "co-author" | "lead author" | null

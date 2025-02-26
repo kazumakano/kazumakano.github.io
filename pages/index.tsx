@@ -1,7 +1,5 @@
 import styles from "../styles/Home.module.css"
 import history from "../public/history.json"
-import type { ReactNode } from "react"
-import Link from "next/link"
 import type { ComponentProps } from "./_app"
 import { useContext, useEffect, useRef, useState } from "react"
 import { IsPcCtx } from "../components/client"
@@ -10,6 +8,7 @@ import Layout from "../components/layout"
 import TextBox from "../components/text-box"
 import Table from "react-bootstrap/Table"
 import { getFormattedDate } from "../functions/utility"
+import { LinkedTd } from "../components/table"
 import { RoundImg } from "../components/image"
 
 const HINT_DELAY = 5000
@@ -19,19 +18,6 @@ const TAGS = [
   "computer vision",
   "deep learning"
 ]
-
-type LinkedTdProps = {
-  children: ReactNode
-  url: string
-}
-
-const LinkedTd = ({ children, url }: LinkedTdProps) => (
-  <td>
-    <Link href={url} target="_blank">
-      {children}
-    </Link>
-  </td>
-)
 
 const rightIcon = (
   <svg height="1em" viewBox="0 0 16 16" width="1em">

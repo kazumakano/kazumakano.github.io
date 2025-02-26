@@ -8,21 +8,8 @@ import Layout from "../components/layout"
 import TextBox from "../components/text-box"
 import Table from "react-bootstrap/Table"
 import { getFormattedDate } from "../functions/utility"
-import Link from "next/link"
+import { LinkedTd } from "../components/table"
 
-
-type LinkedTdProps = {
-  children: ReactNode
-  url: string
-}
-
-const LinkedTd = ({ children, url }: LinkedTdProps) => (
-  <td>
-    <Link href={url} target="_blank">
-      {children}
-    </Link>
-  </td>
-)
 
 export default function Achievement({ pageIndex, transDirect, setTransDirect }: ComponentProps): JSX.Element {
   const pinchSrcRef = useRef<HTMLDivElement>(null)
