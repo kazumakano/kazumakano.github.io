@@ -58,7 +58,7 @@
       "conferenceUrl": "https://www.iieej.org/annualconf/2024nenji-top/"
     },
     {
-      "authorship": "co-author",
+      "authorship": "2nd author",
       "conference": "東海支部連合大会",
       "date": [2024, 8],
       "title": "エッジ音声処理とCAN通信を用いた多数接続可能な発話方向推定システム",
@@ -66,7 +66,7 @@
       "conferenceUrl": "https://www.tokai-rengo.jp/"
     },
     {
-      "authorship": "co-author",
+      "authorship": "2nd author",
       "conference": "東海支部連合大会",
       "date": [2024, 8],
       "title": "物流倉庫におけるスマートフォンを用いた作業者のタスク認識",
@@ -74,7 +74,7 @@
       "conferenceUrl": "https://www.tokai-rengo.jp/"
     },
     {
-      "authorship": "co-author",
+      "authorship": "2nd author",
       "conference": "東海支部連合大会",
       "date": [2024, 8],
       "title": "マルチカメラによるオクルージョンに頑健な物流倉庫向け占有エリア検出手法",
@@ -91,7 +91,7 @@
       "paperUrl": "https://conference.vrsj.org/ac2024/program/doc/1B2-12.pdf"
     },
     {
-      "authorship": "co-author",
+      "authorship": "2nd author",
       "conference": "SIGUBI",
       "date": [2024, 11],
       "title": "EngagedSync：MR共有空間内ユーザの相互状況理解向上のための適応的な周辺環境情報抽出・転送システム",
@@ -103,7 +103,7 @@
 
   "international": [
     {
-      "authorship": "co-author",
+      "authorship": "2nd author",
       "conference": "ABC",
       "date": [2021, 10],
       "title": "A Data-Driven Approach for Online Pre-impact Fall Detection with Wearable Devices",
