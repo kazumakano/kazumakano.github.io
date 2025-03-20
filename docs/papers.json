@@ -8,7 +8,7 @@
       "type": "proceedings"
     },
     {
-      "authorship": "lead author",
+      "authorship": "1st author",
       "conference": "DICOMO",
       "date": [2022, 7],
       "title": "物流倉庫におけるソーラー式BLEビーコンとPDRを用いたハイブリッド測位",
@@ -25,7 +25,7 @@
       "conferenceUrl": "https://gradschool-forum2023.projects.tsukuba.ac.jp/"
     },
     {
-      "authorship": "lead author",
+      "authorship": "1st author",
       "conference": "HCGSYMPO",
       "date": [2023, 12],
       "title": "深層学習PDRとBLEビーコンを用いたハイブリッド測位",
@@ -33,7 +33,7 @@
       "conferenceUrl": "https://www.hcg-ieice.org/hcg-symposium/2023/"
     },
     {
-      "authorship":"lead author",
+      "authorship":"1st author",
       "conference": "JIP",
       "date": [2024, 6],
       "title": "スマートフォンを用いた歩行者自律航法のための水平加速度に基づいた歩き方の違いに頑健な進行方向推定",
@@ -50,7 +50,7 @@
       "conferenceUrl": "https://irasf.hacca.jp/"
     },
     {
-      "authorship": "lead author",
+      "authorship": "1st author",
       "conference": "MCC",
       "date": [2024, 8],
       "title": "アノテーションロスを克服するラベル付き画像セグメントの合成によるデータ拡張",
@@ -112,7 +112,7 @@
       "paperUrl": "https://link.springer.com/chapter/10.1007/978-981-19-0361-8_8"
     },
     {
-      "authorship": "lead author",
+      "authorship": "1st author",
       "conference": "HCII",
       "date": [2022, 6],
       "title": "Smartphone Localization with Solar-Powered BLE Beacons in Warehouse",
@@ -129,7 +129,7 @@
       "conferenceUrl": "https://www.smartcityexpo.com/"
     },
     {
-      "authorship":"lead author",
+      "authorship":"1st author",
       "conference": "IPIN",
       "date": [2023, 9],
       "title": "Gait-Robust Heading Estimation Using Horizontal Acceleration for Smartphone-based PDR",
@@ -155,7 +155,7 @@
       "conferenceUrl": "https://www.sigmobile.org/mobisys/2024/"
     },
     {
-      "authorship": "lead author",
+      "authorship": "1st author",
       "conference": "UbiComp",
       "date": [2024, 10],
       "title": "Composite Image Generation Using Labeled Segments for Pattern-Rich Dataset without Unannotated Target",
