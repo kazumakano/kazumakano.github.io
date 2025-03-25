@@ -8,7 +8,7 @@
       "type": "proceedings"
     },
     {
-      "authorship": "1st author",
+      "authorship": "lead author",
       "conference": "DICOMO",
       "date": [2022, 7],
       "title": "物流倉庫におけるソーラー式BLEビーコンとPDRを用いたハイブリッド測位",
@@ -25,7 +25,7 @@
       "conferenceUrl": "https://gradschool-forum2023.projects.tsukuba.ac.jp/"
     },
     {
-      "authorship": "1st author",
+      "authorship": "lead author",
       "conference": "HCGSYMPO",
       "date": [2023, 12],
       "title": "深層学習PDRとBLEビーコンを用いたハイブリッド測位",
@@ -33,7 +33,7 @@
       "conferenceUrl": "https://www.hcg-ieice.org/hcg-symposium/2023/"
     },
     {
-      "authorship":"1st author",
+      "authorship":"lead author",
       "conference": "JIP",
       "date": [2024, 6],
       "title": "スマートフォンを用いた歩行者自律航法のための水平加速度に基づいた歩き方の違いに頑健な進行方向推定",
@@ -50,7 +50,7 @@
       "conferenceUrl": "https://irasf.hacca.jp/"
     },
     {
-      "authorship": "1st author",
+      "authorship": "lead author",
       "conference": "MCC",
       "date": [2024, 8],
       "title": "アノテーションロスを克服するラベル付き画像セグメントの合成によるデータ拡張",
@@ -58,7 +58,7 @@
       "conferenceUrl": "https://www.iieej.org/annualconf/2024nenji-top/"
     },
     {
-      "authorship": "2nd author",
+      "authorship": "co-author",
       "conference": "東海支部連合大会",
       "date": [2024, 8],
       "title": "エッジ音声処理とCAN通信を用いた多数接続可能な発話方向推定システム",
@@ -66,7 +66,7 @@
       "conferenceUrl": "https://www.tokai-rengo.jp/2024/"
     },
     {
-      "authorship": "2nd author",
+      "authorship": "co-author",
       "conference": "東海支部連合大会",
       "date": [2024, 8],
       "title": "物流倉庫におけるスマートフォンを用いた作業者のタスク認識",
@@ -74,7 +74,7 @@
       "conferenceUrl": "https://www.tokai-rengo.jp/2024/"
     },
     {
-      "authorship": "2nd author",
+      "authorship": "co-author",
       "conference": "東海支部連合大会",
       "date": [2024, 8],
       "title": "マルチカメラによるオクルージョンに頑健な物流倉庫向け占有エリア検出手法",
@@ -91,7 +91,7 @@
       "paperUrl": "https://conference.vrsj.org/ac2024/program/doc/1B2-12.pdf"
     },
     {
-      "authorship": "2nd author",
+      "authorship": "co-author",
       "conference": "SIGUBI",
       "date": [2024, 11],
       "title": "EngagedSync：MR共有空間内ユーザの相互状況理解向上のための適応的な周辺環境情報抽出・転送システム",
@@ -103,7 +103,7 @@
 
   "international": [
     {
-      "authorship": "2nd author",
+      "authorship": "co-author",
       "conference": "ABC",
       "date": [2021, 10],
       "title": "A Data-Driven Approach for Online Pre-impact Fall Detection with Wearable Devices",
@@ -112,7 +112,7 @@
       "paperUrl": "https://link.springer.com/chapter/10.1007/978-981-19-0361-8_8"
     },
     {
-      "authorship": "1st author",
+      "authorship": "lead author",
       "conference": "HCII",
       "date": [2022, 6],
       "title": "Smartphone Localization with Solar-Powered BLE Beacons in Warehouse",
@@ -129,7 +129,7 @@
       "conferenceUrl": "https://www.smartcityexpo.com/"
     },
     {
-      "authorship":"1st author",
+      "authorship":"lead author",
       "conference": "IPIN",
       "date": [2023, 9],
       "title": "Gait-Robust Heading Estimation Using Horizontal Acceleration for Smartphone-based PDR",
@@ -155,7 +155,7 @@
       "conferenceUrl": "https://www.sigmobile.org/mobisys/2024/"
     },
     {
-      "authorship": "1st author",
+      "authorship": "lead author",
       "conference": "UbiComp",
       "date": [2024, 10],
       "title": "Composite Image Generation Using Labeled Segments for Pattern-Rich Dataset without Unannotated Target",
