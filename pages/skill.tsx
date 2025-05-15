@@ -48,6 +48,14 @@ const androidIcon = (
   </svg>
 )
 
+const arduinoIcon = (
+  <svg viewBox="0 -10 40 40">
+    <g>
+      <path fill-rule="evenodd" d="M40 10C40 4.616 35.572.244 30.146.244c-.5 0-1.014.028-1.513.114-4.22.612-7.05 3.731-8.633 6.124C18.418 4.09 15.586.97 11.367.358c-.5-.071-1.013-.114-1.513-.114C4.414.244 0 4.616 0 10s4.427 9.756 9.854 9.756c.5 0 1.014-.028 1.527-.114 4.22-.626 7.05-3.746 8.633-6.138 1.582 2.392 4.413 5.512 8.633 6.138.5.071 1.013.114 1.527.114C35.572 19.756 40 15.384 40 10m-29.119 6.224a6.4 6.4 0 0 1-1.04.071c-3.581 0-6.482-2.834-6.482-6.295 0-3.475 2.914-6.295 6.495-6.295.347 0 .694.028 1.041.071C14.88 4.36 17.307 8.391 18.14 10c-.846 1.624-3.29 5.64-7.259 6.224M29.105 3.776C25.122 4.36 22.679 8.391 21.86 10c.819 1.61 3.262 5.64 7.245 6.224.347.043.694.071 1.04.071 3.568 0 6.482-2.82 6.482-6.295 0-3.46-2.9-6.295-6.481-6.295a9 9 0 0 0-1.041.071M7.075 8.955h5.96v1.876h-5.96zm25.82 1.89h-2.009v1.97H28.96v-1.97h-2.01v-1.89h2.01V6.983h1.926v1.972h2.01z" />
+    </g>
+  </svg>
+)
+
 const blenderIcon = (
   <svg viewBox="0 -50 650 600">
     <g transform="matrix(1,0,0,1,-7.78614,0)">
@@ -160,6 +168,20 @@ const sklearnIcon = (
   </svg>
 )
 
+const tailscaleIcon = (
+  <svg viewBox="-8.5 -8 100 100">
+    <ellipse cx="10.3498" cy="41.7046" rx="10.3498" ry="10.3247" />
+    <ellipse cx="41.3996" cy="41.7046" rx="10.3498" ry="10.3247" />
+    <ellipse cx="10.3498" cy="72.6773" rx="10.3498" ry="10.3247" />
+    <ellipse cx="72.4474" cy="72.6773" rx="10.3498" ry="10.3247" />
+    <ellipse cx="41.3996" cy="72.6773" rx="10.3498" ry="10.3247" />
+    <ellipse cx="72.4474" cy="41.7046" rx="10.3498" ry="10.3247" />
+    <ellipse cx="10.3498" cy="10.729" rx="10.3498" ry="10.3247" />
+    <ellipse cx="41.3996" cy="10.729" rx="10.3498" ry="10.3247" />
+    <ellipse cx="72.4474" cy="10.729" rx="10.3498" ry="10.3247" />
+  </svg>
+)
+
 const reactIcon = (
   <svg viewBox="-11.5 -11.5 23 23">
     <circle cx="0" cy="0" r="2.05" fill="black" />
@@ -227,10 +249,12 @@ export default function Skill({ langColors, pageIndex, transDirect, setTransDire
           <FrameworkTile color="black" icon={expoIcon} name="Expo" url="https://expo.dev/" />
           <FrameworkTile color="black" icon={threeIcon} name="Three.js" url="https://threejs.org/" />
           <FrameworkTile color="#3ddc84" icon={androidIcon} name="Android" url="https://developer.android.com/" />
+          <FrameworkTile color="#008184" icon={arduinoIcon} name="Arduino" url="https://www.arduino.cc/" />
           <FrameworkTile color="#255787" icon={blenderIcon} name="Blender" url="https://www.blender.org/" />
           <FrameworkTile color="midnightblue" icon={daVinciResolveIcon} name="DaVinci Resolve" url="https://www.blackmagicdesign.com/jp/products/davinciresolve/" />
           <FrameworkTile color="#2496ed" icon={dockerIcon} name="Docker" url="https://www.docker.com/" />
           <FrameworkTile color="#ff3131" icon={gstIcon} name="GStreamer" url="https://gstreamer.freedesktop.org/" />
+          <FrameworkTile color="#1f1e1e" icon={tailscaleIcon} name="Tailscale" url="https://tailscale.com/" />
           <FrameworkTile color="black" icon={unityIcon} name="Unity" url="https://unity.com/ja/" />
         </FrameworkGrid>
       </TextBox>
