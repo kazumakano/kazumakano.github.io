@@ -98,6 +98,14 @@
       "type": "proceedings",
       "conferenceUrl": "https://sigubi.ipsj.or.jp/seminar84/",
       "paperUrl": "https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=240585&item_no=1&page_id=13&block_id=8"
+    },
+    {
+      "authorship": "co-author",
+      "conference": "SIGMBL",
+      "date": [2025, 5],
+      "title": "広角カメラの画像歪みを考慮した物流倉庫内マルチカメラトラッキング手法",
+      "type": "proceedings",
+      "conferenceUrl": "https://mbl.ipsj.or.jp/program/2024/115/"
     }
   ],
 
@@ -179,6 +187,14 @@
       "title": "Location AI for Smart Mobility",
       "type": "exhibition",
       "conferenceUrl": "https://www.smartcityexpo.com/"
+    },
+    {
+      "authorship": "co-author",
+      "conference": "SmartComp",
+      "date": [2025, 6],
+      "title": "Digitization Methods for a Logistics Warehouse Towards Digital Twin-Driven Optimization",
+      "type": "proceedings",
+      "conferenceUrl": "https://www.cs.ucc.ie/smartcomp2025/"
     }
   ]
 }
