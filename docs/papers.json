@@ -30,7 +30,8 @@
       "date": [2023, 12],
       "title": "深層学習PDRとBLEビーコンを用いたハイブリッド測位",
       "type": "proceedings",
-      "conferenceUrl": "https://www.hcg-ieice.org/hcg-symposium/2023/"
+      "conferenceUrl": "https://www.hcg-ieice.org/hcg-symposium/2023/",
+      "paperUrl": "https://db.uclab.jp/show/1480"
     },
     {
       "authorship":"lead author",
