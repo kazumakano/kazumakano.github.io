@@ -56,7 +56,8 @@
       "date": [2024, 8],
       "title": "アノテーションロスを克服するラベル付き画像セグメントの合成によるデータ拡張",
       "type": "proceedings",
-      "conferenceUrl": "https://www.iieej.org/annualconf/2024nenji-top/"
+      "conferenceUrl": "https://www.iieej.org/annualconf/2024nenji-top/",
+      "paperUrl": "https://db.uclab.jp/show/1507"
     },
     {
       "authorship": "co-author",
