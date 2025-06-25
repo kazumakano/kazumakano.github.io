@@ -49,7 +49,7 @@ export function PubTab({ papers }: PubTabProps): JSX.Element {
         </tr>
       </thead>
       <tbody>
-        {papers.map((p, i) => (
+        {papers.reverse().map((p, i) => (
           <tr key={i}>
             <td>{getFormattedDate(p.date[1], p.date[0])}</td>
             {p.paperUrl ? <LinkedTd url={p.paperUrl}>{p.title}</LinkedTd> : <td>{p.title}</td>}
