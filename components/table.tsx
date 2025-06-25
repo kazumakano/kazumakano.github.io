@@ -49,7 +49,9 @@ export function PubTab({ papers }: PubTabProps): JSX.Element {
         </tr>
       </thead>
       <tbody>
-        {papers.reverse().map((p, i) => (
+        {papers.sort(
+          (p, q) => new Date(q.date[0], q.date[1] - 1).getTime() - new Date(p.date[0], p.date[1] - 1).getTime()
+        ).map((p, i) => (
           <tr key={i}>
             <td>{getFormattedDate(p.date[1], p.date[0])}</td>
             {p.paperUrl ? <LinkedTd url={p.paperUrl}>{p.title}</LinkedTd> : <td>{p.title}</td>}
