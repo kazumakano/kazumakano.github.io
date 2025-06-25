@@ -109,6 +109,22 @@
       "type": "proceedings",
       "conferenceUrl": "https://mbl.ipsj.or.jp/program/2024/115/",
       "paperUrl": "https://ipsj.ixsq.nii.ac.jp/records/2002043"
+    },
+    {
+      "authorship": "co-author",
+      "conference": "DICOMO",
+      "date": [2025, 6],
+      "title": "マルチカメラを用いたオクルージョンに頑健な物流倉庫内の荷物配置推定",
+      "type": "proceedings",
+      "conferenceUrl": "https://dicomo.org/2025/"
+    },
+    {
+      "authorship": "co-author",
+      "conference": "DICOMO",
+      "date": [2025, 6],
+      "title": "動作特徴の表現学習を活用したスマートフォンによる倉庫内作業認識",
+      "type": "proceedings",
+      "conferenceUrl": "https://dicomo.org/2025/"
     }
   ],
 
