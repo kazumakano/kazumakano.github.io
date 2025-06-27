@@ -214,6 +214,14 @@
       "title": "Digitization Methods for a Logistics Warehouse Towards Digital Twin-Driven Optimization",
       "type": "proceedings",
       "conferenceUrl": "https://www.cs.ucc.ie/smartcomp2025/"
+    },
+    {
+      "authorship": "lead author",
+      "conference": "IPIN",
+      "date": [2025, 9],
+      "title": "CorVS: Person Identification via Video Trajectory–Sensor Correspondence in a Real-World Warehouse",
+      "type": "proceedings",
+      "conferenceUrl": "https://ipin-conference.org/2025/"
     }
   ]
 }
