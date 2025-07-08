@@ -125,6 +125,14 @@
       "title": "動作特徴の表現学習を活用したスマートフォンによる倉庫内作業認識",
       "type": "proceedings",
       "conferenceUrl": "https://dicomo.org/2025/"
+    },
+    {
+      "authorship": "lead author",
+      "conference": "FIT",
+      "date": [2025, 9],
+      "title": "庫内作業員を対象としたトラッキングによる検出漏れ抽出に基づくMLOpsの運用評価",
+      "type": "proceedings",
+      "conferenceUrl": "https://www.ipsj.or.jp/event/fit/fit2025/"
     }
   ],
 
@@ -213,7 +221,8 @@
       "date": [2025, 6],
       "title": "Digitization Methods for a Logistics Warehouse Towards Digital Twin-Driven Optimization",
       "type": "proceedings",
-      "conferenceUrl": "https://www.cs.ucc.ie/smartcomp2025/"
+      "conferenceUrl": "https://www.cs.ucc.ie/smartcomp2025/",
+      "paperUrl": "https://ieeexplore.ieee.org/document/11058642"
     },
     {
       "authorship": "lead author",

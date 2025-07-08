@@ -16,8 +16,7 @@ const TAGS = [
   "indoor positioning",
   "activity recognition",
   "wearable sensor",
-  "computer vision",
-  "deep learning"
+  "computer vision"
 ]
 
 const rightIcon = (
