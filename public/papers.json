@@ -231,6 +231,22 @@
       "title": "CorVS: Person Identification via Video Trajectory-Sensor Correspondence in a Real-World Warehouse",
       "type": "proceedings",
       "conferenceUrl": "https://ipin-conference.org/2025/"
+    },
+    {
+      "authorship": "co-author",
+      "conference": "UbiComp",
+      "date": [2025, 10],
+      "title": "Smartphone-Based Activity Recognition in a Logistics Warehouse Using Self-supervised Representation Learning",
+      "type": "proceedings (workshop)",
+      "conferenceUrl": "https://www.ubicomp.org/ubicomp-iswc-2025/"
+    },
+    {
+      "authorship": "co-author",
+      "conference": "UbiComp",
+      "date": [2025, 10],
+      "title": "Real-time Activity-Aware Video Streaming While Preserving Privacy",
+      "type": "proceedings (poster)",
+      "conferenceUrl": "https://www.ubicomp.org/ubicomp-iswc-2025/"
     }
   ]
 }
