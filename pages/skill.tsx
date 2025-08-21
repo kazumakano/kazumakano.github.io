@@ -168,19 +168,19 @@ const sklearnIcon = (
   </svg>
 )
 
-const tailscaleIcon = (
-  <svg viewBox="-8.5 -8 100 100">
-    <ellipse cx="10.3498" cy="41.7046" rx="10.3498" ry="10.3247" />
-    <ellipse cx="41.3996" cy="41.7046" rx="10.3498" ry="10.3247" />
-    <ellipse cx="10.3498" cy="72.6773" rx="10.3498" ry="10.3247" />
-    <ellipse cx="72.4474" cy="72.6773" rx="10.3498" ry="10.3247" />
-    <ellipse cx="41.3996" cy="72.6773" rx="10.3498" ry="10.3247" />
-    <ellipse cx="72.4474" cy="41.7046" rx="10.3498" ry="10.3247" />
-    <ellipse cx="10.3498" cy="10.729" rx="10.3498" ry="10.3247" />
-    <ellipse cx="41.3996" cy="10.729" rx="10.3498" ry="10.3247" />
-    <ellipse cx="72.4474" cy="10.729" rx="10.3498" ry="10.3247" />
-  </svg>
-)
+// const tailscaleIcon = (
+//   <svg viewBox="-8.5 -8 100 100">
+//     <ellipse cx="10.3498" cy="41.7046" rx="10.3498" ry="10.3247" />
+//     <ellipse cx="41.3996" cy="41.7046" rx="10.3498" ry="10.3247" />
+//     <ellipse cx="10.3498" cy="72.6773" rx="10.3498" ry="10.3247" />
+//     <ellipse cx="72.4474" cy="72.6773" rx="10.3498" ry="10.3247" />
+//     <ellipse cx="41.3996" cy="72.6773" rx="10.3498" ry="10.3247" />
+//     <ellipse cx="72.4474" cy="41.7046" rx="10.3498" ry="10.3247" />
+//     <ellipse cx="10.3498" cy="10.729" rx="10.3498" ry="10.3247" />
+//     <ellipse cx="41.3996" cy="10.729" rx="10.3498" ry="10.3247" />
+//     <ellipse cx="72.4474" cy="10.729" rx="10.3498" ry="10.3247" />
+//   </svg>
+// )
 
 const reactIcon = (
   <svg viewBox="-11.5 -11.5 23 23">
@@ -254,7 +254,7 @@ export default function Skill({ langColors, pageIndex, transDirect, setTransDire
           <FrameworkTile color="midnightblue" icon={daVinciResolveIcon} name="DaVinci Resolve" url="https://www.blackmagicdesign.com/jp/products/davinciresolve/" />
           <FrameworkTile color="#2496ed" icon={dockerIcon} name="Docker" url="https://www.docker.com/" />
           <FrameworkTile color="#ff3131" icon={gstIcon} name="GStreamer" url="https://gstreamer.freedesktop.org/" />
-          <FrameworkTile color="#1f1e1e" icon={tailscaleIcon} name="Tailscale" url="https://tailscale.com/" />
+          {/* <FrameworkTile color="#1f1e1e" icon={tailscaleIcon} name="Tailscale" url="https://tailscale.com/" /> */}
           <FrameworkTile color="black" icon={unityIcon} name="Unity" url="https://unity.com/ja/" />
         </FrameworkGrid>
       </TextBox>
