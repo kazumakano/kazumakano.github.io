@@ -38,13 +38,6 @@ export default function usePinch(srcRef: RefObject<HTMLElement>, tgtRef: RefObje
   }
 
   useEffect(() => {
-    if (tgtRef.current != null) {
-      // @ts-expect-error
-      tgtRef.current.style.zoom = "1"
-    }
-  }, [tgtRef.current])
-
-  useEffect(() => {
     if (srcRef.current != null) {
       srcRef.current.onpointerdown = onPointerDown
       srcRef.current.onpointermove = onPointerMove
@@ -53,5 +46,18 @@ export default function usePinch(srcRef: RefObject<HTMLElement>, tgtRef: RefObje
       srcRef.current.onpointerout = onReset
       srcRef.current.onpointerleave = onReset
     }
-  })
+  }, [onPointerDown, onPointerMove, onReset, srcRef.current])
+
+  useEffect(() => {
+    if (srcRef.current != null) {
+      srcRef.current.style.touchAction = "none"
+    }
+  }, [srcRef.current])
+
+  useEffect(() => {
+    if (tgtRef.current != null) {
+      // @ts-expect-error
+      tgtRef.current.style.zoom = "1"
+    }
+  }, [tgtRef.current])
 }
