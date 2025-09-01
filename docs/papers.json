@@ -132,7 +132,8 @@
       "date": [2025, 9],
       "title": "庫内作業員を対象としたトラッキングによる検出漏れ抽出に基づくMLOpsの運用評価",
       "type": "proceedings",
-      "conferenceUrl": "https://www.ipsj.or.jp/event/fit/fit2025/"
+      "conferenceUrl": "https://www.ipsj.or.jp/event/fit/fit2025/",
+      "paperUrl": ""
     }
   ],
 
@@ -230,7 +231,8 @@
       "date": [2025, 9],
       "title": "CorVS: Person Identification via Video Trajectory–Sensor Correspondence in a Real-World Warehouse",
       "type": "proceedings",
-      "conferenceUrl": "https://ipin-conference.org/2025/"
+      "conferenceUrl": "https://ipin-conference.org/2025/",
+      "paperUrl": ""
     },
     {
       "authorship": "co-author",
@@ -238,7 +240,8 @@
       "date": [2025, 10],
       "title": "Smartphone-Based Activity Recognition in a Logistics Warehouse Using Self-supervised Representation Learning",
       "type": "proceedings (workshop)",
-      "conferenceUrl": "https://www.ubicomp.org/ubicomp-iswc-2025/"
+      "conferenceUrl": "https://www.ubicomp.org/ubicomp-iswc-2025/",
+      "paperUrl": ""
     },
     {
       "authorship": "co-author",
@@ -246,7 +249,8 @@
       "date": [2025, 10],
       "title": "Real-time Activity-Aware Video Streaming While Preserving Privacy",
       "type": "proceedings (poster)",
-      "conferenceUrl": "https://www.ubicomp.org/ubicomp-iswc-2025/"
+      "conferenceUrl": "https://www.ubicomp.org/ubicomp-iswc-2025/",
+      "paperUrl": ""
     }
   ]
 }
