@@ -17,7 +17,7 @@
     {
       "date": [2023, 12],
       "title": "第二十一回キャンパスベンチャーグランプリ中部 特別賞 日刊工業新聞社賞",
-      "url": "https://cvg.nikkan.co.jp/index/chubu/"
+      "url": "https://cvg.nikkan.co.jp/chubu/"
     },
     {
       "date": [2024, 8],
@@ -28,6 +28,11 @@
       "date": [2024, 10],
       "title": "UbiComp / ISWC 2024 Best Demo Award",
       "url": "https://www.ubicomp.org/ubicomp-iswc-2024/"
+    },
+    {
+      "date": [2025, 7],
+      "title": "令和7年度情報処理学会MBL研究会 優秀論文賞",
+      "url": "https://mbl.ipsj.or.jp/program/2025/115/"
     }
   ],
 
