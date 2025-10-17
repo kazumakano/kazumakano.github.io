@@ -58,7 +58,7 @@ export default function Home({ pageIndex, transDirect, setTransDirect }: Compone
 
           <h2>education</h2>
           <Table borderless className={styles.eduTable}>
-            {history.education.map((h, i) => (
+            {history.education.toReversed().map((h, i) => (
               <tbody key={i}>
                 <tr>
                   <td rowSpan={2}>{getFormattedDate(h.term[0]?.[1], h.term[0]?.[0])}</td>
@@ -76,7 +76,7 @@ export default function Home({ pageIndex, transDirect, setTransDirect }: Compone
           <h2>activities</h2>
           <Table borderless className={styles.expTable}>
             <tbody>
-              {history.activity.map((h, i) => (
+              {history.activity.toReversed().map((h, i) => (
                 <tr key={i}>
                   <td>{getFormattedDate(h.term[0]?.[1], h.term[0]?.[0])}</td>
                   <td>~</td>
