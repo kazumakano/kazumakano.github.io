@@ -22,7 +22,7 @@ export default function Achievement({ pageIndex, transDirect, setTransDirect }: 
         <h2>awards</h2>
         <Table borderless className={styles.achieveTable}>
           <tbody>
-            {achieves.award.map((a, i) => (
+            {achieves.award.toReversed().map((a, i) => (
               <tr key={i}>
                 <td>{getFormattedDate(a.date[1], a.date[0])}</td>
                 {a.url ? <LinkedTd url={a.url}>{a.title}</LinkedTd> : <td>{a.title}</td>}
@@ -34,7 +34,7 @@ export default function Achievement({ pageIndex, transDirect, setTransDirect }: 
         <h2>qualifications</h2>
         <Table borderless className={styles.achieveTable}>
           <tbody>
-            {achieves.qualification.map((q, i) => (
+            {achieves.qualification.toReversed().map((q, i) => (
               <tr key={i}>
                 <td>{getFormattedDate(q.date[1], q.date[0])}</td>
                 <LinkedTd url={q.url}>
@@ -48,7 +48,7 @@ export default function Achievement({ pageIndex, transDirect, setTransDirect }: 
         <h2>fellowships</h2>
         <Table borderless className={styles.achieveTable}>
           <tbody>
-            {achieves.fellowship.map((q, i) => (
+            {achieves.fellowship.toReversed().map((q, i) => (
               <tr key={i}>
                 <td>{getFormattedDate(q.date[1], q.date[0])}</td>
                 <LinkedTd url={q.url}>
