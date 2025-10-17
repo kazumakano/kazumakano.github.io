@@ -19,10 +19,8 @@ export default function usePinch(srcRef: RefObject<HTMLElement>, tgtRef: RefObje
       const dist = Math.hypot(evList[0].clientX - evList[1].clientX, evList[0].clientY - evList[1].clientY)
 
       if (initDist < 0) {
-        // @ts-expect-error
         setInitStates([dist, parseFloat(tgtRef.current.style.zoom)])
       } else {
-        // @ts-expect-error
         tgtRef.current.style.zoom = (dist / initDist * initZoom).toString()
       }
     }
@@ -56,7 +54,6 @@ export default function usePinch(srcRef: RefObject<HTMLElement>, tgtRef: RefObje
 
   useEffect(() => {
     if (tgtRef.current != null) {
-      // @ts-expect-error
       tgtRef.current.style.zoom = "1"
     }
   }, [tgtRef.current])
