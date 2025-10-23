@@ -23,11 +23,11 @@ export function LinkedTd({ children, url }: LinkedTdProps): JSX.Element {
 
 export type Paper = {
   authorship: "co-author" | "lead author" | null
-  conference: string
+  conference: string | null
   date: [number, number]
   title: string
   type: string
-  conferenceUrl: string
+  conferenceUrl?: string
   paperUrl?: string
 }
 
