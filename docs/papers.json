@@ -31,7 +31,8 @@
       "title": "深層学習PDRとBLEビーコンを用いたハイブリッド測位",
       "type": "proceedings",
       "conferenceUrl": "https://www.hcg-ieice.org/hcg-symposium/2023/",
-      "paperUrl": "https://db.uclab.jp/show/1480"
+      "paperUrl": "https://db.uclab.jp/show/1480",
+      "pdfDlUrl": "https://db.uclab.jp/download/?code=20250625055239603673594B334D9C800CCDAF5F960A4C220"
     },
     {
       "authorship":"lead author",
@@ -57,7 +58,8 @@
       "title": "アノテーションロスを克服するラベル付き画像セグメントの合成によるデータ拡張",
       "type": "proceedings",
       "conferenceUrl": "https://www.iieej.org/annualconf/2024nenji-top/",
-      "paperUrl": "https://db.uclab.jp/show/1507"
+      "paperUrl": "https://db.uclab.jp/show/1507",
+      "pdfDlUrl": "https://db.uclab.jp/download/?code=20250606025632E8B64AAE0A96402B8653782F0447CBDB099"
     },
     {
       "authorship": "co-author",
@@ -135,7 +137,8 @@
       "title": "庫内作業員を対象としたトラッキングによる検出漏れ抽出に基づくMLOpsの運用評価",
       "type": "proceedings",
       "conferenceUrl": "https://www.ipsj.or.jp/event/fit/fit2025/",
-      "paperUrl": "https://db.uclab.jp/show/1540"
+      "paperUrl": "https://db.uclab.jp/show/1540",
+      "pdfDlUrl": "https://db.uclab.jp/download/?code=20250625061611902BA775031749D8A1BE66A345796643180"
     }
   ],
 
@@ -173,7 +176,8 @@
       "title": "Gait-Robust Heading Estimation Using Horizontal Acceleration for Smartphone-based PDR",
       "type": "proceedings (wip)",
       "conferenceUrl": "https://ipin-conference.org/2023/",
-      "paperUrl": "https://ceur-ws.org/Vol-3581/191_WiP.pdf"
+      "paperUrl": "https://ceur-ws.org/Vol-3581/191_WiP.pdf",
+      "pdfUrl": "https://ceur-ws.org/Vol-3581/191_WiP.pdf"
     },
     {
       "authorship": "co-author",
@@ -199,7 +203,8 @@
       "title": "Composite Image Generation Using Labeled Segments for Pattern-Rich Dataset without Unannotated Target",
       "type": "proceedings (workshop)",
       "conferenceUrl": "https://www.ubicomp.org/ubicomp-iswc-2024/",
-      "paperUrl": "https://dl.acm.org/doi/10.1145/3675094.3678447"
+      "paperUrl": "https://dl.acm.org/doi/10.1145/3675094.3678447",
+      "pdfUrl": "https://dl.acm.org/doi/pdf/10.1145/3675094.3678447"
     },
     {
       "authorship": "co-author",
@@ -260,8 +265,8 @@
       "date": [2025, 10],
       "title": "Multi-Camera Worker Tracking in Logistics Warehouse Considering Wide-Angle Distortion",
       "type": "preprint",
-      "conferenceUrl": null,
-      "paperUrl": "https://arxiv.org/abs/2510.19432"
+      "paperUrl": "https://arxiv.org/abs/2510.19432",
+      "pdfUrl": "https://arxiv.org/pdf/2510.19432"
     },
     {
       "authorship": "lead author",
@@ -269,7 +274,6 @@
       "date": [2025, 10],
       "title": "Tracking-Informed Missed Detection Mining for Effective MLOps: An Industrial Case Study on Warehouse Worker Detection",
       "type": "preprint",
-      "conferenceUrl": null,
       "paperUrl": ""
     }
   ]
