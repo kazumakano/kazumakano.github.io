@@ -208,11 +208,11 @@ a {
   border-radius: 50%;
 }
 
-.copy-btn, .swap-btn {
+.copy-btn, .pdf-btn, .swap-btn {
   border: none;
 }
 
-.copy-btn:hover, .swap-btn:hover {
+.copy-btn:hover, .pdf-btn:hover, .swap-btn:hover {
   background-color: inherit;
 }
 
