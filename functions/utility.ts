@@ -1,3 +1,7 @@
+export function download2view(uri: string): string {
+  return `https://docs.google.com/gview?embedded=true&url=${encodeURIComponent(uri)}`
+}
+
 const dateFormat = new Intl.DateTimeFormat(
   "en-US",
   {

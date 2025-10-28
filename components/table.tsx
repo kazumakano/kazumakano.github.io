@@ -2,7 +2,7 @@ import styles from "../styles/Table.module.css"
 import { useMemo, type ReactNode } from "react"
 import Link from "next/link"
 import Table from "react-bootstrap/Table"
-import { getFormattedDate } from "../functions/utility"
+import { download2view, getFormattedDate } from "../functions/utility"
 import { CopyBtn, PdfBtn } from "./button"
 
 
@@ -30,6 +30,7 @@ export type Paper = {
   conferenceUrl?: string
   paperUrl?: string
   pdfUrl?: string
+  pdfDlUrl?: string
 }
 
 type PubTabProps = {
@@ -37,7 +38,7 @@ type PubTabProps = {
 }
 
 export function PubTab({ papers }: PubTabProps): JSX.Element {
-  const enablePdfCol = useMemo(() => papers.filter(p => p.pdfUrl).length, [papers])
+  const enablePdfCol = useMemo(() => papers.some(p => p.pdfUrl || p.pdfDlUrl), [papers])
 
   return (
     <Table className={styles.pubTab} hover striped>
@@ -61,7 +62,7 @@ export function PubTab({ papers }: PubTabProps): JSX.Element {
             {p.conferenceUrl ? <LinkedTd url={p.conferenceUrl}>{p.conference}</LinkedTd> : <td>{p.conference}</td>}
             <td>{p.authorship}</td>
             <td><CopyBtn text={p.title} /></td>
-            {enablePdfCol ? p.pdfUrl ? <td><PdfBtn uri={p.pdfUrl} /></td> : <td></td> : <></>}
+            {enablePdfCol ? p.pdfUrl ? <td><PdfBtn uri={p.pdfUrl} /></td> : p.pdfDlUrl ? <td><PdfBtn uri={download2view(p.pdfDlUrl)} /></td> : <td></td> : <></>}
           </tr>
         ))}
       </tbody>
