@@ -269,14 +269,6 @@
       "type": "preprint",
       "paperUrl": "https://arxiv.org/abs/2510.19432",
       "pdfUrl": "https://arxiv.org/pdf/2510.19432"
-    },
-    {
-      "authorship": "lead author",
-      "conference": null,
-      "date": [2025, 10],
-      "title": "Tracking-Informed Missed Detection Mining for Effective MLOps: An Industrial Case Study on Warehouse Worker Detection",
-      "type": "preprint",
-      "paperUrl": ""
     }
   ]
 }
