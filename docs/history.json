@@ -29,15 +29,21 @@
 
   "education": [
     {
-      "department": "Department of Electrical Engineering, Electronics, and Information Engineering",
+      "department": "Bachelor's Program in the Department of Electrical Engineering, Electronics, and Information Engineering",
       "school": "School of Engineering, Nagoya University",
       "term": [[2018, 4], [2022, 3]],
       "url": "https://www.nuee.nagoya-u.ac.jp/"
     },
     {
-      "department": "Department of Information and Communication Engineering",
+      "department": "Master's Program in the Department of Information and Communication Engineering",
       "school": "Graduate School of Engineering, Nagoya University",
-      "term": [[2022, 4], null],
+      "term": [[2022, 4], [2024, 3]],
+      "url": "https://www.nuee.nagoya-u.ac.jp/"
+    },
+    {
+      "department": "Doctoral Program in the Department of Information and Communication Engineering",
+      "school": "Graduate School of Engineering, Nagoya University",
+      "term": [[2024, 4], null],
       "url": "https://www.nuee.nagoya-u.ac.jp/"
     },
     {
