@@ -73,7 +73,7 @@ export default function Home({ pageIndex, transDirect, setTransDirect }: Compone
             ))}
           </Table>
 
-          <h2>activities & experiences</h2>
+          <h2>activities</h2>
           <Table borderless className={styles.expTable}>
             <tbody>
               {history.activity.toReversed().map((h, i) => (
