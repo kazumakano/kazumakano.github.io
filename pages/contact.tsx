@@ -48,20 +48,6 @@ export default function Contact({ setIsInputting, pageIndex, transDirect, setTra
   return (
     <Layout pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect} title="contact">
       <TextBox enableMargins={[false, true]} proportion={50}>
-        <h2>social</h2>
-        <SocialGrid>
-          <SocialTile color="#1d9bf0" icon={twitterIcon} reverse={false} url={`https://twitter.com/${process.env.NEXT_PUBLIC_TWITTER_USER_NAME}`}>
-            Twitter<br />
-            @{process.env.NEXT_PUBLIC_TWITTER_USER_NAME}
-          </SocialTile>
-          <SocialTile color="black" icon={githubIcon} reverse={true} url={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB_USER_NAME}`}>
-            GitHub<br />
-            @{process.env.NEXT_PUBLIC_GITHUB_USER_NAME}
-          </SocialTile>
-        </SocialGrid>
-      </TextBox>
-
-      <TextBox enableMargins={[true, false]} proportion={50}>
         <h2>email</h2>
         <div className={styles.mailForm}>
           <div>
@@ -101,6 +87,20 @@ export default function Contact({ setIsInputting, pageIndex, transDirect, setTra
 
           <MailerBtn uri={uri} />
         </div>
+      </TextBox>
+
+      <TextBox enableMargins={[true, false]} proportion={50}>
+        <h2>social</h2>
+        <SocialGrid>
+          <SocialTile color="#1d9bf0" icon={twitterIcon} reverse={false} url={`https://twitter.com/${process.env.NEXT_PUBLIC_TWITTER_USER_NAME}`}>
+            Twitter<br />
+            @{process.env.NEXT_PUBLIC_TWITTER_USER_NAME}
+          </SocialTile>
+          <SocialTile color="black" icon={githubIcon} reverse={true} url={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB_USER_NAME}`}>
+            GitHub<br />
+            @{process.env.NEXT_PUBLIC_GITHUB_USER_NAME}
+          </SocialTile>
+        </SocialGrid>
       </TextBox>
     </Layout>
   )
