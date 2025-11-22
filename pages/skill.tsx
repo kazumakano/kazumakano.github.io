@@ -233,7 +233,7 @@ export default function Skill({ langColors, pageIndex, transDirect, setTransDire
       </TextBox>
 
       <TextBox enableMargins={[true, false]} proportion={50}>
-        <h2>frameworks & tools</h2>
+        <h2>frameworks</h2>
         <FrameworkGrid>
           <FrameworkTile color="#092e20" icon={djangoIcon} name="Django" url="https://www.djangoproject.com/" />
           <FrameworkTile color="#009485" icon={fastApiIcon} name="FastAPI" url="https://fastapi.tiangolo.com/" />
@@ -248,6 +248,10 @@ export default function Skill({ langColors, pageIndex, transDirect, setTransDire
           <FrameworkTile color="black" icon={nextIcon} name="Next.js" url="https://nextjs.org/" />
           <FrameworkTile color="black" icon={expoIcon} name="Expo" url="https://expo.dev/" />
           <FrameworkTile color="black" icon={threeIcon} name="Three.js" url="https://threejs.org/" />
+        </FrameworkGrid>
+
+        <h2>tools</h2>
+        <FrameworkGrid>
           <FrameworkTile color="#3ddc84" icon={androidIcon} name="Android" url="https://developer.android.com/" />
           <FrameworkTile color="#008184" icon={arduinoIcon} name="Arduino" url="https://www.arduino.cc/" />
           <FrameworkTile color="#255787" icon={blenderIcon} name="Blender" url="https://www.blender.org/" />
