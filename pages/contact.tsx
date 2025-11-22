@@ -24,8 +24,7 @@ const scholarIcon = (
       </mask>
     </defs>
     <g mask="url(#shadow)">
-      <path d="M256 411.12L0 202.667 256 0z" />
-      <path d="M256 411.12l256-208.453L256 0z" />
+      <path d="M256 411.12L0 202.667 256 0 512 202.667z" />
       <circle cx="256" cy="362.667" r="149.333" />
     </g>
   </svg>
