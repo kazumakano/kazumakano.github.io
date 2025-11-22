@@ -15,6 +15,22 @@ const githubIcon = (
   </svg>
 )
 
+const scholarIcon = (
+  <svg viewBox="0 0 512 512">
+    <defs>
+      <mask id="shadow">
+        <rect fill="white" height="100%" width="100%" />
+        <path d="M121.037 298.667c23.968-50.453 75.392-85.334 134.963-85.334s110.995 34.881 134.963 85.334H121.037z" fill="black" />
+      </mask>
+    </defs>
+    <g mask="url(#shadow)">
+      <path d="M256 411.12L0 202.667 256 0z" />
+      <path d="M256 411.12l256-208.453L256 0z" />
+      <circle cx="256" cy="362.667" r="149.333" />
+    </g>
+  </svg>
+)
+
 const twitterIcon = (
   <svg viewBox="0 0 248 204">
     <g>
@@ -99,6 +115,9 @@ export default function Contact({ setIsInputting, pageIndex, transDirect, setTra
           <SocialTile color="black" icon={githubIcon} reverse={true} url={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB_USER_NAME}`}>
             GitHub<br />
             @{process.env.NEXT_PUBLIC_GITHUB_USER_NAME}
+          </SocialTile>
+          <SocialTile color="#a0c3ff" icon={scholarIcon} reverse={false} url={`https://scholar.google.co.jp/citations?user=${process.env.NEXT_PUBLIC_SCHOLAR_USER_ID}`}>
+            Google Scholar
           </SocialTile>
         </SocialGrid>
       </TextBox>
