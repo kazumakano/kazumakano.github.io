@@ -7,7 +7,10 @@ import { SocialGrid, SocialTile } from "../components/social-tiles"
 import { CopyBtn, MailerBtn, SwapBtn } from "../components/button"
 
 
-const mailAddrList = process.env.NEXT_PUBLIC_EMAIL == null ? [] : process.env.NEXT_PUBLIC_EMAIL.split(",")
+const mailAddrList: {[key: string]: string} = {}
+if (process.env.NEXT_PUBLIC_ACADEMIC_EMAIL != null) mailAddrList["academic"] = process.env.NEXT_PUBLIC_ACADEMIC_EMAIL
+if (process.env.NEXT_PUBLIC_RECRUIT_EMAIL != null) mailAddrList["recruit"] = process.env.NEXT_PUBLIC_RECRUIT_EMAIL
+if (process.env.NEXT_PUBLIC_PERSONAL_EMAIL != null) mailAddrList["personal"] = process.env.NEXT_PUBLIC_PERSONAL_EMAIL
 
 const githubIcon = (
   <svg viewBox="0 0 16 16">
@@ -44,10 +47,10 @@ export default function Contact({ setIsInputting, pageIndex, transDirect, setTra
   const [mailSubject, setMailSubject] = useState<string>("")
 
   const onChange = useCallback(event => setMailBody(event.target.value.replace(/\n/g, "%0d%0a")), [setMailBody])
-  const onClickSwapBtn = useCallback(() => setMailAddrIdx((mailAddrIdx + 1) % mailAddrList.length), [mailAddrIdx, setMailAddrIdx])
+  const onClickSwapBtn = useCallback(() => setMailAddrIdx((mailAddrIdx + 1) % Object.keys(mailAddrList).length), [mailAddrIdx, setMailAddrIdx])
 
   const uri = useMemo(() => {
-    let uri = `mailto:${mailAddrList[mailAddrIdx]}`
+    let uri = `mailto:${Object.values(mailAddrList)[mailAddrIdx]}`
     if (mailBody != "" && mailSubject != "") {
       uri += `?body=${mailBody}&subject=${mailSubject}`
     }
@@ -69,12 +72,12 @@ export default function Contact({ setIsInputting, pageIndex, transDirect, setTra
             <label htmlFor="mail-to">to</label>
             <div>
               <SwapBtn onClick={onClickSwapBtn} />
-              <select disabled id="mail-to" value={mailAddrList[mailAddrIdx]}>
-                {mailAddrList.map((a, i) => (
-                  <option key={i} value={a}>{a}</option>
+              <select disabled id="mail-to" value={Object.values(mailAddrList)[mailAddrIdx]}>
+                {Object.entries(mailAddrList).map(([k, v]) => (
+                  <option key={k} value={v}>{`${v}    ( for ${k} )`}</option>
                 ))}
               </select>
-              <CopyBtn text={mailAddrList[mailAddrIdx]} />  
+              <CopyBtn text={Object.values(mailAddrList)[mailAddrIdx]} />  
             </div>
           </div>
 
