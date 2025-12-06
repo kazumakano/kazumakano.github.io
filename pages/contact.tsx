@@ -74,7 +74,7 @@ export default function Contact({ setIsInputting, pageIndex, transDirect, setTra
               <SwapBtn onClick={onClickSwapBtn} />
               <select disabled id="mail-to" value={Object.values(mailAddrList)[mailAddrIdx]}>
                 {Object.entries(mailAddrList).map(([k, v]) => (
-                  <option key={k} value={v}>{`${v}    ( for ${k} )`}</option>
+                  <option label={`${v}    ( for ${k} )`} key={k} value={v} />
                 ))}
               </select>
               <CopyBtn text={Object.values(mailAddrList)[mailAddrIdx]} />  
