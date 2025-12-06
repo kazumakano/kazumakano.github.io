@@ -1,6 +1,8 @@
 import { useCallback, useState } from "react"
 import type { MouseEvent } from "react"
 import Button from "react-bootstrap/Button"
+import OverlayTrigger from "react-bootstrap/OverlayTrigger"
+import Tooltip from "react-bootstrap/Tooltip"
 import Link from "next/link"
 
 const ICON_LAG = 1000    // time lag to change icon
@@ -52,6 +54,13 @@ type MailerBtnProps = {
   uri: string
 }
 
+const openIcon = (
+  <svg height="1em" viewBox="0 0 16 16" width="1em">
+    <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+    <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+  </svg>
+)
+
 const sendIcon = (
   <svg height="1em" viewBox="0 0 16 16" width="1em">
     <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89.471-1.178-1.178.471L5.93 9.363l.338.215a.5.5 0 0 1 .154.154l.215.338 7.494-7.494Z" />
@@ -60,15 +69,17 @@ const sendIcon = (
 
 export function MailerBtn({ uri }: MailerBtnProps): JSX.Element {
   return (
-    <Link href={uri} passHref>
-      <Button
-        size="sm"
-        variant="dark"
-        className="btn mailer-btn shadow-none"
-      >
-        {sendIcon}
-      </Button>
-    </Link>
+    <OverlayTrigger overlay={<Tooltip style={{position: "fixed"}}>Open in mail app</Tooltip>}>
+      <Link href={uri} passHref>
+        <Button
+          size="sm"
+          variant="dark"
+          className="btn mailer-btn shadow-none"
+        >
+          {openIcon}
+        </Button>
+      </Link>
+    </OverlayTrigger>
   )
 }
 
