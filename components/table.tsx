@@ -32,7 +32,7 @@ export type Paper = {
   pdfUrl?: string
   pdfDlUrl?: string
   attachUrl?: string
-  attachDlUral?: string
+  attachDlUrl?: string
 }
 
 type PubTabProps = {
@@ -41,7 +41,7 @@ type PubTabProps = {
 
 export function PubTab({ papers }: PubTabProps): JSX.Element {
   const enablePdfCol = useMemo(() => papers.some(p => p.pdfUrl || p.pdfDlUrl), [papers])
-  const enableAttachCol = useMemo(() => papers.some(p => p.attachUrl || p.attachDlUral), [papers])
+  const enableAttachCol = useMemo(() => papers.some(p => p.attachUrl || p.attachDlUrl), [papers])
 
   return (
     <Table className={styles.pubTab} hover striped>
@@ -67,7 +67,7 @@ export function PubTab({ papers }: PubTabProps): JSX.Element {
             <td>{p.authorship}</td>
             <td><CopyBtn text={p.title} /></td>
             {enablePdfCol ? p.pdfUrl ? <td><PdfBtn uri={p.pdfUrl} /></td> : p.pdfDlUrl ? <td><PdfBtn uri={download2view(p.pdfDlUrl)} /></td> : <td></td> : <></>}
-            {enableAttachCol ? p.attachUrl ? <td><AttachBtn uri={p.attachUrl} /></td> : p.attachDlUral ? <td><AttachBtn uri={download2view(p.attachDlUral)} /></td> : <td></td> : <></>}
+            {enableAttachCol ? p.attachUrl ? <td><AttachBtn uri={p.attachUrl} /></td> : p.attachDlUrl ? <td><AttachBtn uri={download2view(p.attachDlUrl)} /></td> : <td></td> : <></>}
           </tr>
         ))}
       </tbody>
