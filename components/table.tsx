@@ -3,7 +3,7 @@ import { useMemo, type ReactNode } from "react"
 import Link from "next/link"
 import Table from "react-bootstrap/Table"
 import { download2view, getFormattedDate } from "../functions/utility"
-import { CopyBtn, PdfBtn } from "./button"
+import { AttachBtn, CopyBtn, PdfBtn } from "./button"
 
 
 type LinkedTdProps = {
@@ -31,6 +31,8 @@ export type Paper = {
   paperUrl?: string
   pdfUrl?: string
   pdfDlUrl?: string
+  attachUrl?: string
+  attachDlUral?: string
 }
 
 type PubTabProps = {
@@ -39,6 +41,7 @@ type PubTabProps = {
 
 export function PubTab({ papers }: PubTabProps): JSX.Element {
   const enablePdfCol = useMemo(() => papers.some(p => p.pdfUrl || p.pdfDlUrl), [papers])
+  const enableAttachCol = useMemo(() => papers.some(p => p.attachUrl || p.attachDlUral), [papers])
 
   return (
     <Table className={styles.pubTab} hover striped>
@@ -51,6 +54,7 @@ export function PubTab({ papers }: PubTabProps): JSX.Element {
           <th>authorship</th>
           <th></th>
           {enablePdfCol ? <th></th> : <></>}
+          {enableAttachCol ? <th></th> : <></>}
         </tr>
       </thead>
       <tbody>
@@ -63,6 +67,7 @@ export function PubTab({ papers }: PubTabProps): JSX.Element {
             <td>{p.authorship}</td>
             <td><CopyBtn text={p.title} /></td>
             {enablePdfCol ? p.pdfUrl ? <td><PdfBtn uri={p.pdfUrl} /></td> : p.pdfDlUrl ? <td><PdfBtn uri={download2view(p.pdfDlUrl)} /></td> : <td></td> : <></>}
+            {enableAttachCol ? p.attachUrl ? <td><AttachBtn uri={p.attachUrl} /></td> : p.attachDlUral ? <td><AttachBtn uri={download2view(p.attachDlUral)} /></td> : <td></td> : <></>}
           </tr>
         ))}
       </tbody>
