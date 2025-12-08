@@ -51,6 +51,7 @@
       "title": "プライバシーに配慮した人流・状態計測システム",
       "type": "exhibition",
       "conferenceUrl": "https://irasf.hacca.jp/",
+      "paperUrl": "https://db.uclab.jp/show/1569",
       "attachDlUrl": "https://db.uclab.jp/download/?code=2025120814311082B1B41D96CB49B3BD7BDF54B936AC19239"
     },
     {
@@ -171,7 +172,8 @@
       "date": [2022, 11],
       "title": "Smart Warehouse",
       "type": "exhibition",
-      "conferenceUrl": "https://www.smartcityexpo.com/"
+      "conferenceUrl": "https://www.smartcityexpo.com/",
+      "attachUrl": "https://1drv.ms/v/c/5ba997f23749e33e/IQAkCHtFCaNJQYOixyhrwm1TAccEhN8KvMwbAdluy5PxgZE"
     },
     {
       "authorship":"lead author",
