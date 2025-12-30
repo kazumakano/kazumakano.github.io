@@ -256,7 +256,8 @@
       "title": "Smartphone-Based Activity Recognition in a Logistics Warehouse Using Self-supervised Representation Learning",
       "type": "proceedings (workshop)",
       "conferenceUrl": "https://www.ubicomp.org/ubicomp-iswc-2025/",
-      "paperUrl": ""
+      "paperUrl": "https://dl.acm.org/doi/10.1145/3714394.3756198",
+      "pdfUrl": "https://dl.acm.org/doi/pdf/10.1145/3714394.3756198"
     },
     {
       "authorship": "co-author",
@@ -265,7 +266,8 @@
       "title": "Real-time Activity-Aware Video Streaming While Preserving Privacy",
       "type": "proceedings (poster)",
       "conferenceUrl": "https://www.ubicomp.org/ubicomp-iswc-2025/",
-      "paperUrl": ""
+      "paperUrl": "https://dl.acm.org/doi/10.1145/3714394.3754399",
+      "pdfUrl": "https://dl.acm.org/doi/pdf/10.1145/3714394.3754399"
     },
     {
       "authorship": "co-author",
