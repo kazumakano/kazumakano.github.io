@@ -65,9 +65,9 @@ export function PubTab({ papers }: PubTabProps): JSX.Element {
             <td>{p.type}</td>
             {p.conferenceUrl ? <LinkedTd url={p.conferenceUrl}>{p.conference}</LinkedTd> : <td>{p.conference}</td>}
             <td>{p.authorship}</td>
-            <td><CopyBtn text={p.title} /></td>
             {enablePdfCol ? p.pdfUrl ? <td><PdfBtn uri={p.pdfUrl} /></td> : p.pdfDlUrl ? <td><PdfBtn uri={download2view(p.pdfDlUrl)} /></td> : <td></td> : <></>}
             {enableAttachCol ? p.attachUrl ? <td><AttachBtn uri={p.attachUrl} /></td> : p.attachDlUrl ? <td><AttachBtn uri={download2view(p.attachDlUrl)} /></td> : <td></td> : <></>}
+            <td><CopyBtn text={p.title} /></td>
           </tr>
         ))}
       </tbody>
