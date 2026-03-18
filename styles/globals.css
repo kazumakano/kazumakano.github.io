@@ -97,7 +97,7 @@ a {
 
 #header > h1 {
   color: white;
-  font-size: xx-large;
+  font-size: 2em;
   text-transform: capitalize;
 }
 
@@ -165,7 +165,7 @@ a {
 .text-box > div > h2 {
   border-color: darkturquoise;
   border-bottom-style: solid;
-  font-size: x-large;
+  font-size: 1.5em;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 0.1em;

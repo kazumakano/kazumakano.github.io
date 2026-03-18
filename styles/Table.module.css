@@ -1,5 +1,5 @@
 .pubTab > tbody > tr > td, .pubTable > tbody > tr > td > button {
-  font-size: small;
+  font-size: 0.8em;
 }
 
 .pubTab > tbody > tr > td > a {

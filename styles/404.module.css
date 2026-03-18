@@ -1,7 +1,7 @@
 .code {
   border-right-style: solid;
   color: white;
-  font-size: xx-large;
+  font-size: 2em;
   margin-bottom: auto;
   margin-left: auto;
   margin-right: 0.5em;
@@ -14,7 +14,7 @@
 
 .msg {
   color: white;
-  font-size: x-large;
+  font-size: 1.5em;
   margin-bottom: auto;
   margin-right: auto;
   margin-top: auto;
