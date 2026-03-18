@@ -43,7 +43,8 @@ const MvBtn = ({ isLeft, pageIndex, setTransDirect }: MvBtnProps) => {
       onMouseEnter={useCallback(() => setIsMouseOver(true), [setIsMouseOver])}
       onMouseLeave={useCallback(() => setIsMouseOver(false), [setIsMouseOver])}
       style={{
-        left: isLeft ? "0%" : "95%",
+        left: isLeft ? "0" : undefined,
+        right: isLeft ? undefined : "0",
         opacity: isPc ? isMouseOver ? 1 : 0 : 1
       }}
     >

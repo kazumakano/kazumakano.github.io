@@ -233,3 +233,22 @@ a {
     width: auto;
   }
 }
+
+@media screen and (max-width: 767px) {
+  body {
+    font-size: smaller;
+  }
+
+  .mv-btn {
+    width: 10%;
+  }
+
+  #slide > div {
+    width: 80%;
+  }
+
+  #progress-icon {
+    left: 89%;
+    width: 10%;
+  }
+}
