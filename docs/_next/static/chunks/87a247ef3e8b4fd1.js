@@ -4,8 +4,8 @@ __turbopack_load_page_chunks__("/contact", [
   "static/chunks/f2a5098ae9fdda20.js",
   "static/chunks/bcab8d98ee4d0afd.js",
   "static/chunks/f0ae9517eb7096af.js",
-  "static/chunks/2347abbe45f38136.js",
+  "static/chunks/5bfc96c7ea6a2708.js",
   "static/chunks/70c807d7fc5f8f76.css",
-  "static/chunks/0898ac94d5afc76a.css",
-  "static/chunks/turbopack-a857e84a465c4768.js"
+  "static/chunks/42b03ee79637751d.css",
+  "static/chunks/turbopack-27a722d465fc85f0.js"
 ])
