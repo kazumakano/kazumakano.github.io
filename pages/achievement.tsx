@@ -31,10 +31,10 @@ export default function Achievement({ pageIndex, transDirect, setTransDirect }: 
           </tbody>
         </Table>
 
-        <h2>qualifications</h2>
+        <h2>fellowships</h2>
         <Table borderless className={styles.achieveTable}>
           <tbody>
-            {achieves.qualification.toReversed().map((q, i) => (
+            {achieves.fellowship.toReversed().map((q, i) => (
               <tr key={i}>
                 <td>{getFormattedDate(q.date[1], q.date[0])}</td>
                 <LinkedTd url={q.url}>
@@ -45,10 +45,10 @@ export default function Achievement({ pageIndex, transDirect, setTransDirect }: 
           </tbody>
         </Table>
 
-        <h2>fellowships</h2>
+        <h2>qualifications</h2>
         <Table borderless className={styles.achieveTable}>
           <tbody>
-            {achieves.fellowship.toReversed().map((q, i) => (
+            {achieves.qualification.toReversed().map((q, i) => (
               <tr key={i}>
                 <td>{getFormattedDate(q.date[1], q.date[0])}</td>
                 <LinkedTd url={q.url}>
