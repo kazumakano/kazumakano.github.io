@@ -76,10 +76,10 @@
 .hintMsg {
   align-items: center;
   display: flex;
-  height: 10%;
-  justify-content: center;
+  height: 7%;
+  justify-content: right;
   position: fixed;
-  top: 90%;
+  top: 93%;
   width: 100%;
 }
 
@@ -99,7 +99,9 @@
   animation-name: blink;
   animation-timing-function: ease-in-out;
   color: white;
-  font-size: x-large;
+  font-size: large;
+  margin-bottom: 0;
+  margin-right: 2em;
 }
 
 .hintMsg > p > svg {
