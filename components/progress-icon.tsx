@@ -30,6 +30,7 @@ export default function ProgressIcon({ pageIndex, transDirect }: ProgressIconPro
       animate="after"
       fill="none"
       id="progress-icon"
+      preserveAspectRatio="xMaxYMax"
     >
       <motion.circle
         variants={variants}
