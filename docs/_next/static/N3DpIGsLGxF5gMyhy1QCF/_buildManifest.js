@@ -1,6 +1,6 @@
 self.__BUILD_MANIFEST = {
   "/": [
-    "static/chunks/6812b2f7cbc197ab.js"
+    "static/chunks/13e3b6445b3febf1.js"
   ],
   "/404": [
     "static/chunks/bb63efe3f1b34924.js"
@@ -9,19 +9,19 @@ self.__BUILD_MANIFEST = {
     "static/chunks/a52db95e23b42612.js"
   ],
   "/achievement": [
-    "static/chunks/b9fa80ddd534ac43.js"
+    "static/chunks/4ead0dc2bed47242.js"
   ],
   "/contact": [
-    "static/chunks/f2f06f611e7fee5d.js"
+    "static/chunks/92e1416c26002107.js"
   ],
   "/publication/domestic": [
-    "static/chunks/fd8e538c0bd44ff9.js"
+    "static/chunks/f1713914b189f440.js"
   ],
   "/publication/international": [
-    "static/chunks/f44ceea5ef6ede7c.js"
+    "static/chunks/a3105fe308470498.js"
   ],
   "/skill": [
-    "static/chunks/c8fe036c4dd0f93e.js"
+    "static/chunks/9c13162189fd55c2.js"
   ],
   "__rewrites": {
     "afterFiles": [],
