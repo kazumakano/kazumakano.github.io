@@ -8,7 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@octokit/core": "^3.5.1",
+    "@octokit/core": "^7.0.6",
     "framer-motion": "^5.3.1",
     "next": "16.1.7",
     "react": "18.2.0",
