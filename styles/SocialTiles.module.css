@@ -19,8 +19,8 @@
 }
 
 .leftLabel, .rightLabel {
-  max-width: 576px;
-  width: calc(75% - 10px);
+  max-width: 384px;
+  width: calc(70% - 10px);
 }
 
 .leftLabel {
@@ -32,8 +32,8 @@
 }
 
 .icon {
-  max-width: 192px;
-  width: calc(25% - 10px);
+  max-width: 128px;
+  width: calc(30% - 10px);
 }
 
 .icon > a > svg {
