@@ -6,6 +6,6 @@ __turbopack_load_page_chunks__("/", [
   "static/chunks/f0ae9517eb7096af.js",
   "static/chunks/bcab8d98ee4d0afd.js",
   "static/chunks/a506a1fd202150fb.css",
-  "static/chunks/2a5b9a8cc0209301.css",
-  "static/chunks/turbopack-fab838cc6fb1fbd4.js"
+  "static/chunks/d425b983da6b81ba.css",
+  "static/chunks/turbopack-e646f89324ae1fc6.js"
 ])

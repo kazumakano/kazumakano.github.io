@@ -5,6 +5,6 @@ __turbopack_load_page_chunks__("/publication/international", [
   "static/chunks/bcab8d98ee4d0afd.js",
   "static/chunks/f0ae9517eb7096af.js",
   "static/chunks/ea5f9863981dc2bb.js",
-  "static/chunks/2a5b9a8cc0209301.css",
-  "static/chunks/turbopack-60f45a0de189187c.js"
+  "static/chunks/d425b983da6b81ba.css",
+  "static/chunks/turbopack-8d1b8e6468260560.js"
 ])
