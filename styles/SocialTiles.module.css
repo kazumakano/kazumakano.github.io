@@ -32,6 +32,7 @@
 }
 
 .icon {
+  fill: var(--icon-black);
   max-width: 128px;
   width: calc(30% - 10px);
 }

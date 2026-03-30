@@ -11,6 +11,7 @@
 }
 
 .frameworkGrid > div > a > div {
+  fill: var(--icon-black);
   height: 100%;
 }
 

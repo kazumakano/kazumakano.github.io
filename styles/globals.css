@@ -1,3 +1,7 @@
+:root {
+  --icon-black: #1f1f1f;
+}
+
 html,
 body {
   padding: 0;
