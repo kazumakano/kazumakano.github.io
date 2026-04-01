@@ -1,7 +1,8 @@
 import styles from "../styles/Achievement.module.css"
 import achieves from "../public/achievements.json"
 import type { ComponentProps } from "./_app"
-import { useRef } from "react"
+import { useContext, useRef } from "react"
+import { IsPcCtx } from "../components/client"
 import usePinch from "../hooks/pinch"
 import Layout from "../components/layout"
 import TextBox from "../components/text-box"
@@ -11,13 +12,14 @@ import { LinkedTd } from "../components/table"
 
 
 export default function Achievement({ pageIndex, transDirect, setTransDirect }: ComponentProps): JSX.Element {
+  const isPc = useContext(IsPcCtx)
   const pinchSrcRef = useRef<HTMLDivElement>(null)
   const pinchTgtRef = useRef<HTMLDivElement>(null)
 
   usePinch(pinchSrcRef, pinchTgtRef)
 
   return (
-    <Layout pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect} title="achievements">
+    <Layout pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect} title={isPc ? "honors & certifications" : "honors & certs"}>
       <TextBox enableMargins={[false, false]} proportion={100} innerRef={pinchTgtRef} outerRef={pinchSrcRef}>
         <h2>awards</h2>
         <Table borderless className={styles.achieveTable}>

@@ -9,16 +9,16 @@ self.__BUILD_MANIFEST = {
     "static/chunks/a52db95e23b42612.js"
   ],
   "/achievement": [
-    "static/chunks/59584388a79feed6.js"
+    "static/chunks/da943d7301b0932d.js"
   ],
   "/contact": [
     "static/chunks/af8e16fc7e49a526.js"
   ],
   "/publication/domestic": [
-    "static/chunks/98f3413f073fdc3b.js"
+    "static/chunks/cc4e6250da826684.js"
   ],
   "/publication/international": [
-    "static/chunks/7689f63843776b30.js"
+    "static/chunks/731b98d4416e2d55.js"
   ],
   "/skill": [
     "static/chunks/d6bfffa0741b0620.js"
