@@ -122,7 +122,7 @@ export default function Contact({ setIsInputting, pageIndex, transDirect, setTra
       </TextBox>
 
       <TextBox enableMargins={[true, false]} proportion={50}>
-        <h2>social</h2>
+        <h2>socials</h2>
         <SocialGrid>
           <SocialTile color="#1d9bf0" icon={twitterIcon} reverse={false} url={`https://twitter.com/${process.env.NEXT_PUBLIC_TWITTER_USER_NAME}`}>
             Twitter<br />
