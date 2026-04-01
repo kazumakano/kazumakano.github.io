@@ -50,6 +50,12 @@
       "school": "Graduate School of Engineering, Nagoya University",
       "term": [[2024, 4], null],
       "url": "https://www.nuee.nagoya-u.ac.jp/"
+    },
+    {
+      "department": "Graduate Program for Lifestyle Revolution based on Transdisciplinary Mobility Innovation",
+      "school": "Institutes of Innovation for Future Society, Nagoya University",
+      "term": [[2022, 4], null],
+      "url": "https://www.tmi.mirai.nagoya-u.ac.jp/"
     }
   ]
 }
