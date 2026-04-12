@@ -5,6 +5,6 @@ __turbopack_load_page_chunks__("/skill", [
   "static/chunks/bcab8d98ee4d0afd.js",
   "static/chunks/1c7f23283dd9f7a4.js",
   "static/chunks/682609017e8ff8fb.js",
-  "static/chunks/59f053567a47907f.css",
-  "static/chunks/turbopack-b5e84d2388c80f83.js"
+  "static/chunks/5d1870530597e1f9.css",
+  "static/chunks/turbopack-00c851e54cd11b72.js"
 ])

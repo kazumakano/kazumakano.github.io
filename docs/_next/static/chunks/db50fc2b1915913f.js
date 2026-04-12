@@ -1,10 +1,10 @@
-__turbopack_load_page_chunks__("/publication/international", [
-  "static/chunks/e28c7d8e2725d8ef.js",
+__turbopack_load_page_chunks__("/publication/domestic", [
+  "static/chunks/bb080f900f8f6cfa.js",
   "static/chunks/ec4d16c8d032c509.js",
   "static/chunks/d1f5d212bc7dc392.js",
   "static/chunks/bcab8d98ee4d0afd.js",
   "static/chunks/f0ae9517eb7096af.js",
   "static/chunks/ea5f9863981dc2bb.js",
-  "static/chunks/59f053567a47907f.css",
-  "static/chunks/turbopack-0af32d3715f314f2.js"
+  "static/chunks/5d1870530597e1f9.css",
+  "static/chunks/turbopack-b7e3dffc2a80e9bb.js"
 ])

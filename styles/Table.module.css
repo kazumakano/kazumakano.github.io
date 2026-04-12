@@ -1,3 +1,11 @@
+.pubTab > thead > tr > td:nth-child(n + 6):nth-last-child(n + 2), .pubTab > tbody > tr > td:nth-child(n + 6):nth-last-child(n + 2) {
+  padding-right: 0px;
+}
+
+.pubTab > thead > tr > td:nth-child(n + 7):nth-last-child(n + 1), .pubTab > tbody > tr > td:nth-child(n + 7):nth-last-child(n + 1) {
+  padding-left: 0px;
+}
+
 .pubTab > tbody > tr > td, .pubTable > tbody > tr > td > button {
   font-size: 0.8em;
 }
