@@ -1,0 +1,64 @@
+{
+  "award": [
+    {
+      "date": [2022, 3],
+      "title": "電子情報通信学会東海支部 令和三年度学業成績優秀賞"
+    },
+    {
+      "date": [2023, 9],
+      "title": "10th IPIN Competition on Indoor Localization Track 5 2nd Place",
+      "url": "https://unit.aist.go.jp/harc/xDR-Challenge-2023/"
+    },
+    {
+      "date": [2023, 12],
+      "title": "HCGシンポジウム2023 特集テーマセッション賞",
+      "url": "https://www.hcg-ieice.org/hcg-symposium/2023/"
+    },
+    {
+      "date": [2023, 12],
+      "title": "第二十一回キャンパスベンチャーグランプリ中部 特別賞 日刊工業新聞社賞",
+      "url": "https://cvg.nikkan.co.jp/chubu"
+    },
+    {
+      "date": [2024, 8],
+      "title": "第52回画像電子学会年次大会 学生発表奨励賞",
+      "url": "https://www.iieej.org/annualconf/2024nenji-top/"
+    },
+    {
+      "date": [2024, 10],
+      "title": "UbiComp / ISWC 2024 Best Demo Award",
+      "url": "https://www.ubicomp.org/ubicomp-iswc-2024/"
+    },
+    {
+      "date": [2025, 7],
+      "title": "令和7年度情報処理学会MBL研究会 優秀論文賞",
+      "url": "https://mbl.ipsj.or.jp/program/2025/115/"
+    }
+  ],
+
+  "fellowship": [
+    {
+      "date": [2022, 3],
+      "title": "Graduate Program for Lifestyle Revolution based on Transdisciplinary Mobility Innovation from MEXT and Nagoya University",
+      "url": "https://www.tmi.mirai.nagoya-u.ac.jp/"
+    },
+    {
+      "date": [2024, 6],
+      "title": "Make New Standards Program for the Next Generation Researchers from JST and THERS",
+      "url": "https://dec.nagoya-u.ac.jp/spring_information"
+    },
+    {
+      "date": [2024, 6],
+      "title": "TokAI BOOST: Program for Fostering Next Generation AI Professionals from JST and Nagoya University",
+      "url": "https://www.mds.nagoya-u.ac.jp/mda-program/tokai-boost"
+    }
+  ],
+
+  "qualification": [
+    {
+      "date": [2023, 3],
+      "title": "JDLA Deep Learning for ENGINEER 2023 #1",
+      "url": "https://www.jdla.org/certificate/engineer/"
+    }
+  ]
+}
