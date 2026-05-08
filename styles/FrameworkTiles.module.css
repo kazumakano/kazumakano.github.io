@@ -1,13 +1,14 @@
 .frameworkGrid {
+  align-self: center;
   display: grid;
   grid-auto-rows: 1fr;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fill, 100px);
   justify-content: center;
   margin-bottom: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
   margin-top: 20px;
+  max-width: 1024px;
+  width: 100%;
 }
 
 .frameworkGrid > div > a > div {
