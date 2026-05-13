@@ -5,6 +5,6 @@ __turbopack_load_page_chunks__("/achievement", [
   "static/chunks/0~xzcxwplrd-0.js",
   "static/chunks/0dklmwvtqa-~3.js",
   "static/chunks/0gsdue809hs1-.js",
-  "static/chunks/04r1ff~jzz7eh.css",
-  "static/chunks/turbopack-14339h4hvod4f.js"
+  "static/chunks/0e2-dbm797w7..css",
+  "static/chunks/turbopack-0a_7ldf7esnfe.js"
 ])
