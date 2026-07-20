@@ -9,7 +9,7 @@ self.__BUILD_MANIFEST = {
     "static/chunks/0z0n3nh_l7.te.js"
   ],
   "/achievement": [
-    "static/chunks/01a-3uggbyqdx.js"
+    "static/chunks/07m_5hxu--9iw.js"
   ],
   "/contact": [
     "static/chunks/077_-prw8xty-.js"
