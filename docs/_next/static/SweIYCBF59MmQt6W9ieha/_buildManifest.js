@@ -15,10 +15,10 @@ self.__BUILD_MANIFEST = {
     "static/chunks/077_-prw8xty-.js"
   ],
   "/publication/domestic": [
-    "static/chunks/06t.8gj9_mxwn.js"
+    "static/chunks/00v454~-ez_v-.js"
   ],
   "/publication/international": [
-    "static/chunks/0ngj4i3vp1coy.js"
+    "static/chunks/0dt~-~ilrjqx~.js"
   ],
   "/skill": [
     "static/chunks/18a9khg0d0k79.js"
