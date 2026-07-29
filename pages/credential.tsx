@@ -11,7 +11,7 @@ import { getFormattedDate } from "../functions/utility"
 import { LinkedTd } from "../components/table"
 
 
-export default function Achievement({ pageIndex, transDirect, setTransDirect }: ComponentProps): JSX.Element {
+export default function Credential({ pageIndex, transDirect, setTransDirect }: ComponentProps): JSX.Element {
   const isPc = useContext(IsPcCtx)
   const pinchSrcRef = useRef<HTMLDivElement>(null)
   const pinchTgtRef = useRef<HTMLDivElement>(null)
@@ -19,7 +19,7 @@ export default function Achievement({ pageIndex, transDirect, setTransDirect }: 
   usePinch(pinchSrcRef, pinchTgtRef)
 
   return (
-    <Layout pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect} title={isPc ? "honors & certifications" : "honors & certs"}>
+    <Layout pageIndex={pageIndex} transDirect={transDirect} setTransDirect={setTransDirect} title={"credentials"}>
       <TextBox enableMargins={[false, false]} proportion={100} innerRef={pinchTgtRef} outerRef={pinchSrcRef}>
         <h2>awards</h2>
         <Table borderless className={styles.achieveTable}>
@@ -47,7 +47,7 @@ export default function Achievement({ pageIndex, transDirect, setTransDirect }: 
           </tbody>
         </Table>
 
-        <h2>qualifications</h2>
+        <h2>certifications</h2>
         <Table borderless className={styles.achieveTable}>
           <tbody>
             {achieves.qualification.toReversed().map((q, i) => (

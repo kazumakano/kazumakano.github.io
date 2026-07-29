@@ -10,7 +10,7 @@ import type { Dispatch, SetStateAction } from "react"
 
 const BG_IMGS = [
   "/barcelona.jpeg",
-  "canada-place.jpeg",
+  "/canada-place.jpeg",
   "/fushimi-inari-taisha.jpeg",
   "/garden-of-the-gods.jpeg",
   "/golconda.jpeg",
@@ -23,7 +23,7 @@ export const CONTENTS = [
   "/",
   "/publication/international",
   "/publication/domestic",
-  "/achievement",
+  "/credential",
   "/skill",
   "/contact"
 ]

@@ -128,8 +128,9 @@ export default function Contact({ setIsInputting, pageIndex, transDirect, setTra
             Twitter<br />
             @{process.env.NEXT_PUBLIC_TWITTER_USER_NAME}
           </SocialTile>
-          <SocialTile color="#007EBB" icon={linkedinIcon} reverse={true} url={`https://www.linkedin.com/in/${process.env.NEXT_PUBLIC_TWITTER_USER_NAME}/`}>
-            LinkedIn
+          <SocialTile color="#007EBB" icon={linkedinIcon} reverse={true} url={`https://www.linkedin.com/in/${process.env.NEXT_PUBLIC_LINKEDIN_USER_NAME}/`}>
+            LinkedIn<br />
+            @{process.env.NEXT_PUBLIC_LINKEDIN_USER_NAME}
           </SocialTile>
           <SocialTile color="black" icon={githubIcon} reverse={false} url={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB_USER_NAME}`}>
             GitHub<br />
