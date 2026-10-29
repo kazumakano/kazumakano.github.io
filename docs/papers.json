@@ -280,13 +280,13 @@
     },
     {
       "authorship":"lead author",
-      "conference": null,
-      "date": [2026, 7],
+      "conference": "J-ISPIN",
+      "date": [2026, 10],
       "title": "CorVS+: Correspondence-Driven Association of Video Trajectories and Sensors for Identity-Aware Person Localization in Warehouses",
-      "type": "preprint",
-      "paperUrl": "https://arxiv.org/abs/2510.26369",
-      "pdfUrl": "https://arxiv.org/pdf/2510.26369",
-      "attachUrl": "https://doi.org/10.5281/zenodo.17745683"
+      "type": "article",
+      "paperUrl": "https://ieeexplore.ieee.org/document/11719960",
+      "pdfUrl": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11719960",
+      "attachUrl": "https://zenodo.org/records/17745683"
     },
     {
       "authorship": "lead author",

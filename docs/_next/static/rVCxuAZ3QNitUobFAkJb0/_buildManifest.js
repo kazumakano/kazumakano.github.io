@@ -1,6 +1,6 @@
 self.__BUILD_MANIFEST = {
   "/": [
-    "static/chunks/0n.lr-v862542.js"
+    "static/chunks/0h3lunow9sbo2.js"
   ],
   "/404": [
     "static/chunks/1850o97l92.lf.js"
@@ -9,19 +9,22 @@ self.__BUILD_MANIFEST = {
     "static/chunks/0z0n3nh_l7.te.js"
   ],
   "/contact": [
-    "static/chunks/0rxs0_j50pdyg.js"
+    "static/chunks/0iyqt5x6tdt8-.js"
   ],
   "/credential": [
-    "static/chunks/0ph9xn-rb1b.q.js"
+    "static/chunks/118.nli3hu222.js"
   ],
   "/publication/domestic": [
-    "static/chunks/0oocch9qzashq.js"
+    "static/chunks/0u0cq21dffzlv.js"
   ],
   "/publication/international": [
-    "static/chunks/01k50~6f20h-..js"
+    "static/chunks/0p9upmojodae3.js"
+  ],
+  "/research": [
+    "static/chunks/0xt10ws4s0e.6.js"
   ],
   "/skill": [
-    "static/chunks/0~9u52_t123a7.js"
+    "static/chunks/12s~w_cnvl~q8.js"
   ],
   "__rewrites": {
     "afterFiles": [],
@@ -37,6 +40,7 @@ self.__BUILD_MANIFEST = {
     "/credential",
     "/publication/domestic",
     "/publication/international",
+    "/research",
     "/skill"
   ]
 };self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()

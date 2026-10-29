@@ -1,8 +1,7 @@
 import styles from "../styles/Achievement.module.css"
 import achieves from "../public/achievements.json"
 import type { ComponentProps } from "./_app"
-import { useContext, useRef } from "react"
-import { IsPcCtx } from "../components/client"
+import { useRef } from "react"
 import usePinch from "../hooks/pinch"
 import Layout from "../components/layout"
 import TextBox from "../components/text-box"
@@ -12,7 +11,6 @@ import { LinkedTd } from "../components/table"
 
 
 export default function Credential({ pageIndex, transDirect, setTransDirect }: ComponentProps): JSX.Element {
-  const isPc = useContext(IsPcCtx)
   const pinchSrcRef = useRef<HTMLDivElement>(null)
   const pinchTgtRef = useRef<HTMLDivElement>(null)
 
