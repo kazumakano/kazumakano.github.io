@@ -143,6 +143,14 @@
       "conferenceUrl": "https://www.ipsj.or.jp/event/fit/fit2025/",
       "paperUrl": "https://www.ieice.org/publications/conferences/summary.php?id=FIT0000017513&ConfCd=F&year=2025&conf_type=F",
       "pdfUrl": "https://www.ieice.org/publications/conferences/bin/pdf_link.php?fname=CM-001.pdf&year=2025&ConfCd=F"
+    },
+    {
+      "authorship": "co-author",
+      "conference": "JIP",
+      "date": [null, null],
+      "title": "実倉庫環境におけるIMUデータを用いた作業認識への自己教師あり学習の適用と有効性評価",
+      "type": "article",
+      "conferenceUrl": "https://www.ipsj.or.jp/journal/index.html"
     }
   ],
 
@@ -284,6 +292,7 @@
       "date": [2026, 10],
       "title": "CorVS+: Correspondence-Driven Association of Video Trajectories and Sensors for Identity-Aware Person Localization in Warehouses",
       "type": "article",
+      "conferenceUrl": "https://ieee-jispin.org/",
       "paperUrl": "https://ieeexplore.ieee.org/document/11719960",
       "pdfUrl": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11719960",
       "attachUrl": "https://zenodo.org/records/17745683"
