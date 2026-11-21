@@ -42,7 +42,8 @@
       "title": "スマートフォンを用いた歩行者自律航法のための水平加速度に基づいた歩き方の違いに頑健な進行方向推定",
       "type": "article",
       "conferenceUrl": "https://www.ipsj.or.jp/journal/index.html",
-      "paperUrl": "https://ipsj.ixsq.nii.ac.jp/records/234951"
+      "paperUrl": "https://ipsj.ixsq.nii.ac.jp/records/234951",
+      "pdfUrl": "https://1drv.ms/b/c/5ba997f23749e33e/IQD_Pm3YkhJvR4eStv32pYdoAVljpYidWAYUy07h7iP6B04"
     },
     {
       "authorship": null,
@@ -147,10 +148,11 @@
     {
       "authorship": "co-author",
       "conference": "JIP",
-      "date": [null, null],
+      "date": [2026, 10],
       "title": "実倉庫環境におけるIMUデータを用いた作業認識への自己教師あり学習の適用と有効性評価",
       "type": "article",
-      "conferenceUrl": "https://www.ipsj.or.jp/journal/index.html"
+      "conferenceUrl": "https://www.ipsj.or.jp/journal/index.html",
+      "paperUrl": "https://ipsj.ixsq.nii.ac.jp/records/2014943"
     }
   ],
 
